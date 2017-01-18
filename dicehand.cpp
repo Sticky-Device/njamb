@@ -47,6 +47,7 @@ int DiceHand::getBestResult(DiceHandResult resultType)
     return 0;
 }
 
+// get dice by its index
 int DiceHand::getDice(int index)
 {
     if (index < 1 || index > 6)
