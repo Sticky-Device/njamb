@@ -11,10 +11,14 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = njamb
 TEMPLATE = app
 
+CONFIG += c++11
+
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    dicehand.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    dicehand.h
 
 FORMS    += mainwindow.ui
