@@ -60,11 +60,14 @@ int DiceHand::getDice(int index)
 
 int DiceHand::getBestResultForNumber(int number)
 {
-    return std::accumulate(dice.begin(), dice.end(), 0, [=](int currentResult, int element) {
+    auto result = std::accumulate(dice.begin(), dice.end(), 0, [=](int currentResult, int element) {
        if (element != number)
            return currentResult;
        return currentResult + number;
     });
+
+    auto maxRes = 5 * number;
+    return result < maxRes ? result : maxRes;
 }
 
 void DiceHand::Init()
