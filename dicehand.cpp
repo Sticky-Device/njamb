@@ -1,5 +1,6 @@
 #include "dicehand.h"
 #include <random>
+#include <numeric>
 
 static int generateRandomDiceInteger()
 {
@@ -59,12 +60,11 @@ int DiceHand::getDice(int index)
 
 int DiceHand::getBestResultForNumber(int number)
 {
-    int result = 0;
-    for (auto val : dice)
-        if (val == number)
-            result += number;
-
-    return result;
+    return std::accumulate(dice.begin(), dice.end(), 0, [=](int currentResult, int element) {
+       if (element != number)
+           return currentResult;
+       return currentResult + number;
+    });
 }
 
 void DiceHand::Init()
