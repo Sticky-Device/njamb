@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QApplication>
+
 #include "dicehand.h"
 
 
@@ -12,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //events
     connect(ui->diceRollButton, SIGNAL (clicked()), this, SLOT (rollDiceButtonClicked()));
+    connect(ui->actionQuit, SIGNAL (triggered()), QApplication::instance(), SLOT (quit()));
 }
 
 MainWindow::~MainWindow()
@@ -37,3 +40,4 @@ void MainWindow::rollDiceButtonClicked()
     ui->label_fives->setText(QString::number(hand.getBestResult(DiceHandResult::Fives)));
     ui->label_sixes->setText(QString::number(hand.getBestResult(DiceHandResult::Sixes)));
 }
+
