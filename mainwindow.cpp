@@ -33,11 +33,11 @@ void MainWindow::rollDiceButtonClicked()
     ui->label_dice5->setText(QString::number(hand.getDice(5)));
     ui->label_dice6->setText(QString::number(hand.getDice(6)));
 
-    ui->label_ones->setText(QString::number(hand.getBestResult(DiceHandResult::Ones)));
-    ui->label_twos->setText(QString::number(hand.getBestResult(DiceHandResult::Twos)));
-    ui->label_threes->setText(QString::number(hand.getBestResult(DiceHandResult::Threes)));
-    ui->label_fours->setText(QString::number(hand.getBestResult(DiceHandResult::Fours)));
-    ui->label_fives->setText(QString::number(hand.getBestResult(DiceHandResult::Fives)));
-    ui->label_sixes->setText(QString::number(hand.getBestResult(DiceHandResult::Sixes)));
+    ui->label_free_ones->setText(QString::number(hand.getBestResult(DiceHandResult::Ones)));
+    ui->label_free_twos->setText(QString::number(hand.getBestResult(DiceHandResult::Twos)));
+    ui->label_free_threes->setText(QString::number(hand.getBestResult(DiceHandResult::Threes)));
+    ui->label_free_fours->setText(QString::number(hand.getBestResult(DiceHandResult::Fours)));
+    ui->label_free_fives->setText(QString::number(hand.getBestResult(DiceHandResult::Fives)));
+    ui->label_free_sixes->setText(QString::number(hand.getBestResult(DiceHandResult::Sixes)));
 }
 
