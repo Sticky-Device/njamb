@@ -72,7 +72,7 @@ int DiceHand::getBestResultForNumber(int number)
 
 void DiceHand::Init()
 {
-    for (auto i = dice.size(); i < 6; ++i)
+    for (int i = dice.size(); i < 6; ++i)
         dice.push_back(generateRandomDiceInteger());
 }
 
