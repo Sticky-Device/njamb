@@ -24,3 +24,6 @@ HEADERS  += mainwindow.h \
     njambengine.h
 
 FORMS    += mainwindow.ui
+
+RESOURCES += \
+    dice.qrc

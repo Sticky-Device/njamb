@@ -989,7 +989,10 @@
        </font>
       </property>
       <property name="text">
-       <string>6</string>
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="dice.qrc">:/dice/resources/dice-6.PNG</pixmap>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1715,7 +1718,10 @@
        </font>
       </property>
       <property name="text">
-       <string>6</string>
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="dice.qrc">:/dice/resources/dice-6.PNG</pixmap>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1731,7 +1737,10 @@
        </font>
       </property>
       <property name="text">
-       <string>6</string>
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="dice.qrc">:/dice/resources/dice-6.PNG</pixmap>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1747,7 +1756,10 @@
        </font>
       </property>
       <property name="text">
-       <string>6</string>
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="dice.qrc">:/dice/resources/dice-6.PNG</pixmap>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1763,7 +1775,10 @@
        </font>
       </property>
       <property name="text">
-       <string>6</string>
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="dice.qrc">:/dice/resources/dice-6.PNG</pixmap>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1782,7 +1797,10 @@
        <enum>Qt::LeftToRight</enum>
       </property>
       <property name="text">
-       <string>6</string>
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="dice.qrc">:/dice/resources/dice-6.PNG</pixmap>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1852,8 +1870,72 @@
      <x>0</x>
      <y>0</y>
      <width>509</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>232</red>
+         <green>231</green>
+         <blue>230</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>232</red>
+         <green>231</green>
+         <blue>230</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>232</red>
+         <green>231</green>
+         <blue>230</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>232</red>
+         <green>231</green>
+         <blue>230</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
@@ -1902,6 +1984,8 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="dice.qrc"/>
+ </resources>
  <connections/>
 </ui>

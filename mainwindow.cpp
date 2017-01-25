@@ -3,6 +3,7 @@
 
 #include <QApplication>
 #include <QMessageBox>
+#include <QPixmap>
 
 #include "dicehand.h"
 
@@ -24,16 +25,36 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+QPixmap getDicePixMap(int number)
+{
+    switch (number) {
+    case 1:
+        return QPixmap(QString::fromUtf8(":/dice/resources/dice-1.PNG"));
+    case 2:
+        return QPixmap(QString::fromUtf8(":/dice/resources/dice-2.PNG"));
+    case 3:
+        return QPixmap(QString::fromUtf8(":/dice/resources/dice-3.PNG"));
+    case 4:
+        return QPixmap(QString::fromUtf8(":/dice/resources/dice-4.PNG"));
+    case 5:
+        return QPixmap(QString::fromUtf8(":/dice/resources/dice-5.PNG"));
+    case 6:
+        return QPixmap(QString::fromUtf8(":/dice/resources/dice-6.PNG"));
+    default:
+        return QPixmap(QString::fromUtf8(":/dice/resources/dice-6.PNG"));
+    }
+}
+
 void MainWindow::rollDiceButtonClicked()
 {
     auto hand = engine.rollDice();
 
-    ui->label_dice1->setText(QString::number(hand.getDice(1)));
-    ui->label_dice2->setText(QString::number(hand.getDice(2)));
-    ui->label_dice3->setText(QString::number(hand.getDice(3)));
-    ui->label_dice4->setText(QString::number(hand.getDice(4)));
-    ui->label_dice5->setText(QString::number(hand.getDice(5)));
-    ui->label_dice6->setText(QString::number(hand.getDice(6)));
+    ui->label_dice1->setPixmap(getDicePixMap(hand.getDice(1)));
+    ui->label_dice2->setPixmap(getDicePixMap(hand.getDice(2)));
+    ui->label_dice3->setPixmap(getDicePixMap(hand.getDice(3)));
+    ui->label_dice4->setPixmap(getDicePixMap(hand.getDice(4)));
+    ui->label_dice5->setPixmap(getDicePixMap(hand.getDice(5)));
+    ui->label_dice6->setPixmap(getDicePixMap(hand.getDice(6)));
 
     ui->label_free_ones->setText(QString::number(hand.getBestResult(DiceHandResult::Ones)));
     ui->label_free_twos->setText(QString::number(hand.getBestResult(DiceHandResult::Twos)));
