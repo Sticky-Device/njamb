@@ -17,11 +17,13 @@ CONFIG += c++11
 SOURCES += main.cpp\
         mainwindow.cpp \
     dicehand.cpp \
-    njambengine.cpp
+    njambengine.cpp \
+    clickablelabel.cpp
 
 HEADERS  += mainwindow.h \
     dicehand.h \
-    njambengine.h
+    njambengine.h \
+    clickablelabel.h
 
 FORMS    += mainwindow.ui
 
