@@ -81,12 +81,12 @@ void MainWindow::on_actionAbout_Njamb_triggered()
 
 void MainWindow::resetUIElements()
 {
-    ui->label_dice1->setText("6");
-    ui->label_dice2->setText("6");
-    ui->label_dice3->setText("6");
-    ui->label_dice4->setText("6");
-    ui->label_dice5->setText("6");
-    ui->label_dice6->setText("6");
+    ui->label_dice1->setPixmap(getDicePixMap(6));
+    ui->label_dice2->setPixmap(getDicePixMap(6));
+    ui->label_dice3->setPixmap(getDicePixMap(6));
+    ui->label_dice4->setPixmap(getDicePixMap(6));
+    ui->label_dice5->setPixmap(getDicePixMap(6));
+    ui->label_dice6->setPixmap(getDicePixMap(6));
 
     ui->label_free_ones->setText("0");
     ui->label_free_twos->setText("0");
