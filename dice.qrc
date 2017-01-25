@@ -6,5 +6,11 @@
         <file>resources/dice-4.PNG</file>
         <file>resources/dice-5.PNG</file>
         <file>resources/dice-6.PNG</file>
+        <file>resources/dice-selected-1.PNG</file>
+        <file>resources/dice-selected-2.PNG</file>
+        <file>resources/dice-selected-3.PNG</file>
+        <file>resources/dice-selected-4.PNG</file>
+        <file>resources/dice-selected-5.PNG</file>
+        <file>resources/dice-selected-6.PNG</file>
     </qresource>
 </RCC>

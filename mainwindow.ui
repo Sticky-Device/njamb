@@ -981,7 +981,7 @@
      </widget>
     </item>
     <item row="18" column="4">
-     <widget class="QLabel" name="label_dice4">
+     <widget class="ClickableLabel" name="label_dice4">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1710,7 +1710,7 @@
      </widget>
     </item>
     <item row="18" column="1">
-     <widget class="QLabel" name="label_dice1">
+     <widget class="ClickableLabel" name="label_dice1">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1729,7 +1729,7 @@
      </widget>
     </item>
     <item row="18" column="2">
-     <widget class="QLabel" name="label_dice2">
+     <widget class="ClickableLabel" name="label_dice2">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1748,7 +1748,7 @@
      </widget>
     </item>
     <item row="18" column="3">
-     <widget class="QLabel" name="label_dice3">
+     <widget class="ClickableLabel" name="label_dice3">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1767,7 +1767,7 @@
      </widget>
     </item>
     <item row="18" column="5">
-     <widget class="QLabel" name="label_dice5">
+     <widget class="ClickableLabel" name="label_dice5">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1786,7 +1786,7 @@
      </widget>
     </item>
     <item row="18" column="6">
-     <widget class="QLabel" name="label_dice6">
+     <widget class="ClickableLabel" name="label_dice6">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1870,7 +1870,7 @@
      <x>0</x>
      <y>0</y>
      <width>509</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
    <property name="palette">
@@ -1984,6 +1984,16 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>ClickableLabel</class>
+   <extends>QLabel</extends>
+   <header location="global">clickablelabel.h</header>
+   <slots>
+    <signal>clicked()</signal>
+   </slots>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="dice.qrc"/>
  </resources>
