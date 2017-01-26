@@ -9,22 +9,6 @@
 
 const QString aboutText = "Ovo je verzija njamba razvijana od strane Petra, Stefana i Todorica. Mirko radi sam.";
 
-MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
-{
-    ui->setupUi(this);
-
-    //events
-    connect(ui->diceRollButton, SIGNAL (clicked()), this, SLOT (rollDiceButtonClicked()));
-    connect(ui->actionQuit, SIGNAL (triggered()), QApplication::instance(), SLOT (quit()));
-}
-
-MainWindow::~MainWindow()
-{
-    delete ui;
-}
-
 QPixmap getDicePixMap(int number)
 {
     switch (number) {
@@ -65,16 +49,56 @@ QPixmap getSelectedDicePixMap(int number)
     }
 }
 
+void Dice::drawImage()
+{
+    uiElement->setPixmap(selected ? getSelectedDicePixMap(val) : getDicePixMap(val));
+}
+
+void Dice::setDice(int value)
+{
+    setValue(value);
+    drawImage();
+}
+
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+
+    dice1.setUp(6, ui->label_dice1);
+    dice2.setUp(6, ui->label_dice2);
+    dice3.setUp(6, ui->label_dice3);
+    dice4.setUp(6, ui->label_dice4);
+    dice5.setUp(6, ui->label_dice5);
+    dice6.setUp(6, ui->label_dice6);
+
+    //events
+    connect(ui->diceRollButton, SIGNAL (clicked()), this, SLOT (rollDiceButtonClicked()));
+    connect(ui->actionQuit, SIGNAL (triggered()), QApplication::instance(), SLOT (quit()));
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
 void MainWindow::rollDiceButtonClicked()
 {
     auto hand = engine.rollDice();
 
-    ui->label_dice1->setPixmap(getDicePixMap(hand.getDice(1)));
-    ui->label_dice2->setPixmap(getDicePixMap(hand.getDice(2)));
-    ui->label_dice3->setPixmap(getDicePixMap(hand.getDice(3)));
-    ui->label_dice4->setPixmap(getDicePixMap(hand.getDice(4)));
-    ui->label_dice5->setPixmap(getDicePixMap(hand.getDice(5)));
-    ui->label_dice6->setPixmap(getDicePixMap(hand.getDice(6)));
+    dice1.setSelected(false);
+    dice1.setDice(hand.getDice(1));
+    dice2.setSelected(false);
+    dice2.setDice(hand.getDice(2));
+    dice3.setSelected(false);
+    dice3.setDice(hand.getDice(3));
+    dice4.setSelected(false);
+    dice4.setDice(hand.getDice(4));
+    dice5.setSelected(false);
+    dice5.setDice(hand.getDice(5));
+    dice6.setSelected(false);
+    dice6.setDice(hand.getDice(6));
 
     ui->label_free_ones->setText(QString::number(hand.getBestResult(DiceHandResult::Ones)));
     ui->label_free_twos->setText(QString::number(hand.getBestResult(DiceHandResult::Twos)));
@@ -123,7 +147,8 @@ void MainWindow::on_label_dice1_clicked()
         return; // don't swithc to selected if we still didn't roll dice
 
     auto hand = engine.getCurrentHand();
-    ui->label_dice1->setPixmap(getSelectedDicePixMap(hand.getDice(1)));
+    dice1.invertSelection();
+    dice1.drawImage();
 }
 
 void MainWindow::on_label_dice2_clicked()
@@ -131,8 +156,8 @@ void MainWindow::on_label_dice2_clicked()
     if (engine.currentRoll() == 0)
         return; // don't swithc to selected if we still didn't roll dice
 
-    auto hand = engine.getCurrentHand();
-    ui->label_dice2->setPixmap(getSelectedDicePixMap(hand.getDice(2)));
+    dice2.invertSelection();
+    dice2.drawImage();
 }
 
 void MainWindow::on_label_dice3_clicked()
@@ -140,8 +165,8 @@ void MainWindow::on_label_dice3_clicked()
     if (engine.currentRoll() == 0)
         return; // don't swithc to selected if we still didn't roll dice
 
-    auto hand = engine.getCurrentHand();
-    ui->label_dice3->setPixmap(getSelectedDicePixMap(hand.getDice(3)));
+    dice3.invertSelection();
+    dice3.drawImage();
 }
 
 void MainWindow::on_label_dice4_clicked()
@@ -149,8 +174,8 @@ void MainWindow::on_label_dice4_clicked()
     if (engine.currentRoll() == 0)
         return; // don't swithc to selected if we still didn't roll dice
 
-    auto hand = engine.getCurrentHand();
-    ui->label_dice4->setPixmap(getSelectedDicePixMap(hand.getDice(4)));
+    dice4.invertSelection();
+    dice4.drawImage();
 }
 
 void MainWindow::on_label_dice5_clicked()
@@ -158,8 +183,8 @@ void MainWindow::on_label_dice5_clicked()
     if (engine.currentRoll() == 0)
         return; // don't swithc to selected if we still didn't roll dice
 
-    auto hand = engine.getCurrentHand();
-    ui->label_dice5->setPixmap(getSelectedDicePixMap(hand.getDice(5)));
+    dice5.invertSelection();
+    dice5.drawImage();
 }
 
 void MainWindow::on_label_dice6_clicked()
@@ -167,6 +192,6 @@ void MainWindow::on_label_dice6_clicked()
     if (engine.currentRoll() == 0)
         return; // don't swithc to selected if we still didn't roll dice
 
-    auto hand = engine.getCurrentHand();
-    ui->label_dice6->setPixmap(getSelectedDicePixMap(hand.getDice(6)));
+    dice6.invertSelection();
+    dice6.drawImage();
 }

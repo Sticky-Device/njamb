@@ -7,7 +7,8 @@ NjambEngine::NjambEngine()
 
 void NjambEngine::resetGame()
 {
-
+    numberOfRolls = 0;
+    currentHand = {{6, 6, 6, 6, 6, 6}};
 }
 
 DiceHand NjambEngine::rollDice()

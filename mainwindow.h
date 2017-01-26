@@ -3,10 +3,30 @@
 
 #include <QMainWindow>
 #include "njambengine.h"
+#include "clickablelabel.h"
 
 namespace Ui {
 class MainWindow;
 }
+
+class Dice
+{
+public:
+    void setUp(int value, ClickableLabel* label) { val = value; uiElement = label; }
+
+    void setValue(int value) { val = value; }
+    void setSelected(bool s) { selected = s;} // flip selection
+    void invertSelection() { selected = !selected;}
+
+    void drawImage();
+
+    void setDice(int value);
+
+private:
+    int val;
+    ClickableLabel* uiElement;
+    bool selected = false;
+};
 
 class MainWindow : public QMainWindow
 {
@@ -38,6 +58,14 @@ private:
 private:
     NjambEngine engine;
     Ui::MainWindow *ui;
+
+private:
+    Dice dice1;
+    Dice dice2;
+    Dice dice3;
+    Dice dice4;
+    Dice dice5;
+    Dice dice6;
 };
 
 #endif // MAINWINDOW_H
