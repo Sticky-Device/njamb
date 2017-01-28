@@ -58,6 +58,11 @@ int DiceHand::getDice(int index)
     return dice[index - 1];
 }
 
+int &DiceHand::operator[](int index)
+{
+    return dice[index];
+}
+
 int DiceHand::getBestResultForNumber(int number)
 {
     auto result = std::accumulate(dice.begin(), dice.end(), 0, [=](int currentResult, int element) {

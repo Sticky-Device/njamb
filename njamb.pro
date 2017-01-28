@@ -23,7 +23,8 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h \
     dicehand.h \
     njambengine.h \
-    clickablelabel.h
+    clickablelabel.h \
+    rules.h
 
 FORMS    += mainwindow.ui
 

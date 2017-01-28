@@ -30,6 +30,8 @@ public:
     int getBestResult(DiceHandResult resultType);
     int getDice(int index);
 
+    int& operator[](int index);
+
 private:
     int getBestResultForNumber(int number);
 

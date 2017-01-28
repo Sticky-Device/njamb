@@ -12,5 +12,6 @@
         <file>resources/dice-selected-4.PNG</file>
         <file>resources/dice-selected-5.PNG</file>
         <file>resources/dice-selected-6.PNG</file>
+        <file>resources/blue-dice-icon.png</file>
     </qresource>
 </RCC>
