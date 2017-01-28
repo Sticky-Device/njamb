@@ -15,7 +15,9 @@ public:
     void setUp(int value, ClickableLabel* label) { val = value; uiElement = label; }
 
     void setValue(int value) { val = value; }
+    int getValue() { return val; }
     void setSelected(bool s) { selected = s;} // flip selection
+    bool isSelected() { return selected; }
     void invertSelection() { selected = !selected;}
 
     void drawImage();
@@ -38,22 +40,22 @@ public:
 
 private slots:
     void rollDiceButtonClicked();
+
+    // menu events
     void on_actionNew_Game_triggered();
     void on_actionAbout_Njamb_triggered();
+
+    // dice clicked events
     void on_label_dice1_clicked();
-
     void on_label_dice2_clicked();
-
     void on_label_dice3_clicked();
-
     void on_label_dice4_clicked();
-
     void on_label_dice5_clicked();
-
     void on_label_dice6_clicked();
 
 private:
     void resetUIElements();
+    std::vector<int> getSelectedDiceIndices();
 
 private:
     NjambEngine engine;

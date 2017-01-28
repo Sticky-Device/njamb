@@ -2,6 +2,9 @@
 #define NJAMBENGINE_H
 
 #include "dicehand.h"
+#include "rules.h"
+
+#include <vector>
 
 class NjambEngine
 {
@@ -10,12 +13,13 @@ public:
 
 public:
     void resetGame();
-    DiceHand rollDice();
+    DiceHand rollDice(std::vector<int> savedDice = {});
     DiceHand getCurrentHand();
     int currentRoll();
 
 private:
-    DiceHand currentHand{{6, 6, 6, 6, 6, 6}}; // we start we all sixes (for now)
+    const DiceHand defaultHand = {{Rules::DEFAULT_DICE, Rules::DEFAULT_DICE, Rules::DEFAULT_DICE, Rules::DEFAULT_DICE, Rules::DEFAULT_DICE, Rules::DEFAULT_DICE}};
+    DiceHand currentHand = defaultHand; // we start we all sixes (for now)
     int numberOfRolls = 0;
 };
 

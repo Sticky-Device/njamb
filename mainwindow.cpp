@@ -6,6 +6,7 @@
 #include <QPixmap>
 
 #include "dicehand.h"
+#include "rules.h"
 
 const QString aboutText = "Ovo je verzija njamba razvijana od strane Petra, Stefana i Todorica. Mirko radi sam.";
 
@@ -66,12 +67,12 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    dice1.setUp(6, ui->label_dice1);
-    dice2.setUp(6, ui->label_dice2);
-    dice3.setUp(6, ui->label_dice3);
-    dice4.setUp(6, ui->label_dice4);
-    dice5.setUp(6, ui->label_dice5);
-    dice6.setUp(6, ui->label_dice6);
+    dice1.setUp(Rules::DEFAULT_DICE, ui->label_dice1);
+    dice2.setUp(Rules::DEFAULT_DICE, ui->label_dice2);
+    dice3.setUp(Rules::DEFAULT_DICE, ui->label_dice3);
+    dice4.setUp(Rules::DEFAULT_DICE, ui->label_dice4);
+    dice5.setUp(Rules::DEFAULT_DICE, ui->label_dice5);
+    dice6.setUp(Rules::DEFAULT_DICE, ui->label_dice6);
 
     //events
     connect(ui->diceRollButton, SIGNAL (clicked()), this, SLOT (rollDiceButtonClicked()));
@@ -85,19 +86,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::rollDiceButtonClicked()
 {
-    auto hand = engine.rollDice();
+    auto savedDice = getSelectedDiceIndices();
+    auto hand = engine.rollDice(savedDice);
 
-    dice1.setSelected(false);
     dice1.setDice(hand.getDice(1));
-    dice2.setSelected(false);
     dice2.setDice(hand.getDice(2));
-    dice3.setSelected(false);
     dice3.setDice(hand.getDice(3));
-    dice4.setSelected(false);
     dice4.setDice(hand.getDice(4));
-    dice5.setSelected(false);
     dice5.setDice(hand.getDice(5));
-    dice6.setSelected(false);
     dice6.setDice(hand.getDice(6));
 
     ui->label_free_ones->setText(QString::number(hand.getBestResult(DiceHandResult::Ones)));
@@ -125,12 +121,19 @@ void MainWindow::on_actionAbout_Njamb_triggered()
 
 void MainWindow::resetUIElements()
 {
-    ui->label_dice1->setPixmap(getDicePixMap(6));
-    ui->label_dice2->setPixmap(getDicePixMap(6));
-    ui->label_dice3->setPixmap(getDicePixMap(6));
-    ui->label_dice4->setPixmap(getDicePixMap(6));
-    ui->label_dice5->setPixmap(getDicePixMap(6));
-    ui->label_dice6->setPixmap(getDicePixMap(6));
+    dice1.setSelected(false);
+    dice2.setSelected(false);
+    dice3.setSelected(false);
+    dice4.setSelected(false);
+    dice5.setSelected(false);
+    dice6.setSelected(false);
+
+    ui->label_dice1->setPixmap(getDicePixMap(Rules::DEFAULT_DICE));
+    ui->label_dice2->setPixmap(getDicePixMap(Rules::DEFAULT_DICE));
+    ui->label_dice3->setPixmap(getDicePixMap(Rules::DEFAULT_DICE));
+    ui->label_dice4->setPixmap(getDicePixMap(Rules::DEFAULT_DICE));
+    ui->label_dice5->setPixmap(getDicePixMap(Rules::DEFAULT_DICE));
+    ui->label_dice6->setPixmap(getDicePixMap(Rules::DEFAULT_DICE));
 
     ui->label_free_ones->setText("0");
     ui->label_free_twos->setText("0");
@@ -138,6 +141,25 @@ void MainWindow::resetUIElements()
     ui->label_free_fours->setText("0");
     ui->label_free_fives->setText("0");
     ui->label_free_sixes->setText("0");
+}
+
+std::vector<int> MainWindow::getSelectedDiceIndices()
+{
+    std::vector<int> result;
+    if (dice1.isSelected())
+        result.push_back(0);
+    if (dice2.isSelected())
+        result.push_back(1);
+    if (dice3.isSelected())
+        result.push_back(2);
+    if (dice4.isSelected())
+        result.push_back(3);
+    if (dice5.isSelected())
+        result.push_back(4);
+    if (dice6.isSelected())
+        result.push_back(5);
+
+    return result;
 }
 
 

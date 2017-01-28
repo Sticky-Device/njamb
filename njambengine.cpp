@@ -1,4 +1,9 @@
 #include "njambengine.h"
+#include "rules.h"
+
+#include <algorithm>
+
+using namespace std;
 
 NjambEngine::NjambEngine()
 {
@@ -8,13 +13,20 @@ NjambEngine::NjambEngine()
 void NjambEngine::resetGame()
 {
     numberOfRolls = 0;
-    currentHand = {{6, 6, 6, 6, 6, 6}};
+    currentHand = defaultHand;
 }
 
-DiceHand NjambEngine::rollDice()
+DiceHand NjambEngine::rollDice(std::vector<int> savedDice)
 {
     ++numberOfRolls;
-    currentHand = DiceHand();
+    auto newHand = DiceHand();
+    for(auto i = 0; i < 6; ++i)
+    {
+        // set only dice that are not selected
+        if (find(begin(savedDice), end(savedDice), i) == end(savedDice))
+            currentHand[i] = newHand[i];
+    }
+
     return currentHand;
 }
 
@@ -27,4 +39,3 @@ int NjambEngine::currentRoll()
 {
     return numberOfRolls;
 }
-
