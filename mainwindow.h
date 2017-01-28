@@ -38,6 +38,8 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    void loadHeavyStuff();
+
 private slots:
     void rollDiceButtonClicked();
 
@@ -56,6 +58,7 @@ private slots:
 private:
     void resetUIElements();
     std::vector<int> getSelectedDiceIndices();
+    void playDiceRollSound();
 
 private:
     NjambEngine engine;

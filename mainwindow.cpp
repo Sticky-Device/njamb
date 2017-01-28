@@ -4,11 +4,14 @@
 #include <QApplication>
 #include <QMessageBox>
 #include <QPixmap>
+#include <QSoundEffect>
+#include <QUrl>
 
 #include "dicehand.h"
 #include "rules.h"
 
 const QString aboutText = "Ovo je verzija njamba razvijana od strane Petra, Stefana i Todorica. Mirko radi sam.";
+QSoundEffect effect;
 
 QPixmap getDicePixMap(int number)
 {
@@ -84,8 +87,14 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::loadHeavyStuff()
+{
+    effect.setSource(QUrl("qrc:/dice/resources/dice-roll.wav"));
+}
+
 void MainWindow::rollDiceButtonClicked()
 {
+    playDiceRollSound();
     auto savedDice = getSelectedDiceIndices();
     auto hand = engine.rollDice(savedDice);
 
@@ -160,6 +169,11 @@ std::vector<int> MainWindow::getSelectedDiceIndices()
         result.push_back(5);
 
     return result;
+}
+
+void MainWindow::playDiceRollSound()
+{
+    effect.play();
 }
 
 
