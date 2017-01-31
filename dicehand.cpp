@@ -1,6 +1,7 @@
 #include "dicehand.h"
 #include "rules.h"
 
+#include <set>
 #include <random>
 #include <numeric>
 #include <algorithm>
@@ -118,7 +119,14 @@ int DiceHand::getBestResultTriling()
 
 int DiceHand::getBestResultStraight()
 {
-    return 0;
+    std::set<int> diceSet(begin(dice), end(dice));
+    if (diceSet.size() < 5)
+        return 0;
+
+    if (diceSet.size() == 6)
+        return std::accumulate(++begin(diceSet), end(diceSet), 0) + Rules::STRAIGHT_ADDITION;
+
+    return std::accumulate(begin(diceSet), end(diceSet), 0);
 }
 
 int DiceHand::getBestResultFull()
