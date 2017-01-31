@@ -10,6 +10,11 @@ NjambEngine::NjambEngine()
 
 }
 
+void NjambEngine::nextRound()
+{
+    numberOfRolls = 0;
+}
+
 void NjambEngine::resetGame()
 {
     numberOfRolls = 0;
@@ -37,5 +42,5 @@ DiceHand NjambEngine::getCurrentHand()
 
 int NjambEngine::currentRoll()
 {
-    return numberOfRolls;
+    return numberOfRolls % 4;
 }

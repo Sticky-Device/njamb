@@ -10,14 +10,18 @@ public:
     explicit ClickableLabel( QWidget* parent=0 );
     ~ClickableLabel();
 
-    void setClickable(bool c) { clickable = c; }
+    void setActive(bool c) { if (!filled) active = c; } // disable; can be reverted back to enabled
+    void setFilled() { filled = true; } // we are done with this label; cannot revert
 signals:
     void clicked();
+    void hovered();
+    void unhovered();
 protected:
-    void mousePressEvent(QMouseEvent*);
+    bool event(QEvent *e);
 
 private:
-    bool clickable = true;
+    bool active = false;
+    bool filled = false;
 };
 
 #endif // CLICKABLELABEL_H

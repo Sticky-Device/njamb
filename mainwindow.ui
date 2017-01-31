@@ -327,12 +327,18 @@
     </item>
     <item row="1" column="1">
      <widget class="ClickableLabel" name="label_118">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -343,6 +349,8 @@ background-color: rgb(53, 134, 214);</string>
      <widget class="ClickableLabel" name="label_free_ones">
       <property name="font">
        <font>
+        <weight>75</weight>
+        <bold>true</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -351,7 +359,7 @@ background-color: rgb(53, 134, 214);</string>
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -360,12 +368,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="1" column="3">
      <widget class="ClickableLabel" name="label_117">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -374,12 +388,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="1" column="4">
      <widget class="ClickableLabel" name="label_116">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -407,12 +427,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="1" column="5">
      <widget class="ClickableLabel" name="label_121">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -421,12 +447,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="1" column="6">
      <widget class="ClickableLabel" name="label_122">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -626,12 +658,18 @@ background-color: rgb(53, 134, 214);</string>
         </disabled>
        </palette>
       </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -640,12 +678,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="2" column="2">
      <widget class="ClickableLabel" name="label_free_twos">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -826,12 +870,18 @@ background-color: rgb(53, 134, 214);</string>
         </disabled>
        </palette>
       </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -840,12 +890,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="2" column="4">
      <widget class="ClickableLabel" name="label_109">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -854,12 +910,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="2" column="5">
      <widget class="ClickableLabel" name="label_114">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -868,12 +930,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="2" column="6">
      <widget class="ClickableLabel" name="label_115">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -901,12 +969,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="3" column="1">
      <widget class="ClickableLabel" name="label_104">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -915,12 +989,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="3" column="2">
      <widget class="ClickableLabel" name="label_free_threes">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -929,12 +1009,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="3" column="3">
      <widget class="ClickableLabel" name="label_103">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -943,12 +1029,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="3" column="4">
      <widget class="ClickableLabel" name="label_102">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -957,12 +1049,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="3" column="5">
      <widget class="ClickableLabel" name="label_107">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -971,12 +1069,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="3" column="6">
      <widget class="ClickableLabel" name="label_108">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -985,12 +1089,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="4" column="2">
      <widget class="ClickableLabel" name="label_free_fours">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -999,12 +1109,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="4" column="1">
      <widget class="ClickableLabel" name="label_97">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1013,12 +1129,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="4" column="3">
      <widget class="ClickableLabel" name="label_96">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1027,12 +1149,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="4" column="4">
      <widget class="ClickableLabel" name="label_95">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1041,12 +1169,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="4" column="5">
      <widget class="ClickableLabel" name="label_100">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1055,12 +1189,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="8" column="5">
      <widget class="ClickableLabel" name="label_71">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1069,12 +1209,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="4" column="6">
      <widget class="ClickableLabel" name="label_101">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1102,12 +1248,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="5" column="1">
      <widget class="ClickableLabel" name="label_90">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1116,12 +1268,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="5" column="2">
      <widget class="ClickableLabel" name="label_free_fives">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1130,12 +1288,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="5" column="3">
      <widget class="ClickableLabel" name="label_89">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1144,12 +1308,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="9" column="3">
      <widget class="ClickableLabel" name="label_60">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1158,12 +1328,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="5" column="4">
      <widget class="ClickableLabel" name="label_88">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1172,12 +1348,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="5" column="5">
      <widget class="ClickableLabel" name="label_93">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1186,12 +1368,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="5" column="6">
      <widget class="ClickableLabel" name="label_94">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1219,12 +1407,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="6" column="1">
      <widget class="ClickableLabel" name="label_83">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1233,12 +1427,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="6" column="2">
      <widget class="ClickableLabel" name="label_free_sixes">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1247,12 +1447,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="6" column="3">
      <widget class="ClickableLabel" name="label_82">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1261,12 +1467,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="6" column="4">
      <widget class="ClickableLabel" name="label_81">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1275,12 +1487,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="6" column="5">
      <widget class="ClickableLabel" name="label_86">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1289,12 +1507,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="6" column="6">
      <widget class="ClickableLabel" name="label_87">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1341,7 +1565,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="7" column="2">
-     <widget class="QLabel" name="label_80">
+     <widget class="QLabel" name="label_free_numbers_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1461,12 +1685,18 @@ background-color: rgb(30, 76, 122);</string>
     </item>
     <item row="8" column="1">
      <widget class="ClickableLabel" name="label_68">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1474,13 +1704,19 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="8" column="2">
-     <widget class="ClickableLabel" name="label_69">
+     <widget class="ClickableLabel" name="label_free_max">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1489,12 +1725,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="8" column="3">
      <widget class="ClickableLabel" name="label_67">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1503,12 +1745,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="8" column="4">
      <widget class="ClickableLabel" name="label_66">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1517,12 +1765,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="8" column="6">
      <widget class="ClickableLabel" name="label_72">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1569,12 +1823,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="9" column="1">
      <widget class="ClickableLabel" name="label_61">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1582,13 +1842,19 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="9" column="2">
-     <widget class="ClickableLabel" name="label_62">
+     <widget class="ClickableLabel" name="label_free_min">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1597,12 +1863,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="9" column="4">
      <widget class="ClickableLabel" name="label_59">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1611,12 +1883,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="9" column="5">
      <widget class="ClickableLabel" name="label_64">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1625,12 +1903,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="9" column="6">
      <widget class="ClickableLabel" name="label_65">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1677,7 +1961,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="10" column="2">
-     <widget class="QLabel" name="label_58">
+     <widget class="QLabel" name="label_free_minmax_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1777,7 +2061,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="10" column="7">
-     <widget class="QLabel" name="label_53">
+     <widget class="QLabel" name="label_minmax_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1817,12 +2101,18 @@ background-color: rgb(30, 76, 122);</string>
     </item>
     <item row="11" column="1">
      <widget class="ClickableLabel" name="label_46">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1830,13 +2120,19 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="11" column="2">
-     <widget class="ClickableLabel" name="label_47">
+     <widget class="ClickableLabel" name="label_free_triling">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1845,12 +2141,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="11" column="3">
      <widget class="ClickableLabel" name="label_45">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1859,12 +2161,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="11" column="4">
      <widget class="ClickableLabel" name="label_44">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1873,12 +2181,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="11" column="5">
      <widget class="ClickableLabel" name="label_49">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1887,12 +2201,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="11" column="6">
      <widget class="ClickableLabel" name="label_50">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1911,7 +2231,7 @@ background-color: rgb(53, 134, 214);</string>
        <enum>Qt::LeftToRight</enum>
       </property>
       <property name="text">
-       <string>Kenta</string>
+       <string>Straight</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1920,12 +2240,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="12" column="1">
      <widget class="ClickableLabel" name="label_39">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1933,13 +2259,19 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="12" column="2">
-     <widget class="ClickableLabel" name="label_40">
+     <widget class="ClickableLabel" name="label_free_straight">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1948,12 +2280,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="12" column="3">
      <widget class="ClickableLabel" name="label_38">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1962,12 +2300,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="12" column="4">
      <widget class="ClickableLabel" name="label_37">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1976,12 +2320,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="12" column="5">
      <widget class="ClickableLabel" name="label_42">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1990,12 +2340,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="12" column="6">
      <widget class="ClickableLabel" name="label_43">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2023,12 +2379,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="13" column="1">
      <widget class="ClickableLabel" name="label_32">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2036,13 +2398,19 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="13" column="2">
-     <widget class="ClickableLabel" name="label_33">
+     <widget class="ClickableLabel" name="label_free_full">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2051,12 +2419,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="13" column="3">
      <widget class="ClickableLabel" name="label_31">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2065,12 +2439,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="13" column="4">
      <widget class="ClickableLabel" name="label_30">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2079,12 +2459,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="13" column="5">
      <widget class="ClickableLabel" name="label_35">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2093,12 +2479,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="13" column="6">
      <widget class="ClickableLabel" name="label_36">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2126,12 +2518,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="14" column="1">
      <widget class="ClickableLabel" name="label_25">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2139,13 +2537,19 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="14" column="2">
-     <widget class="ClickableLabel" name="label_26">
+     <widget class="ClickableLabel" name="label_free_poker">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2154,12 +2558,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="14" column="3">
      <widget class="ClickableLabel" name="label_24">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2168,12 +2578,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="14" column="4">
      <widget class="ClickableLabel" name="label_19">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2182,12 +2598,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="14" column="5">
      <widget class="ClickableLabel" name="label_28">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2196,12 +2618,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="14" column="6">
      <widget class="ClickableLabel" name="label_29">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2229,12 +2657,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="15" column="1">
      <widget class="ClickableLabel" name="label_21">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2242,13 +2676,19 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="15" column="2">
-     <widget class="ClickableLabel" name="label_23">
+     <widget class="ClickableLabel" name="label_free_yamb">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2257,12 +2697,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="15" column="3">
      <widget class="ClickableLabel" name="label_22">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2271,12 +2717,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="15" column="4">
      <widget class="ClickableLabel" name="label_17">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(42, 104, 167);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2285,12 +2737,18 @@ background-color: rgb(42, 104, 167);</string>
     </item>
     <item row="15" column="5">
      <widget class="ClickableLabel" name="label_18">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2299,12 +2757,18 @@ background-color: rgb(53, 134, 214);</string>
     </item>
     <item row="15" column="6">
      <widget class="ClickableLabel" name="label_20">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(53, 134, 214);</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2351,7 +2815,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="16" column="2">
-     <widget class="QLabel" name="label_9">
+     <widget class="QLabel" name="label_free_major_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2556,7 +3020,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="7" column="7">
-     <widget class="QLabel" name="label_79">
+     <widget class="QLabel" name="label_numbers_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2576,7 +3040,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="16" column="7">
-     <widget class="QLabel" name="label_14">
+     <widget class="QLabel" name="label_major_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2596,7 +3060,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="17" column="1" colspan="6">
-     <widget class="QLabel" name="label_7">
+     <widget class="QLabel" name="label_final_result">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2744,6 +3208,8 @@ background-color: rgb(30, 76, 122);</string>
    <header location="global">clickablelabel.h</header>
    <slots>
     <signal>clicked()</signal>
+    <signal>hovered()</signal>
+    <signal>unhovered()</signal>
    </slots>
   </customwidget>
  </customwidgets>

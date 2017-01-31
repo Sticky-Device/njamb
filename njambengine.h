@@ -12,6 +12,7 @@ public:
     NjambEngine();
 
 public:
+    void nextRound();
     void resetGame();
     DiceHand rollDice(std::vector<int> savedDice = {});
     DiceHand getCurrentHand();

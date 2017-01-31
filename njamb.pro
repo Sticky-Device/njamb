@@ -6,7 +6,7 @@
 
 QT       += core gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets multimedia
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = njamb
 TEMPLATE = app
@@ -18,13 +18,15 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     dicehand.cpp \
     njambengine.cpp \
-    clickablelabel.cpp
+    clickablelabel.cpp \
+    results.cpp
 
 HEADERS  += mainwindow.h \
     dicehand.h \
     njambengine.h \
     clickablelabel.h \
-    rules.h
+    rules.h \
+    results.h
 
 FORMS    += mainwindow.ui
 

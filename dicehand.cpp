@@ -1,6 +1,10 @@
 #include "dicehand.h"
+#include "rules.h"
+
 #include <random>
 #include <numeric>
+#include <algorithm>
+#include <functional>
 
 static int generateRandomDiceInteger()
 {
@@ -25,22 +29,36 @@ DiceHand::DiceHand(std::vector<int> savedDice)
     Init(); // init remaining
 }
 
-int DiceHand::getBestResult(DiceHandResult resultType)
+int DiceHand::getBestResult(Rules::YambField resultType)
 {
     switch (resultType)
     {
-    case DiceHandResult::Ones :
+    case Rules::YambField::Ones :
         return getBestResultForNumber(1);
-    case DiceHandResult::Twos :
+    case Rules::YambField::Twos :
         return getBestResultForNumber(2);
-    case DiceHandResult::Threes :
+    case Rules::YambField::Threes :
         return getBestResultForNumber(3);
-    case DiceHandResult::Fours :
+    case Rules::YambField::Fours :
         return getBestResultForNumber(4);
-    case DiceHandResult::Fives :
+    case Rules::YambField::Fives :
         return getBestResultForNumber(5);
-    case DiceHandResult::Sixes :
+    case Rules::YambField::Sixes :
         return getBestResultForNumber(6);
+    case Rules::YambField::Max :
+        return getBestResultMax();
+    case Rules::YambField::Min :
+        return getBestResultMin();
+    case Rules::YambField::Triling :
+        return getBestResultTriling();
+    case Rules::YambField::Straight :
+        return getBestResultStraight();
+    case Rules::YambField::Full :
+        return getBestResultFull();
+    case Rules::YambField::Poker :
+        return getBestResultPoker();
+    case Rules::YambField::Yamb :
+        return getBestResultYamb();
     default:
         break;
     }
@@ -75,9 +93,93 @@ int DiceHand::getBestResultForNumber(int number)
     return result < maxRes ? result : maxRes;
 }
 
+int DiceHand::getBestResultMax()
+{
+    auto hand = dice;
+    std::sort(begin(hand), end(hand));
+    return std::accumulate(++begin(hand), end(hand), 0);
+}
+
+int DiceHand::getBestResultMin()
+{
+    auto hand = dice;
+    std::sort(begin(hand), end(hand));
+    return std::accumulate(begin(hand), --end(hand), 0);
+}
+
+int DiceHand::getBestResultTriling()
+{
+    auto maxDiceOf3 = getMaxDiceThatWeHaveAtLeast(3);
+    if (maxDiceOf3 == 0)
+        return 0;
+
+    return 3 * maxDiceOf3 + Rules::TRILING_ADDITION;
+}
+
+int DiceHand::getBestResultStraight()
+{
+    return 0;
+}
+
+int DiceHand::getBestResultFull()
+{
+    auto maxDiceOf3 = getMaxDiceThatWeHaveAtLeast(3);
+    auto maxDiceOf2 = getMaxDiceThatWeHaveExactly(2);
+
+    if ((maxDiceOf2 == 0) || (maxDiceOf3 == 0))
+        return 0;
+
+    return 3 * maxDiceOf3 + 2 * maxDiceOf2 + Rules::FULL_ADDITION;
+}
+
+int DiceHand::getBestResultPoker()
+{
+    auto diceOf4 = getMaxDiceThatWeHaveAtLeast(4);
+    if (diceOf4 == 0)
+        return 0;
+
+    return 4 * diceOf4 + Rules::POKER_ADDITION;
+}
+
+int DiceHand::getBestResultYamb()
+{
+    auto diceOf5 = getMaxDiceThatWeHaveAtLeast(5);
+    if (diceOf5 == 0)
+        return 0;
+
+    return 5 * diceOf5 + Rules::YAMB_ADDITION;
+}
+
+int DiceHand::getMaxDiceThatWeHaveAtLeast(int numberOf)
+{
+    return getMaxDiceThatMeetsCriteria(numberOf, [](int a, int b) {return a >= b;});
+}
+
+int DiceHand::getMaxDiceThatWeHaveExactly(int numberOf)
+{
+    return getMaxDiceThatMeetsCriteria(numberOf, [](int a, int b) {return a == b;});
+}
+
+template<typename Operator>
+int DiceHand::getMaxDiceThatMeetsCriteria(int numberOf, Operator op)
+{
+    std::vector<int> result;
+    for (auto i : dice)
+    {
+        if (op(static_cast<int>(std::count(begin(dice), end(dice), i)), numberOf))
+            result.push_back(i);
+    }
+
+    // check if this is needed at all
+    if (result.empty())
+        return 0;
+
+    return *std::max_element(begin(result), end(result));
+}
+
 void DiceHand::Init()
 {
-    for (int i = dice.size(); i < 6; ++i)
+    for (auto i = dice.size(); i < 6; ++i)
         dice.push_back(generateRandomDiceInteger());
 }
 
