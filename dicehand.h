@@ -12,7 +12,7 @@ public:
     DiceHand(std::vector<int> savedDice);
 
 public:
-    int getBestResult(Rules::YambField resultType);
+    int getBestResult(Rules::YambField resultType, int currentRoll = 0);
     int getDice(int index);
 
     int& operator[](int index);
@@ -22,15 +22,16 @@ private:
     int getBestResultMax();
     int getBestResultMin();
     int getBestResultTriling();
-    int getBestResultStraight();
+    int getBestResultStraight(int currentRoll);
     int getBestResultFull();
     int getBestResultPoker();
     int getBestResultYamb();
 
-    template<typename Operator>
-    int getMaxDiceThatMeetsCriteria(int numberOf, Operator op);
+    template<typename Operator1, typename Operator2>
+    int getMaxDiceThatMeetsCriteria(int numberOf, Operator1 op1, Operator2 op2);
     int getMaxDiceThatWeHaveAtLeast(int numberOf);
     int getMaxDiceThatWeHaveExactly(int numberOf);
+    int getMaxMinorDiceForFull(int majorFullDice);
 
 private:
     void Init();

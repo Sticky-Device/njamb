@@ -30,7 +30,7 @@ DiceHand::DiceHand(std::vector<int> savedDice)
     Init(); // init remaining
 }
 
-int DiceHand::getBestResult(Rules::YambField resultType)
+int DiceHand::getBestResult(Rules::YambField resultType, int currentRoll)
 {
     switch (resultType)
     {
@@ -53,7 +53,7 @@ int DiceHand::getBestResult(Rules::YambField resultType)
     case Rules::YambField::Triling :
         return getBestResultTriling();
     case Rules::YambField::Straight :
-        return getBestResultStraight();
+        return getBestResultStraight(currentRoll);
     case Rules::YambField::Full :
         return getBestResultFull();
     case Rules::YambField::Poker :
@@ -117,27 +117,38 @@ int DiceHand::getBestResultTriling()
     return 3 * maxDiceOf3 + Rules::TRILING_ADDITION;
 }
 
-int DiceHand::getBestResultStraight()
+int DiceHand::getBestResultStraight(int currentRoll)
 {
+    if (currentRoll < 1 || currentRoll > 3)
+        return 0; // mark error
+
     std::set<int> diceSet(begin(dice), end(dice));
     if (diceSet.size() < 5)
         return 0;
 
-    if (diceSet.size() == 6)
-        return std::accumulate(++begin(diceSet), end(diceSet), 0) + Rules::STRAIGHT_ADDITION;
+    switch (currentRoll) {
+    case 1:
+        return Rules::STRAIGHT_FIRST_HAND;
+    case 2:
+        return Rules::STRAIGHT_SECOND_HAND;
+    case 3 :
+        return Rules::STRAIGHT_THIRD_HAND;
+    default:
+        break;
+    }
 
-    return std::accumulate(begin(diceSet), end(diceSet), 0);
+    return 0;
 }
 
 int DiceHand::getBestResultFull()
 {
-    auto maxDiceOf3 = getMaxDiceThatWeHaveAtLeast(3);
-    auto maxDiceOf2 = getMaxDiceThatWeHaveExactly(2);
+    auto majorDice = getMaxDiceThatWeHaveAtLeast(3);
+    auto minorDice = getMaxMinorDiceForFull(majorDice);
 
-    if ((maxDiceOf2 == 0) || (maxDiceOf3 == 0))
+    if ((majorDice == 0) || (minorDice == 0))
         return 0;
 
-    return 3 * maxDiceOf3 + 2 * maxDiceOf2 + Rules::FULL_ADDITION;
+    return 3 * majorDice + 2 * minorDice + Rules::FULL_ADDITION;
 }
 
 int DiceHand::getBestResultPoker()
@@ -160,21 +171,26 @@ int DiceHand::getBestResultYamb()
 
 int DiceHand::getMaxDiceThatWeHaveAtLeast(int numberOf)
 {
-    return getMaxDiceThatMeetsCriteria(numberOf, [](int a, int b) {return a >= b;});
+    return getMaxDiceThatMeetsCriteria(numberOf, [](int a, int b) {return a >= b;}, [](int){return true;});
 }
 
 int DiceHand::getMaxDiceThatWeHaveExactly(int numberOf)
 {
-    return getMaxDiceThatMeetsCriteria(numberOf, [](int a, int b) {return a == b;});
+    return getMaxDiceThatMeetsCriteria(numberOf, [](int a, int b) {return a == b;}, [](int){return true;});
 }
 
-template<typename Operator>
-int DiceHand::getMaxDiceThatMeetsCriteria(int numberOf, Operator op)
+int DiceHand::getMaxMinorDiceForFull(int majorFullDice)
+{
+    return getMaxDiceThatMeetsCriteria(2, [](int a, int b) {return a >= b;}, [=](int dice){ return dice != majorFullDice; });
+}
+
+template<typename Operator1, typename Operator2>
+int DiceHand::getMaxDiceThatMeetsCriteria(int numberOf, Operator1 op1, Operator2 op2)
 {
     std::vector<int> result;
     for (auto i : dice)
     {
-        if (op(static_cast<int>(std::count(begin(dice), end(dice), i)), numberOf))
+        if (op1(static_cast<int>(std::count(begin(dice), end(dice), i)), numberOf) && op2(i))
             result.push_back(i);
     }
 

@@ -11,7 +11,7 @@ public:
     ~ClickableLabel();
 
     void setActive(bool c) { if (!filled) active = c; } // disable; can be reverted back to enabled
-    void setFilled() { filled = true; } // we are done with this label; cannot revert
+    void setFilled(bool f) { filled = f; } // we are done with this label for this game; can be reverted only if new game is selected
 signals:
     void clicked();
     void hovered();

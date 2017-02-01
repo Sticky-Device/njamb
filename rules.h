@@ -7,7 +7,9 @@ const int DEFAULT_DICE = 5;
 
 // additions to results
 const int TRILING_ADDITION = 20;
-const int STRAIGHT_ADDITION = 0;
+const int STRAIGHT_FIRST_HAND = 66;
+const int STRAIGHT_SECOND_HAND = 56;
+const int STRAIGHT_THIRD_HAND = 46;
 const int FULL_ADDITION = 30;
 const int POKER_ADDITION = 40;
 const int YAMB_ADDITION = 50;
