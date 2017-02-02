@@ -28,7 +28,8 @@ SOURCES += main.cpp\
     callcollumn.cpp \
     handcollumn.cpp
 
-HEADERS  += mainwindow.h \
+HEADERS  += \
+    mainwindow.h \
     dicehand.h \
     njambengine.h \
     clickablelabel.h \

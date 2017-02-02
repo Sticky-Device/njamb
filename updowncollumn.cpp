@@ -1,6 +1,6 @@
-#include "upUpDownCollumn.h"
+#include "UpDownCollumn.h"
 
-UpUpDownCollumn::UpUpDownCollumn(Ui::MainWindow *ui, NjambEngine &engine) : AbstractCollumn(ui, engine)
+UpDownCollumn::UpDownCollumn(Ui::MainWindow *ui, NjambEngine &engine) : AbstractCollumn(ui, engine)
 {
 
 }

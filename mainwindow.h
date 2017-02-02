@@ -6,7 +6,12 @@
 #include "results.h"
 #include "clickablelabel.h"
 
+#include "downcollumn.h"
 #include "freecollumn.h"
+#include "upcollumn.h"
+#include "updowncollumn.h"
+#include "handcollumn.h"
+#include "callcollumn.h"
 
 
 namespace Ui {
@@ -115,6 +120,8 @@ private slots:
     void on_label_free_poker_clicked();
     void on_label_free_yamb_clicked();
 
+    void on_label_down_ones_clicked();
+
 private:
     void nextRound();
     void updateResults(Rules::Collumn, Rules::YambField, int value);
@@ -140,7 +147,12 @@ private:
     Dice dice6;
 
 private:
+    DownCollumn downCollumn;
     FreeCollumn freeCollumn;
+    UpCollumn upCollumn;
+    UpDownCollumn upDownCollumn;
+    HandCollumn handCollumn;
+    CallCollumn callCollumn;
 
 private:
     Results results;

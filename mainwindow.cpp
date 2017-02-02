@@ -65,7 +65,12 @@ void Dice::setDice(int value)
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
-    freeCollumn(ui, engine)
+    downCollumn(ui, engine),
+    freeCollumn(ui, engine),
+    upCollumn(ui, engine),
+    upDownCollumn(ui, engine),
+    handCollumn(ui, engine),
+    callCollumn(ui, engine)
 {
     ui->setupUi(this);
 
@@ -155,7 +160,12 @@ void MainWindow::resetUIElements()
     ui->label_dice5->setPixmap(getDicePixMap(Rules::DEFAULT_DICE));
     ui->label_dice6->setPixmap(getDicePixMap(Rules::DEFAULT_DICE));
 
+    downCollumn.reset();
     freeCollumn.reset();
+    upCollumn.reset();
+    upDownCollumn.reset();
+    handCollumn.reset();
+    callCollumn.reset();
 
     ui->diceRollButton->setEnabled(true);
 
@@ -483,6 +493,51 @@ void MainWindow::on_label_free_yamb_clicked()
     nextRound();
 }
 
+//void MainWindow::on_label_down_ones_hovered()
+//{
+//    ui->label_down_threes->setText("11");
+//}
+
+//void MainWindow::on_label_down_ones_unhovered()
+//{
+
+//}
+
+//void MainWindow::on_label_down_ones_clicked()
+//{
+
+//}
+
+//void MainWindow::on_label_down_twos_hovered()
+//{
+
+//}
+
+//void MainWindow::on_label_down_twos_unhovered()
+//{
+
+//}
+
+//void MainWindow::on_label_down_twos_clicked()
+//{
+
+//}
+
+//void MainWindow::on_label_down_threes_hovered()
+//{
+
+//}
+
+//void MainWindow::on_label_down_threes_unhovered()
+//{
+
+//}
+
+//void MainWindow::on_label_down_threes_clicked()
+//{
+
+//}
+
 void MainWindow::nextRound()
 {
     engine.nextRound();
@@ -526,3 +581,4 @@ void MainWindow::updateResults(Rules::Collumn collumn, Rules::YambField field, i
 
     ui->label_final_result->setText(QString("Final Result: ") + QString::number(results.getFinalResult()));
 }
+

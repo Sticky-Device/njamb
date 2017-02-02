@@ -86,6 +86,16 @@ public:
 protected:
     Ui::MainWindow *ui;
     NjambEngine& engine;
+private slots:
+    void on_label_down_ones_hovered();
+    void on_label_down_ones_unhovered();
+    void on_label_down_ones_clicked();
+    void on_label_down_twos_hovered();
+    void on_label_down_twos_unhovered();
+    void on_label_down_twos_clicked();
+    void on_label_down_threes_hovered();
+    void on_label_down_threes_unhovered();
+    void on_label_down_threes_clicked();
 };
 
 #endif // ABSTRACTCOLLUMN_H
