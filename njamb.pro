@@ -22,7 +22,11 @@ SOURCES += main.cpp\
     results.cpp \
     abstractcollumn.cpp \
     freecollumn.cpp \
-    downcollumn.cpp
+    downcollumn.cpp \
+    upcollumn.cpp \
+    updowncollumn.cpp \
+    callcollumn.cpp \
+    handcollumn.cpp
 
 HEADERS  += mainwindow.h \
     dicehand.h \
@@ -32,7 +36,11 @@ HEADERS  += mainwindow.h \
     results.h \
     abstractcollumn.h \
     freecollumn.h \
-    downcollumn.h
+    downcollumn.h \
+    upcollumn.h \
+    updowncollumn.h \
+    callcollumn.h \
+    handcollumn.h
 
 FORMS    += mainwindow.ui
 

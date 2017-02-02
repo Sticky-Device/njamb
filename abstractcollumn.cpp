@@ -245,7 +245,7 @@ void AbstractCollumn::trilingClicked()
 void AbstractCollumn::straightHovered()
 {
     auto hand = engine.getCurrentHand();
-    getUIElementStraight()->setText(QString::number(hand.getBestResult(Rules::YambField::Straight)));
+    getUIElementStraight()->setText(QString::number(hand.getBestResult(Rules::YambField::Straight, engine.currentRoll())));
 }
 
 void AbstractCollumn::straightUnhovered()
@@ -256,7 +256,7 @@ void AbstractCollumn::straightUnhovered()
 void AbstractCollumn::straightClicked()
 {
     auto hand = engine.getCurrentHand();
-    auto result = hand.getBestResult(Rules::YambField::Straight);
+    auto result = hand.getBestResult(Rules::YambField::Straight, engine.currentRoll());
     ui->label_free_straight->setText(QString::number(result));
     ui->label_free_straight->setStyleSheet(Rules::FILLED_LABEL_COLOR);
     ui->label_free_straight->setFilled(true);

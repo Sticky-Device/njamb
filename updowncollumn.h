@@ -1,15 +1,15 @@
-#ifndef DOWNCOLLUMN_H
-#define DOWNCOLLUMN_H
+#ifndef UPDOWNCOLLUMN_H
+#define UPDOWNCOLLUMN_H
 
 #include "abstractcollumn.h"
 
-class DownCollumn : public AbstractCollumn
+class UpDownCollumn : public AbstractCollumn
 {
 public:
-    DownCollumn(Ui::MainWindow *ui, NjambEngine&);
+    UpDownCollumn(Ui::MainWindow* ui, NjambEngine& engine);
 
 public:
-    ClickableLabel *getUIElementOnes() override;
+    ClickableLabel* getUIElementOnes() override;
     ClickableLabel* getUIElementTwos() override;
     ClickableLabel* getUIElementThrees() override;
     ClickableLabel* getUIElementFours() override;
@@ -24,4 +24,4 @@ public:
     ClickableLabel* getUIElementYamb() override;
 };
 
-#endif // DOWNCOLLUMN_H
+#endif // UPDOWNCOLLUMN_H

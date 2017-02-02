@@ -367,7 +367,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="1" column="3">
-     <widget class="ClickableLabel" name="label_117">
+     <widget class="ClickableLabel" name="label_up_ones">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -387,7 +387,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="1" column="4">
-     <widget class="ClickableLabel" name="label_116">
+     <widget class="ClickableLabel" name="label_updown_ones">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -426,7 +426,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="1" column="5">
-     <widget class="ClickableLabel" name="label_121">
+     <widget class="ClickableLabel" name="label_hand_ones">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -446,7 +446,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="1" column="6">
-     <widget class="ClickableLabel" name="label_122">
+     <widget class="ClickableLabel" name="label_call_ones">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -697,7 +697,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="2" column="3">
-     <widget class="ClickableLabel" name="label_110">
+     <widget class="ClickableLabel" name="label_up_twos">
       <property name="palette">
        <palette>
         <active>
@@ -889,7 +889,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="2" column="4">
-     <widget class="ClickableLabel" name="label_109">
+     <widget class="ClickableLabel" name="label_updown_twos">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -909,7 +909,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="2" column="5">
-     <widget class="ClickableLabel" name="label_114">
+     <widget class="ClickableLabel" name="label_hand_twos">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -929,7 +929,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="2" column="6">
-     <widget class="ClickableLabel" name="label_115">
+     <widget class="ClickableLabel" name="label_call_twos">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1008,7 +1008,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="3" column="3">
-     <widget class="ClickableLabel" name="label_103">
+     <widget class="ClickableLabel" name="label_up_threes">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1028,7 +1028,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="3" column="4">
-     <widget class="ClickableLabel" name="label_102">
+     <widget class="ClickableLabel" name="label_updown_threes">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1048,7 +1048,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="3" column="5">
-     <widget class="ClickableLabel" name="label_107">
+     <widget class="ClickableLabel" name="label_hand_threes">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1068,7 +1068,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="3" column="6">
-     <widget class="ClickableLabel" name="label_108">
+     <widget class="ClickableLabel" name="label_call_threes">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1108,7 +1108,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="4" column="1">
-     <widget class="ClickableLabel" name="label_97">
+     <widget class="ClickableLabel" name="label_down_fours">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1128,7 +1128,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="4" column="3">
-     <widget class="ClickableLabel" name="label_96">
+     <widget class="ClickableLabel" name="label_up_fours">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1148,7 +1148,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="4" column="4">
-     <widget class="ClickableLabel" name="label_95">
+     <widget class="ClickableLabel" name="label_updown_fours">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1168,7 +1168,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="4" column="5">
-     <widget class="ClickableLabel" name="label_100">
+     <widget class="ClickableLabel" name="label_hand_fours">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1188,7 +1188,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="8" column="5">
-     <widget class="ClickableLabel" name="label_71">
+     <widget class="ClickableLabel" name="label_hand_max">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1208,7 +1208,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="4" column="6">
-     <widget class="ClickableLabel" name="label_101">
+     <widget class="ClickableLabel" name="label_call_fours">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1247,7 +1247,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="5" column="1">
-     <widget class="ClickableLabel" name="label_90">
+     <widget class="ClickableLabel" name="label_down_fives">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1287,7 +1287,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="5" column="3">
-     <widget class="ClickableLabel" name="label_89">
+     <widget class="ClickableLabel" name="label_up_fives">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1307,7 +1307,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="9" column="3">
-     <widget class="ClickableLabel" name="label_60">
+     <widget class="ClickableLabel" name="label_up_min">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1327,7 +1327,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="5" column="4">
-     <widget class="ClickableLabel" name="label_88">
+     <widget class="ClickableLabel" name="label_updown_fives">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1347,7 +1347,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="5" column="5">
-     <widget class="ClickableLabel" name="label_93">
+     <widget class="ClickableLabel" name="label_hand_fives">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1367,7 +1367,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="5" column="6">
-     <widget class="ClickableLabel" name="label_94">
+     <widget class="ClickableLabel" name="label_call_fives">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1406,7 +1406,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="6" column="1">
-     <widget class="ClickableLabel" name="label_83">
+     <widget class="ClickableLabel" name="label_down_sixes">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1446,7 +1446,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="6" column="3">
-     <widget class="ClickableLabel" name="label_82">
+     <widget class="ClickableLabel" name="label_up_sixes">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1466,7 +1466,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="6" column="4">
-     <widget class="ClickableLabel" name="label_81">
+     <widget class="ClickableLabel" name="label_updown_sixes">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1486,7 +1486,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="6" column="5">
-     <widget class="ClickableLabel" name="label_86">
+     <widget class="ClickableLabel" name="label_hand_sixes">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1506,7 +1506,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="6" column="6">
-     <widget class="ClickableLabel" name="label_87">
+     <widget class="ClickableLabel" name="label_call_sixes">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1684,7 +1684,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="8" column="1">
-     <widget class="ClickableLabel" name="label_68">
+     <widget class="ClickableLabel" name="label_down_max">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1724,7 +1724,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="8" column="3">
-     <widget class="ClickableLabel" name="label_67">
+     <widget class="ClickableLabel" name="label_up_max">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1744,7 +1744,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="8" column="4">
-     <widget class="ClickableLabel" name="label_66">
+     <widget class="ClickableLabel" name="label_updown_max">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1764,7 +1764,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="8" column="6">
-     <widget class="ClickableLabel" name="label_72">
+     <widget class="ClickableLabel" name="label_call_max">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1822,7 +1822,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="9" column="1">
-     <widget class="ClickableLabel" name="label_61">
+     <widget class="ClickableLabel" name="label_down_min">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1862,7 +1862,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="9" column="4">
-     <widget class="ClickableLabel" name="label_59">
+     <widget class="ClickableLabel" name="label_updown_min">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1882,7 +1882,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="9" column="5">
-     <widget class="ClickableLabel" name="label_64">
+     <widget class="ClickableLabel" name="label_hand_min">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1902,7 +1902,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="9" column="6">
-     <widget class="ClickableLabel" name="label_65">
+     <widget class="ClickableLabel" name="label_call_min">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2100,7 +2100,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="11" column="1">
-     <widget class="ClickableLabel" name="label_46">
+     <widget class="ClickableLabel" name="label_down_triling">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2140,7 +2140,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="11" column="3">
-     <widget class="ClickableLabel" name="label_45">
+     <widget class="ClickableLabel" name="label_up_triling">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2160,7 +2160,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="11" column="4">
-     <widget class="ClickableLabel" name="label_44">
+     <widget class="ClickableLabel" name="label_updown_triling">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2180,7 +2180,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="11" column="5">
-     <widget class="ClickableLabel" name="label_49">
+     <widget class="ClickableLabel" name="label_hand_triling">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2200,7 +2200,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="11" column="6">
-     <widget class="ClickableLabel" name="label_50">
+     <widget class="ClickableLabel" name="label_call_triling">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2239,7 +2239,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="12" column="1">
-     <widget class="ClickableLabel" name="label_39">
+     <widget class="ClickableLabel" name="label_down_straight">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2279,7 +2279,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="12" column="3">
-     <widget class="ClickableLabel" name="label_38">
+     <widget class="ClickableLabel" name="label_up_straight">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2299,7 +2299,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="12" column="4">
-     <widget class="ClickableLabel" name="label_37">
+     <widget class="ClickableLabel" name="label_updown_straight">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2319,7 +2319,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="12" column="5">
-     <widget class="ClickableLabel" name="label_42">
+     <widget class="ClickableLabel" name="label_hand_straight">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2339,7 +2339,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="12" column="6">
-     <widget class="ClickableLabel" name="label_43">
+     <widget class="ClickableLabel" name="label_call_straight">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2378,7 +2378,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="13" column="1">
-     <widget class="ClickableLabel" name="label_32">
+     <widget class="ClickableLabel" name="label_down_full">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2418,7 +2418,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="13" column="3">
-     <widget class="ClickableLabel" name="label_31">
+     <widget class="ClickableLabel" name="label_up_full">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2438,7 +2438,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="13" column="4">
-     <widget class="ClickableLabel" name="label_30">
+     <widget class="ClickableLabel" name="label_updown_full">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2458,7 +2458,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="13" column="5">
-     <widget class="ClickableLabel" name="label_35">
+     <widget class="ClickableLabel" name="label_hand_full">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2478,7 +2478,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="13" column="6">
-     <widget class="ClickableLabel" name="label_36">
+     <widget class="ClickableLabel" name="label_call_full">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2517,7 +2517,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="14" column="1">
-     <widget class="ClickableLabel" name="label_25">
+     <widget class="ClickableLabel" name="label_down_poker">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2557,7 +2557,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="14" column="3">
-     <widget class="ClickableLabel" name="label_24">
+     <widget class="ClickableLabel" name="label_up_poker">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2577,7 +2577,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="14" column="4">
-     <widget class="ClickableLabel" name="label_19">
+     <widget class="ClickableLabel" name="label_updown_poker">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2597,7 +2597,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="14" column="5">
-     <widget class="ClickableLabel" name="label_28">
+     <widget class="ClickableLabel" name="label_hand_poker">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2617,7 +2617,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="14" column="6">
-     <widget class="ClickableLabel" name="label_29">
+     <widget class="ClickableLabel" name="label_call_poker">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2656,7 +2656,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="15" column="1">
-     <widget class="ClickableLabel" name="label_21">
+     <widget class="ClickableLabel" name="label_down_yamb">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2696,7 +2696,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="15" column="3">
-     <widget class="ClickableLabel" name="label_22">
+     <widget class="ClickableLabel" name="label_up_yamb">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2716,7 +2716,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="15" column="4">
-     <widget class="ClickableLabel" name="label_17">
+     <widget class="ClickableLabel" name="label_updown_yamb">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2736,7 +2736,7 @@ background-color: rgb(42, 104, 167);</string>
      </widget>
     </item>
     <item row="15" column="5">
-     <widget class="ClickableLabel" name="label_18">
+     <widget class="ClickableLabel" name="label_hand_yamb">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2756,7 +2756,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="15" column="6">
-     <widget class="ClickableLabel" name="label_20">
+     <widget class="ClickableLabel" name="label_call_yamb">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -3087,7 +3087,7 @@ background-color: rgb(30, 76, 122);</string>
      <x>0</x>
      <y>0</y>
      <width>509</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
    <property name="palette">
