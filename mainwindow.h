@@ -6,6 +6,8 @@
 #include "results.h"
 #include "clickablelabel.h"
 
+#include "freecollumn.h"
+
 
 namespace Ui {
 class MainWindow;
@@ -136,6 +138,9 @@ private:
     Dice dice4;
     Dice dice5;
     Dice dice6;
+
+private:
+    FreeCollumn freeCollumn;
 
 private:
     Results results;

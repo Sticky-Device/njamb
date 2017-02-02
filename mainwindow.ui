@@ -326,7 +326,7 @@
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="ClickableLabel" name="label_118">
+     <widget class="ClickableLabel" name="label_down_ones">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -485,7 +485,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="ClickableLabel" name="label_111">
+     <widget class="ClickableLabel" name="label_down_twos">
       <property name="palette">
        <palette>
         <active>
@@ -968,7 +968,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="3" column="1">
-     <widget class="ClickableLabel" name="label_104">
+     <widget class="ClickableLabel" name="label_down_threes">
       <property name="font">
        <font>
         <weight>75</weight>

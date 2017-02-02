@@ -1,6 +1,8 @@
 #ifndef RULES_H
 #define RULES_H
 
+#include <QString>
+
 namespace Rules {
 
 const int DEFAULT_DICE = 5;
@@ -45,6 +47,10 @@ enum class CollumnGroup {
     MinMax,
     Major
 };
+
+// colors
+const QString FILLED_LABEL_COLOR = "QLabel {color: rgb(255, 255, 255); background-color: rgb(42, 104, 167) }";
+const QString FREE_LABEL_COLOR = "QLabel { color: rgb(255, 255, 255); background-color: rgb(53, 134, 214) }";
 
 }
 

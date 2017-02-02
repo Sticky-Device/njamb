@@ -64,7 +64,8 @@ void Dice::setDice(int value)
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+    freeCollumn(ui, engine)
 {
     ui->setupUi(this);
 
@@ -146,6 +147,7 @@ void MainWindow::resetUIElements()
     dice5.setSelected(false);
     dice6.setSelected(false);
 
+    // TODO: use dice objects
     ui->label_dice1->setPixmap(getDicePixMap(Rules::DEFAULT_DICE));
     ui->label_dice2->setPixmap(getDicePixMap(Rules::DEFAULT_DICE));
     ui->label_dice3->setPixmap(getDicePixMap(Rules::DEFAULT_DICE));
@@ -153,45 +155,7 @@ void MainWindow::resetUIElements()
     ui->label_dice5->setPixmap(getDicePixMap(Rules::DEFAULT_DICE));
     ui->label_dice6->setPixmap(getDicePixMap(Rules::DEFAULT_DICE));
 
-    ui->label_free_ones->setText("");
-    ui->label_free_ones->setActive(false);
-    ui->label_free_ones->setFilled(false);
-    ui->label_free_twos->setText("");
-    ui->label_free_twos->setActive(false);
-    ui->label_free_twos->setFilled(false);
-    ui->label_free_threes->setText("");
-    ui->label_free_threes->setActive(false);
-    ui->label_free_threes->setFilled(false);
-    ui->label_free_fours->setText("");
-    ui->label_free_fours->setActive(false);
-    ui->label_free_fours->setFilled(false);
-    ui->label_free_fives->setText("");
-    ui->label_free_fives->setActive(false);
-    ui->label_free_fives->setFilled(false);
-    ui->label_free_sixes->setText("");
-    ui->label_free_sixes->setActive(false);
-    ui->label_free_sixes->setFilled(false);
-    ui->label_free_max->setText("");
-    ui->label_free_max->setActive(false);
-    ui->label_free_max->setFilled(false);
-    ui->label_free_min->setText("");
-    ui->label_free_min->setActive(false);
-    ui->label_free_min->setFilled(false);
-    ui->label_free_triling->setText("");
-    ui->label_free_triling->setActive(false);
-    ui->label_free_triling->setFilled(false);
-    ui->label_free_straight->setText("");
-    ui->label_free_straight->setActive(false);
-    ui->label_free_straight->setFilled(false);
-    ui->label_free_full->setText("");
-    ui->label_free_full->setActive(false);
-    ui->label_free_full->setFilled(false);
-    ui->label_free_poker->setText("");
-    ui->label_free_poker->setActive(false);
-    ui->label_free_poker->setFilled(false);
-    ui->label_free_yamb->setText("");
-    ui->label_free_yamb->setActive(false);
-    ui->label_free_yamb->setFilled(false);
+    freeCollumn.reset();
 
     ui->diceRollButton->setEnabled(true);
 
@@ -274,273 +238,247 @@ void MainWindow::on_label_dice6_clicked()
 
 void MainWindow::on_label_free_ones_hovered()
 {
-    auto hand = engine.getCurrentHand();
-    ui->label_free_ones->setText(QString::number(hand.getBestResult(Rules::YambField::Ones)));
+    freeCollumn.onesHovered();
 }
 
 void MainWindow::on_label_free_ones_unhovered()
 {
-    ui->label_free_ones->setText("");
+    freeCollumn.onesUnhovered();
 }
 
 void MainWindow::on_label_free_twos_hovered()
 {
-    auto hand = engine.getCurrentHand();
-    ui->label_free_twos->setText(QString::number(hand.getBestResult(Rules::YambField::Twos)));
+    freeCollumn.twosHovered();
 }
 
 void MainWindow::on_label_free_twos_unhovered()
 {
-    ui->label_free_twos->setText("");
+    freeCollumn.twosUnhovered();
 }
 
 void MainWindow::on_label_free_threes_hovered()
 {
-    auto hand = engine.getCurrentHand();
-    ui->label_free_threes->setText(QString::number(hand.getBestResult(Rules::YambField::Threes)));
+    freeCollumn.threesHovered();
 }
 
 void MainWindow::on_label_free_threes_unhovered()
 {
-    ui->label_free_threes->setText("");
+    freeCollumn.threesUnhovered();
 }
 
 void MainWindow::on_label_free_fours_hovered()
 {
-    auto hand = engine.getCurrentHand();
-    ui->label_free_fours->setText(QString::number(hand.getBestResult(Rules::YambField::Fours)));
+    freeCollumn.foursHovered();
 }
 
 void MainWindow::on_label_free_fours_unhovered()
 {
-    ui->label_free_fours->setText("");
+    freeCollumn.foursUnhovered();
 }
 
 void MainWindow::on_label_free_fives_hovered()
 {
-    auto hand = engine.getCurrentHand();
-    ui->label_free_fives->setText(QString::number(hand.getBestResult(Rules::YambField::Fives)));
+    freeCollumn.fivesHovered();
 }
 
 void MainWindow::on_label_free_fives_unhovered()
 {
-    ui->label_free_fives->setText("");
+    freeCollumn.fivesUnhovered();
 }
 
 void MainWindow::on_label_free_sixes_hovered()
 {
-    auto hand = engine.getCurrentHand();
-    ui->label_free_sixes->setText(QString::number(hand.getBestResult(Rules::YambField::Sixes)));
+    freeCollumn.sixesHovered();
 }
 
 void MainWindow::on_label_free_sixes_unhovered()
 {
-    ui->label_free_sixes->setText("");
+    freeCollumn.sixesUnhovered();
 }
 
 void MainWindow::on_label_free_max_hovered()
 {
-    auto hand = engine.getCurrentHand();
-    ui->label_free_max->setText(QString::number(hand.getBestResult(Rules::YambField::Max)));
+    freeCollumn.maxHovered();
 }
 
 void MainWindow::on_label_free_max_unhovered()
 {
-    ui->label_free_max->setText("");
+    freeCollumn.maxUnhovered();
 }
 
 void MainWindow::on_label_free_min_hovered()
 {
-    auto hand = engine.getCurrentHand();
-    ui->label_free_min->setText(QString::number(hand.getBestResult(Rules::YambField::Min)));
+    freeCollumn.minHovered();
 }
 
 void MainWindow::on_label_free_min_unhovered()
 {
-    ui->label_free_min->setText("");
+    freeCollumn.minUnhovered();
 }
 
 void MainWindow::on_label_free_triling_hovered()
 {
-    auto hand = engine.getCurrentHand();
-    ui->label_free_triling->setText(QString::number(hand.getBestResult(Rules::YambField::Triling)));
+    freeCollumn.trilingHovered();
 }
 
 void MainWindow::on_label_free_triling_unhovered()
 {
-    ui->label_free_triling->setText("");
+    freeCollumn.trilingUnhovered();
 }
 
 void MainWindow::on_label_free_straight_hovered()
 {
-    auto hand = engine.getCurrentHand();
-    ui->label_free_straight->setText(QString::number(hand.getBestResult(Rules::YambField::Straight, engine.currentRoll())));
+    freeCollumn.straightHovered();
 }
 
 void MainWindow::on_label_free_straight_unhovered()
 {
-    ui->label_free_straight->setText("");
+    freeCollumn.straightUnhovered();
 }
 
 void MainWindow::on_label_free_full_hovered()
 {
-    auto hand = engine.getCurrentHand();
-    ui->label_free_full->setText(QString::number(hand.getBestResult(Rules::YambField::Full)));
+    freeCollumn.fullHovered();
 }
 
 void MainWindow::on_label_free_full_unhovered()
 {
-    ui->label_free_full->setText("");
+    freeCollumn.fullUnhovered();
 }
 
 void MainWindow::on_label_free_poker_hovered()
 {
-    auto hand = engine.getCurrentHand();
-    ui->label_free_poker->setText(QString::number(hand.getBestResult(Rules::YambField::Poker)));
+    freeCollumn.pokerHovered();
 }
 
 void MainWindow::on_label_free_poker_unhovered()
 {
-    ui->label_free_poker->setText("");
+    freeCollumn.pokerUnhovered();
 }
 
 void MainWindow::on_label_free_yamb_hovered()
 {
-    auto hand = engine.getCurrentHand();
-    ui->label_free_yamb->setText(QString::number(hand.getBestResult(Rules::YambField::Yamb)));
+    freeCollumn.yambHovered();
 }
 
 void MainWindow::on_label_free_yamb_unhovered()
 {
-    ui->label_free_yamb->setText("");
+    freeCollumn.yambUnhovered();
 }
 
 void MainWindow::on_label_free_ones_clicked()
 {
+    freeCollumn.onesClicked();
     auto hand = engine.getCurrentHand();
     auto result = hand.getBestResult(Rules::YambField::Ones);
-    ui->label_free_ones->setText(QString::number(result));
-    ui->label_free_ones->setFilled(true);
     updateResults(Rules::Collumn::Free, Rules::YambField::Ones, result);
     nextRound();
 }
 
 void MainWindow::on_label_free_twos_clicked()
 {
+    freeCollumn.twosClicked();
     auto hand = engine.getCurrentHand();
     auto result = hand.getBestResult(Rules::YambField::Twos);
-    ui->label_free_twos->setText(QString::number(result));
-    ui->label_free_twos->setFilled(true);
     updateResults(Rules::Collumn::Free, Rules::YambField::Twos, result);
     nextRound();
 }
 
 void MainWindow::on_label_free_threes_clicked()
 {
+    freeCollumn.threesClicked();
     auto hand = engine.getCurrentHand();
     auto result = hand.getBestResult(Rules::YambField::Threes);
-    ui->label_free_threes->setText(QString::number(result));
-    ui->label_free_threes->setFilled(true);
     updateResults(Rules::Collumn::Free, Rules::YambField::Threes, result);
     nextRound();
 }
 
 void MainWindow::on_label_free_fours_clicked()
 {
+    freeCollumn.foursClicked();
     auto hand = engine.getCurrentHand();
     auto result = hand.getBestResult(Rules::YambField::Fours);
-    ui->label_free_fours->setText(QString::number(result));
-    ui->label_free_fours->setFilled(true);
     updateResults(Rules::Collumn::Free, Rules::YambField::Fours, result);
     nextRound();
 }
 
 void MainWindow::on_label_free_fives_clicked()
 {
+    freeCollumn.fivesClicked();
     auto hand = engine.getCurrentHand();
     auto result = hand.getBestResult(Rules::YambField::Fives);
-    ui->label_free_fives->setText(QString::number(result));
-    ui->label_free_fives->setFilled(true);
     updateResults(Rules::Collumn::Free, Rules::YambField::Fives, result);
     nextRound();
 }
 
 void MainWindow::on_label_free_sixes_clicked()
 {
+    freeCollumn.sixesClicked();
     auto hand = engine.getCurrentHand();
     auto result = hand.getBestResult(Rules::YambField::Sixes);
-    ui->label_free_sixes->setText(QString::number(result));
-    ui->label_free_sixes->setFilled(true);
     updateResults(Rules::Collumn::Free, Rules::YambField::Sixes, result);
     nextRound();
 }
 
 void MainWindow::on_label_free_max_clicked()
 {
+    freeCollumn.maxClicked();
     auto hand = engine.getCurrentHand();
     auto result = hand.getBestResult(Rules::YambField::Max);
-    ui->label_free_max->setText(QString::number(result));
-    ui->label_free_max->setFilled(true);
     updateResults(Rules::Collumn::Free, Rules::YambField::Max, result);
     nextRound();
 }
 
 void MainWindow::on_label_free_min_clicked()
 {
+    freeCollumn.minClicked();
     auto hand = engine.getCurrentHand();
     auto result = hand.getBestResult(Rules::YambField::Min);
-    ui->label_free_min->setText(QString::number(result));
-    ui->label_free_min->setFilled(true);
     updateResults(Rules::Collumn::Free, Rules::YambField::Min, result);
     nextRound();
 }
 
 void MainWindow::on_label_free_triling_clicked()
 {
+    freeCollumn.trilingClicked();
     auto hand = engine.getCurrentHand();
     auto result = hand.getBestResult(Rules::YambField::Triling);
-    ui->label_free_triling->setText(QString::number(result));
-    ui->label_free_triling->setFilled(true);
     updateResults(Rules::Collumn::Free, Rules::YambField::Triling, result);
     nextRound();
 }
 
 void MainWindow::on_label_free_straight_clicked()
 {
+    freeCollumn.straightClicked();
     auto hand = engine.getCurrentHand();
     auto result = hand.getBestResult(Rules::YambField::Straight, engine.currentRoll());
-    ui->label_free_straight->setText(QString::number(result));
-    ui->label_free_straight->setFilled(true);
     updateResults(Rules::Collumn::Free, Rules::YambField::Straight, result);
     nextRound();
 }
 
 void MainWindow::on_label_free_full_clicked()
 {
+    freeCollumn.fullClicked();
     auto hand = engine.getCurrentHand();
     auto result = hand.getBestResult(Rules::YambField::Full);
-    ui->label_free_full->setText(QString::number(result));
-    ui->label_free_full->setFilled(true);
     updateResults(Rules::Collumn::Free, Rules::YambField::Full, result);
     nextRound();
 }
 
 void MainWindow::on_label_free_poker_clicked()
 {
+    freeCollumn.pokerClicked();
     auto hand = engine.getCurrentHand();
     auto result = hand.getBestResult(Rules::YambField::Poker);
-    ui->label_free_poker->setText(QString::number(result));
-    ui->label_free_poker->setFilled(true);
     updateResults(Rules::Collumn::Free, Rules::YambField::Poker, result);
     nextRound();
 }
 
 void MainWindow::on_label_free_yamb_clicked()
 {
+    freeCollumn.yambClicked();
     auto hand = engine.getCurrentHand();
     auto result = hand.getBestResult(Rules::YambField::Yamb);
-    ui->label_free_yamb->setText(QString::number(hand.getBestResult(Rules::YambField::Yamb)));
-    ui->label_free_yamb->setFilled(true);
     updateResults(Rules::Collumn::Free, Rules::YambField::Yamb, result);
     nextRound();
 }

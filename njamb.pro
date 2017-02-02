@@ -19,14 +19,20 @@ SOURCES += main.cpp\
     dicehand.cpp \
     njambengine.cpp \
     clickablelabel.cpp \
-    results.cpp
+    results.cpp \
+    abstractcollumn.cpp \
+    freecollumn.cpp \
+    downcollumn.cpp
 
 HEADERS  += mainwindow.h \
     dicehand.h \
     njambengine.h \
     clickablelabel.h \
     rules.h \
-    results.h
+    results.h \
+    abstractcollumn.h \
+    freecollumn.h \
+    downcollumn.h
 
 FORMS    += mainwindow.ui
 
