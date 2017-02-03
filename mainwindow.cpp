@@ -81,6 +81,8 @@ MainWindow::MainWindow(QWidget *parent) :
     dice5.setUp(Rules::DEFAULT_DICE, ui->label_dice5);
     dice6.setUp(Rules::DEFAULT_DICE, ui->label_dice6);
 
+    resetUIElements();
+
     //events
     connect(ui->diceRollButton, SIGNAL (clicked()), this, SLOT (rollDiceButtonClicked()));
     connect(ui->actionQuit, SIGNAL (triggered()), QApplication::instance(), SLOT (quit()));
@@ -107,95 +109,12 @@ void MainWindow::rollDiceButtonClicked()
     dice5.setDice(hand.getDice(5));
     dice6.setDice(hand.getDice(6));
 
-    // activate down collumn. TODO: extra to method
-    ui->label_down_ones->setActive(true);
-    ui->label_down_twos->setActive(true);
-    ui->label_down_threes->setActive(true);
-    ui->label_down_fours->setActive(true);
-    ui->label_down_fives->setActive(true);
-    ui->label_down_sixes->setActive(true);
-    ui->label_down_max->setActive(true);
-    ui->label_down_min->setActive(true);
-    ui->label_down_triling->setActive(true);
-    ui->label_down_straight->setActive(true);
-    ui->label_down_full->setActive(true);
-    ui->label_down_poker->setActive(true);
-    ui->label_down_yamb->setActive(true);
-
-    // activate free collumn. TODO: extra to method
-    ui->label_free_ones->setActive(true);
-    ui->label_free_twos->setActive(true);
-    ui->label_free_threes->setActive(true);
-    ui->label_free_fours->setActive(true);
-    ui->label_free_fives->setActive(true);
-    ui->label_free_sixes->setActive(true);
-    ui->label_free_max->setActive(true);
-    ui->label_free_min->setActive(true);
-    ui->label_free_triling->setActive(true);
-    ui->label_free_straight->setActive(true);
-    ui->label_free_full->setActive(true);
-    ui->label_free_poker->setActive(true);
-    ui->label_free_yamb->setActive(true);
-
-    // activate up collumn. TODO: extra to method
-    ui->label_up_ones->setActive(true);
-    ui->label_up_twos->setActive(true);
-    ui->label_up_threes->setActive(true);
-    ui->label_up_fours->setActive(true);
-    ui->label_up_fives->setActive(true);
-    ui->label_up_sixes->setActive(true);
-    ui->label_up_max->setActive(true);
-    ui->label_up_min->setActive(true);
-    ui->label_up_triling->setActive(true);
-    ui->label_up_straight->setActive(true);
-    ui->label_up_full->setActive(true);
-    ui->label_up_poker->setActive(true);
-    ui->label_up_yamb->setActive(true);
-
-    // activate down collumn. TODO: extra to method
-    ui->label_updown_ones->setActive(true);
-    ui->label_updown_twos->setActive(true);
-    ui->label_updown_threes->setActive(true);
-    ui->label_updown_fours->setActive(true);
-    ui->label_updown_fives->setActive(true);
-    ui->label_updown_sixes->setActive(true);
-    ui->label_updown_max->setActive(true);
-    ui->label_updown_min->setActive(true);
-    ui->label_updown_triling->setActive(true);
-    ui->label_updown_straight->setActive(true);
-    ui->label_updown_full->setActive(true);
-    ui->label_updown_poker->setActive(true);
-    ui->label_updown_yamb->setActive(true);
-
-    // activate down collumn. TODO: extra to method
-    ui->label_hand_ones->setActive(true);
-    ui->label_hand_twos->setActive(true);
-    ui->label_hand_threes->setActive(true);
-    ui->label_hand_fours->setActive(true);
-    ui->label_hand_fives->setActive(true);
-    ui->label_hand_sixes->setActive(true);
-    ui->label_hand_max->setActive(true);
-    ui->label_hand_min->setActive(true);
-    ui->label_hand_triling->setActive(true);
-    ui->label_hand_straight->setActive(true);
-    ui->label_hand_full->setActive(true);
-    ui->label_hand_poker->setActive(true);
-    ui->label_hand_yamb->setActive(true);
-
-    // activate down collumn. TODO: extra to method
-    ui->label_call_ones->setActive(true);
-    ui->label_call_twos->setActive(true);
-    ui->label_call_threes->setActive(true);
-    ui->label_call_fours->setActive(true);
-    ui->label_call_fives->setActive(true);
-    ui->label_call_sixes->setActive(true);
-    ui->label_call_max->setActive(true);
-    ui->label_call_min->setActive(true);
-    ui->label_call_triling->setActive(true);
-    ui->label_call_straight->setActive(true);
-    ui->label_call_full->setActive(true);
-    ui->label_call_poker->setActive(true);
-    ui->label_call_yamb->setActive(true);
+    downCollumn.diceRolled();
+    freeCollumn.diceRolled();
+    upCollumn.diceRolled();
+    upDownCollumn.diceRolled();
+    handCollumn.diceRolled();
+    callCollumn.diceRolled();
 
     if (engine.currentRoll() == 3)
     {

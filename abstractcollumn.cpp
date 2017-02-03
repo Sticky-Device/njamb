@@ -8,7 +8,19 @@ AbstractCollumn::AbstractCollumn(Ui::MainWindow *ui, NjambEngine & eng) : ui(ui)
 
 void AbstractCollumn::diceRolled()
 {
-
+    getUIElementOnes()->setActive(true);
+    getUIElementTwos()->setActive(true);
+    getUIElementThrees()->setActive(true);
+    getUIElementFours()->setActive(true);
+    getUIElementFives()->setActive(true);
+    getUIElementSixes()->setActive(true);
+    getUIElementMax()->setActive(true);
+    getUIElementMin()->setActive(true);
+    getUIElementTriling()->setActive(true);
+    getUIElementStraight()->setActive(true);
+    getUIElementFull()->setActive(true);
+    getUIElementPoker()->setActive(true);
+    getUIElementYamb()->setActive(true);
 }
 
 void AbstractCollumn::reset()
