@@ -9,6 +9,24 @@ public:
     FreeCollumn(Ui::MainWindow* ui, NjambEngine& engine);
 
 public:
+    std::vector<Rules::YambField> getPlayableFields() override;
+
+public:
+    void onesClicked();
+    void twosClicked();
+    void threesClicked();
+    void foursClicked();
+    void fivesClicked();
+    void sixesClicked();
+    void maxClicked();
+    void minClicked();
+    void trilingClicked();
+    void straightClicked();
+    void fullClicked();
+    void pokerClicked();
+    void yambClicked();
+
+public:
     ClickableLabel* getUIElementOnes() override;
     ClickableLabel* getUIElementTwos() override;
     ClickableLabel* getUIElementThrees() override;
@@ -22,6 +40,12 @@ public:
     ClickableLabel* getUIElementFull() override;
     ClickableLabel* getUIElementPoker() override;
     ClickableLabel* getUIElementYamb() override;
+
+private:
+    void removePlayableField(Rules::YambField field);
+
+private:
+    std::vector<Rules::YambField> playableFields;
 };
 
 #endif // FREECOLLUMN_H

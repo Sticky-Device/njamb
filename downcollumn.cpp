@@ -1,8 +1,12 @@
 #include "downcollumn.h"
 
-DownCollumn::DownCollumn(Ui::MainWindow *ui, NjambEngine &engine) : AbstractCollumn(ui, engine)
+DownCollumn::DownCollumn(Ui::MainWindow *ui, NjambEngine &engine) : AbstractCollumn(ui, engine),
+playableFields ( std::deque<Rules::YambField> {Rules::YambField::Yamb, Rules::YambField::Poker, Rules::YambField::Full,
+                      Rules::YambField::Straight, Rules::YambField::Triling, Rules::YambField::Min, Rules::YambField::Max,
+                      Rules::YambField::Sixes, Rules::YambField::Fives, Rules::YambField::Fours, Rules::YambField::Threes,
+                      Rules::YambField::Twos, Rules::YambField::Ones
+                   })
 {
-
 }
 
 void DownCollumn::reset()
@@ -20,6 +24,89 @@ void DownCollumn::reset()
     getUIElementFull()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
     getUIElementPoker()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
     getUIElementYamb()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
+}
+
+std::vector<Rules::YambField> DownCollumn::getPlayableFields()
+{
+    return {playableFields.top()};
+}
+
+void DownCollumn::onesClicked()
+{
+    AbstractCollumn::onesClicked();
+    playableFields.pop();
+}
+
+void DownCollumn::twosClicked()
+{
+    AbstractCollumn::twosClicked();
+    playableFields.pop();
+}
+
+void DownCollumn::threesClicked()
+{
+    AbstractCollumn::threesClicked();
+    playableFields.pop();
+}
+
+void DownCollumn::foursClicked()
+{
+    AbstractCollumn::foursClicked();
+    playableFields.pop();
+}
+
+void DownCollumn::fivesClicked()
+{
+    AbstractCollumn::fivesClicked();
+    playableFields.pop();
+}
+
+void DownCollumn::sixesClicked()
+{
+    AbstractCollumn::sixesClicked();
+    playableFields.pop();
+}
+
+void DownCollumn::maxClicked()
+{
+    AbstractCollumn::maxClicked();
+    playableFields.pop();
+}
+
+void DownCollumn::minClicked()
+{
+    AbstractCollumn::minClicked();
+    playableFields.pop();
+}
+
+void DownCollumn::trilingClicked()
+{
+    AbstractCollumn::trilingClicked();
+    playableFields.pop();
+}
+
+void DownCollumn::straightClicked()
+{
+    AbstractCollumn::straightClicked();
+    playableFields.pop();
+}
+
+void DownCollumn::fullClicked()
+{
+    AbstractCollumn::fullClicked();
+    playableFields.pop();
+}
+
+void DownCollumn::pokerClicked()
+{
+    AbstractCollumn::pokerClicked();
+    playableFields.pop();
+}
+
+void DownCollumn::yambClicked()
+{
+    AbstractCollumn::yambClicked();
+    playableFields.pop();
 }
 
 ClickableLabel *DownCollumn::getUIElementOnes()

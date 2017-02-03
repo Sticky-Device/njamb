@@ -10,6 +10,7 @@ public:
 
 public:
     void reset() override;
+    std::vector<Rules::YambField> getPlayableFields() override;
 
 public:
     ClickableLabel* getUIElementOnes() override;

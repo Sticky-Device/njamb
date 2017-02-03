@@ -9,6 +9,9 @@ public:
     HandCollumn(Ui::MainWindow* ui, NjambEngine& engine);
 
 public:
+    std::vector<Rules::YambField> getPlayableFields() override;
+
+public:
     ClickableLabel* getUIElementOnes() override;
     ClickableLabel* getUIElementTwos() override;
     ClickableLabel* getUIElementThrees() override;

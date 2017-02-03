@@ -8,19 +8,40 @@ AbstractCollumn::AbstractCollumn(Ui::MainWindow *ui, NjambEngine & eng) : ui(ui)
 
 void AbstractCollumn::diceRolled()
 {
-    getUIElementOnes()->setActive(true);
-    getUIElementTwos()->setActive(true);
-    getUIElementThrees()->setActive(true);
-    getUIElementFours()->setActive(true);
-    getUIElementFives()->setActive(true);
-    getUIElementSixes()->setActive(true);
-    getUIElementMax()->setActive(true);
-    getUIElementMin()->setActive(true);
-    getUIElementTriling()->setActive(true);
-    getUIElementStraight()->setActive(true);
-    getUIElementFull()->setActive(true);
-    getUIElementPoker()->setActive(true);
-    getUIElementYamb()->setActive(true);
+    for (auto field : getPlayableFields())
+    {
+        switch (field) {
+        case Rules::YambField::Ones:
+            getUIElementOnes()->setActive(true);
+        case Rules::YambField::Twos:
+            getUIElementTwos()->setActive(true);
+        case Rules::YambField::Threes:
+            getUIElementThrees()->setActive(true);
+        case Rules::YambField::Fours:
+            getUIElementFours()->setActive(true);
+        case Rules::YambField::Fives:
+            getUIElementFives()->setActive(true);
+        case Rules::YambField::Sixes:
+            getUIElementSixes()->setActive(true);
+        case Rules::YambField::Max:
+            getUIElementMax()->setActive(true);
+        case Rules::YambField::Min:
+            getUIElementMin()->setActive(true);
+        case Rules::YambField::Triling:
+            getUIElementTriling()->setActive(true);
+        case Rules::YambField::Straight:
+            getUIElementStraight()->setActive(true);
+        case Rules::YambField::Full:
+            getUIElementFull()->setActive(true);
+        case Rules::YambField::Poker:
+            getUIElementPoker()->setActive(true);
+        case Rules::YambField::Yamb:
+            getUIElementYamb()->setActive(true);
+            break;
+        default:
+            break;
+        }
+    }
 }
 
 void AbstractCollumn::reset()

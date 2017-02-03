@@ -22,6 +22,11 @@ void UpCollumn::reset()
     getUIElementPoker()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
 }
 
+std::vector<Rules::YambField> UpCollumn::getPlayableFields()
+{
+    return {};
+}
+
 ClickableLabel *UpCollumn::getUIElementOnes()
 {
     return ui->label_up_ones;

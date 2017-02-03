@@ -2,6 +2,7 @@
 #define DOWNCOLLUMN_H
 
 #include "abstractcollumn.h"
+#include <stack>
 
 class DownCollumn : public AbstractCollumn
 {
@@ -10,6 +11,22 @@ public:
 
 public:
     void reset() override;
+    std::vector<Rules::YambField> getPlayableFields() override;
+
+public:
+    void onesClicked();
+    void twosClicked();
+    void threesClicked();
+    void foursClicked();
+    void fivesClicked();
+    void sixesClicked();
+    void maxClicked();
+    void minClicked();
+    void trilingClicked();
+    void straightClicked();
+    void fullClicked();
+    void pokerClicked();
+    void yambClicked();
 
 public:
     ClickableLabel *getUIElementOnes() override;
@@ -25,6 +42,9 @@ public:
     ClickableLabel* getUIElementFull() override;
     ClickableLabel* getUIElementPoker() override;
     ClickableLabel* getUIElementYamb() override;
+
+private:
+    std::stack<Rules::YambField> playableFields;
 };
 
 #endif // DOWNCOLLUMN_H

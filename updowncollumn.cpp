@@ -21,6 +21,11 @@ void UpDownCollumn::reset()
     getUIElementYamb()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
 }
 
+std::vector<Rules::YambField> UpDownCollumn::getPlayableFields()
+{
+    return {};
+}
+
 ClickableLabel *UpDownCollumn::getUIElementOnes()
 {
     return ui->label_updown_ones;

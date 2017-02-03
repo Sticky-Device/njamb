@@ -4,6 +4,8 @@
 #include "ui_mainwindow.h"
 #include "njambengine.h"
 #include "clickablelabel.h"
+#include "rules.h"
+#include <vector>
 
 class AbstractCollumn
 {
@@ -12,6 +14,7 @@ public:
 
     virtual void diceRolled();
     virtual void reset();
+    virtual std::vector<Rules::YambField> getPlayableFields() = 0;
 
 public:
     // abstract methods
@@ -31,61 +34,58 @@ public:
 
 public:
     // field events
-    void onesHovered();
-    void onesUnhovered();
-    void onesClicked();
+    virtual void onesHovered();
+    virtual void onesUnhovered();
+    virtual void onesClicked();
 
-    void twosHovered();
-    void twosUnhovered();
-    void twosClicked();
+    virtual void twosHovered();
+    virtual void twosUnhovered();
+    virtual void twosClicked();
 
-    void threesHovered();
-    void threesUnhovered();
-    void threesClicked();
+    virtual void threesHovered();
+    virtual void threesUnhovered();
+    virtual void threesClicked();
 
-    void foursHovered();
-    void foursUnhovered();
-    void foursClicked();
+    virtual void foursHovered();
+    virtual void foursUnhovered();
+    virtual void foursClicked();
 
-    void fivesHovered();
-    void fivesUnhovered();
-    void fivesClicked();
+    virtual void fivesHovered();
+    virtual void fivesUnhovered();
+    virtual void fivesClicked();
 
-    void sixesHovered();
-    void sixesUnhovered();
-    void sixesClicked();
+    virtual void sixesHovered();
+    virtual void sixesUnhovered();
+    virtual void sixesClicked();
 
-    void maxHovered();
-    void maxUnhovered();
-    void maxClicked();
+    virtual void maxHovered();
+    virtual void maxUnhovered();
+    virtual void maxClicked();
 
-    void minHovered();
-    void minUnhovered();
-    void minClicked();
+    virtual void minHovered();
+    virtual void minUnhovered();
+    virtual void minClicked();
 
-    void trilingHovered();
-    void trilingUnhovered();
-    void trilingClicked();
+    virtual void trilingHovered();
+    virtual void trilingUnhovered();
+    virtual void trilingClicked();
 
-    void straightHovered();
-    void straightUnhovered();
-    void straightClicked();
+    virtual void straightHovered();
+    virtual void straightUnhovered();
+    virtual void straightClicked();
 
-    void fullHovered();
-    void fullUnhovered();
-    void fullClicked();
+    virtual void fullHovered();
+    virtual void fullUnhovered();
+    virtual void fullClicked();
 
-    void pokerHovered();
-    void pokerUnhovered();
-    void pokerClicked();
+    virtual void pokerHovered();
+    virtual void pokerUnhovered();
+    virtual void pokerClicked();
 
-    void yambHovered();
-    void yambUnhovered();
-    void yambClicked();
+    virtual void yambHovered();
+    virtual void yambUnhovered();
+    virtual void yambClicked();
 
-protected:
-    Ui::MainWindow *ui;
-    NjambEngine& engine;
 private slots:
     void on_label_down_ones_hovered();
     void on_label_down_ones_unhovered();
@@ -96,6 +96,10 @@ private slots:
     void on_label_down_threes_hovered();
     void on_label_down_threes_unhovered();
     void on_label_down_threes_clicked();
+
+protected:
+    Ui::MainWindow *ui;
+    NjambEngine& engine;
 };
 
 #endif // ABSTRACTCOLLUMN_H

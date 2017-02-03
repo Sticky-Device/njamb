@@ -5,6 +5,11 @@ CallCollumn::CallCollumn(Ui::MainWindow *ui, NjambEngine &engine) : AbstractColl
 
 }
 
+std::vector<Rules::YambField> CallCollumn::getPlayableFields()
+{
+    return {};
+}
+
 ClickableLabel *CallCollumn::getUIElementOnes()
 {
     return ui->label_call_ones;

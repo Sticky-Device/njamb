@@ -5,6 +5,11 @@ HandCollumn::HandCollumn(Ui::MainWindow *ui, NjambEngine &engine) : AbstractColl
 
 }
 
+std::vector<Rules::YambField> HandCollumn::getPlayableFields()
+{
+    return {};
+}
+
 ClickableLabel *HandCollumn::getUIElementOnes()
 {
     return ui->label_hand_ones;
