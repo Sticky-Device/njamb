@@ -9,6 +9,9 @@ public:
     UpDownCollumn(Ui::MainWindow* ui, NjambEngine& engine);
 
 public:
+    void reset() override;
+
+public:
     ClickableLabel* getUIElementOnes() override;
     ClickableLabel* getUIElementTwos() override;
     ClickableLabel* getUIElementThrees() override;

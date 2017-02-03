@@ -5,6 +5,22 @@ UpDownCollumn::UpDownCollumn(Ui::MainWindow *ui, NjambEngine &engine) : Abstract
 
 }
 
+void UpDownCollumn::reset()
+{
+    AbstractCollumn::reset();
+    getUIElementOnes()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
+    getUIElementTwos()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
+    getUIElementThrees()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
+    getUIElementFours()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
+    getUIElementFives()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
+    getUIElementSixes()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
+    getUIElementTriling()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
+    getUIElementStraight()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
+    getUIElementFull()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
+    getUIElementPoker()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
+    getUIElementYamb()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
+}
+
 ClickableLabel *UpDownCollumn::getUIElementOnes()
 {
     return ui->label_updown_ones;

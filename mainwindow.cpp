@@ -107,6 +107,22 @@ void MainWindow::rollDiceButtonClicked()
     dice5.setDice(hand.getDice(5));
     dice6.setDice(hand.getDice(6));
 
+    // activate down collumn. TODO: extra to method
+    ui->label_down_ones->setActive(true);
+    ui->label_down_twos->setActive(true);
+    ui->label_down_threes->setActive(true);
+    ui->label_down_fours->setActive(true);
+    ui->label_down_fives->setActive(true);
+    ui->label_down_sixes->setActive(true);
+    ui->label_down_max->setActive(true);
+    ui->label_down_min->setActive(true);
+    ui->label_down_triling->setActive(true);
+    ui->label_down_straight->setActive(true);
+    ui->label_down_full->setActive(true);
+    ui->label_down_poker->setActive(true);
+    ui->label_down_yamb->setActive(true);
+
+    // activate free collumn. TODO: extra to method
     ui->label_free_ones->setActive(true);
     ui->label_free_twos->setActive(true);
     ui->label_free_threes->setActive(true);
@@ -120,6 +136,66 @@ void MainWindow::rollDiceButtonClicked()
     ui->label_free_full->setActive(true);
     ui->label_free_poker->setActive(true);
     ui->label_free_yamb->setActive(true);
+
+    // activate up collumn. TODO: extra to method
+    ui->label_up_ones->setActive(true);
+    ui->label_up_twos->setActive(true);
+    ui->label_up_threes->setActive(true);
+    ui->label_up_fours->setActive(true);
+    ui->label_up_fives->setActive(true);
+    ui->label_up_sixes->setActive(true);
+    ui->label_up_max->setActive(true);
+    ui->label_up_min->setActive(true);
+    ui->label_up_triling->setActive(true);
+    ui->label_up_straight->setActive(true);
+    ui->label_up_full->setActive(true);
+    ui->label_up_poker->setActive(true);
+    ui->label_up_yamb->setActive(true);
+
+    // activate down collumn. TODO: extra to method
+    ui->label_updown_ones->setActive(true);
+    ui->label_updown_twos->setActive(true);
+    ui->label_updown_threes->setActive(true);
+    ui->label_updown_fours->setActive(true);
+    ui->label_updown_fives->setActive(true);
+    ui->label_updown_sixes->setActive(true);
+    ui->label_updown_max->setActive(true);
+    ui->label_updown_min->setActive(true);
+    ui->label_updown_triling->setActive(true);
+    ui->label_updown_straight->setActive(true);
+    ui->label_updown_full->setActive(true);
+    ui->label_updown_poker->setActive(true);
+    ui->label_updown_yamb->setActive(true);
+
+    // activate down collumn. TODO: extra to method
+    ui->label_hand_ones->setActive(true);
+    ui->label_hand_twos->setActive(true);
+    ui->label_hand_threes->setActive(true);
+    ui->label_hand_fours->setActive(true);
+    ui->label_hand_fives->setActive(true);
+    ui->label_hand_sixes->setActive(true);
+    ui->label_hand_max->setActive(true);
+    ui->label_hand_min->setActive(true);
+    ui->label_hand_triling->setActive(true);
+    ui->label_hand_straight->setActive(true);
+    ui->label_hand_full->setActive(true);
+    ui->label_hand_poker->setActive(true);
+    ui->label_hand_yamb->setActive(true);
+
+    // activate down collumn. TODO: extra to method
+    ui->label_call_ones->setActive(true);
+    ui->label_call_twos->setActive(true);
+    ui->label_call_threes->setActive(true);
+    ui->label_call_fours->setActive(true);
+    ui->label_call_fives->setActive(true);
+    ui->label_call_sixes->setActive(true);
+    ui->label_call_max->setActive(true);
+    ui->label_call_min->setActive(true);
+    ui->label_call_triling->setActive(true);
+    ui->label_call_straight->setActive(true);
+    ui->label_call_full->setActive(true);
+    ui->label_call_poker->setActive(true);
+    ui->label_call_yamb->setActive(true);
 
     if (engine.currentRoll() == 3)
     {
@@ -493,51 +569,6 @@ void MainWindow::on_label_free_yamb_clicked()
     nextRound();
 }
 
-//void MainWindow::on_label_down_ones_hovered()
-//{
-//    ui->label_down_threes->setText("11");
-//}
-
-//void MainWindow::on_label_down_ones_unhovered()
-//{
-
-//}
-
-//void MainWindow::on_label_down_ones_clicked()
-//{
-
-//}
-
-//void MainWindow::on_label_down_twos_hovered()
-//{
-
-//}
-
-//void MainWindow::on_label_down_twos_unhovered()
-//{
-
-//}
-
-//void MainWindow::on_label_down_twos_clicked()
-//{
-
-//}
-
-//void MainWindow::on_label_down_threes_hovered()
-//{
-
-//}
-
-//void MainWindow::on_label_down_threes_unhovered()
-//{
-
-//}
-
-//void MainWindow::on_label_down_threes_clicked()
-//{
-
-//}
-
 void MainWindow::nextRound()
 {
     engine.nextRound();
@@ -582,3 +613,168 @@ void MainWindow::updateResults(Rules::Collumn collumn, Rules::YambField field, i
     ui->label_final_result->setText(QString("Final Result: ") + QString::number(results.getFinalResult()));
 }
 
+
+void MainWindow::on_label_down_ones_clicked()
+{
+    downCollumn.onesClicked();
+}
+
+void MainWindow::on_label_down_ones_hovered()
+{
+    downCollumn.onesHovered();
+}
+
+void MainWindow::on_label_down_ones_unhovered()
+{
+    downCollumn.onesUnhovered();
+}
+
+void MainWindow::on_label_down_twos_clicked()
+{
+    downCollumn.twosClicked();
+}
+
+void MainWindow::on_label_down_twos_hovered()
+{
+    downCollumn.twosHovered();
+}
+
+void MainWindow::on_label_down_twos_unhovered()
+{
+    downCollumn.twosUnhovered();
+}
+
+void MainWindow::on_label_up_yamb_clicked()
+{
+    upCollumn.yambClicked();
+}
+
+void MainWindow::on_label_up_yamb_hovered()
+{
+    upCollumn.yambHovered();
+}
+
+void MainWindow::on_label_up_yamb_unhovered()
+{
+    upCollumn.yambUnhovered();
+}
+
+void MainWindow::on_label_up_poker_clicked()
+{
+    upCollumn.pokerClicked();
+}
+
+void MainWindow::on_label_up_poker_hovered()
+{
+    upCollumn.pokerHovered();
+}
+
+void MainWindow::on_label_up_poker_unhovered()
+{
+    upCollumn.pokerUnhovered();
+}
+
+void MainWindow::on_label_up_full_clicked()
+{
+    upCollumn.fullClicked();
+}
+
+void MainWindow::on_label_up_full_hovered()
+{
+    upCollumn.fullHovered();
+}
+
+void MainWindow::on_label_up_full_unhovered()
+{
+    upCollumn.fullUnhovered();
+}
+
+void MainWindow::on_label_updown_max_clicked()
+{
+    upDownCollumn.maxClicked();
+}
+
+void MainWindow::on_label_updown_max_hovered()
+{
+    upDownCollumn.maxHovered();
+}
+
+void MainWindow::on_label_updown_max_unhovered()
+{
+    upDownCollumn.maxUnhovered();
+}
+
+void MainWindow::on_label_updown_min_clicked()
+{
+    upDownCollumn.minClicked();
+}
+
+void MainWindow::on_label_updown_min_hovered()
+{
+    upDownCollumn.minHovered();
+}
+
+void MainWindow::on_label_updown_min_unhovered()
+{
+    upDownCollumn.minUnhovered();
+}
+
+void MainWindow::on_label_updown_triling_clicked()
+{
+    upDownCollumn.trilingClicked();
+}
+
+void MainWindow::on_label_updown_triling_hovered()
+{
+    upDownCollumn.trilingHovered();
+}
+
+void MainWindow::on_label_updown_triling_unhovered()
+{
+    upDownCollumn.trilingUnhovered();
+}
+
+void MainWindow::on_label_updown_sixes_clicked()
+{
+    upDownCollumn.sixesClicked();
+}
+
+void MainWindow::on_label_updown_sixes_hovered()
+{
+    upDownCollumn.sixesHovered();
+}
+
+void MainWindow::on_label_updown_sixes_unhovered()
+{
+    upDownCollumn.sixesUnhovered();
+}
+
+void MainWindow::on_label_hand_ones_clicked()
+{
+    handCollumn.onesClicked();
+}
+
+void MainWindow::on_label_hand_ones_hovered()
+{
+    handCollumn.onesHovered();
+}
+
+void MainWindow::on_label_hand_ones_unhovered()
+{
+    handCollumn.onesUnhovered();
+}
+
+void MainWindow::on_label_call_ones_clicked()
+{
+    callCollumn.onesClicked();
+}
+
+void MainWindow::on_label_call_ones_hovered()
+{
+    callCollumn.onesHovered();
+}
+
+void MainWindow::on_label_call_ones_unhovered()
+{
+    callCollumn.onesUnhovered();
+}

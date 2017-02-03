@@ -122,6 +122,70 @@ private slots:
 
     void on_label_down_ones_clicked();
 
+    void on_label_down_ones_hovered();
+
+    void on_label_down_ones_unhovered();
+
+    void on_label_down_twos_clicked();
+
+    void on_label_down_twos_hovered();
+
+    void on_label_down_twos_unhovered();
+
+    void on_label_up_yamb_clicked();
+
+    void on_label_up_yamb_hovered();
+
+    void on_label_up_yamb_unhovered();
+
+    void on_label_up_poker_clicked();
+
+    void on_label_up_poker_hovered();
+
+    void on_label_up_poker_unhovered();
+
+    void on_label_up_full_clicked();
+
+    void on_label_up_full_hovered();
+
+    void on_label_up_full_unhovered();
+
+    void on_label_updown_max_clicked();
+
+    void on_label_updown_max_hovered();
+
+    void on_label_updown_max_unhovered();
+
+    void on_label_updown_min_clicked();
+
+    void on_label_updown_min_hovered();
+
+    void on_label_updown_min_unhovered();
+
+    void on_label_updown_triling_clicked();
+
+    void on_label_updown_triling_hovered();
+
+    void on_label_updown_triling_unhovered();
+
+    void on_label_updown_sixes_clicked();
+
+    void on_label_updown_sixes_hovered();
+
+    void on_label_updown_sixes_unhovered();
+
+    void on_label_hand_ones_clicked();
+
+    void on_label_hand_ones_hovered();
+
+    void on_label_hand_ones_unhovered();
+
+    void on_label_call_ones_clicked();
+
+    void on_label_call_ones_hovered();
+
+    void on_label_call_ones_unhovered();
+
 private:
     void nextRound();
     void updateResults(Rules::Collumn, Rules::YambField, int value);

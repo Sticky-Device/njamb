@@ -10,8 +10,8 @@ class AbstractCollumn
 public:
     AbstractCollumn(Ui::MainWindow *ui, NjambEngine&);
 
-    void diceRolled();
-    void reset();
+    virtual void diceRolled();
+    virtual void reset();
 
 public:
     // abstract methods
