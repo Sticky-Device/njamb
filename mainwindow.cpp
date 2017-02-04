@@ -268,17 +268,17 @@ void MainWindow::on_label_free_threes_hovered()
 
 void MainWindow::on_label_free_threes_unhovered()
 {
-   freeCollumn.fieldUnhovered(Rules::YambField::Threes);
+    freeCollumn.fieldUnhovered(Rules::YambField::Threes);
 }
 
 void MainWindow::on_label_free_fours_hovered()
 {
-   freeCollumn.fieldHovered(Rules::YambField::Fours);
+    freeCollumn.fieldHovered(Rules::YambField::Fours);
 }
 
 void MainWindow::on_label_free_fours_unhovered()
 {
-   freeCollumn.fieldUnhovered(Rules::YambField::Fours);
+    freeCollumn.fieldUnhovered(Rules::YambField::Fours);
 }
 
 void MainWindow::on_label_free_fives_hovered()
@@ -353,7 +353,7 @@ void MainWindow::on_label_free_full_unhovered()
 
 void MainWindow::on_label_free_poker_hovered()
 {
-   freeCollumn.fieldHovered(Rules::YambField::Poker);
+    freeCollumn.fieldHovered(Rules::YambField::Poker);
 }
 
 void MainWindow::on_label_free_poker_unhovered()
@@ -363,7 +363,7 @@ void MainWindow::on_label_free_poker_unhovered()
 
 void MainWindow::on_label_free_yamb_hovered()
 {
-   freeCollumn.fieldHovered(Rules::YambField::Yamb);
+    freeCollumn.fieldHovered(Rules::YambField::Yamb);
 }
 
 void MainWindow::on_label_free_yamb_unhovered()
@@ -427,7 +427,7 @@ void MainWindow::on_label_free_sixes_clicked()
 
 void MainWindow::on_label_free_max_clicked()
 {
-   freeCollumn.fieldClicked(Rules::YambField::Max);
+    freeCollumn.fieldClicked(Rules::YambField::Max);
     auto hand = engine.getCurrentHand();
     auto result = hand.getBestResult(Rules::YambField::Max);
     updateResults(Rules::Collumn::Free, Rules::YambField::Max, result);
@@ -604,7 +604,7 @@ void MainWindow::on_label_up_poker_hovered()
 
 void MainWindow::on_label_up_poker_unhovered()
 {
-   upCollumn.fieldUnhovered(Rules::YambField::Poker);
+    upCollumn.fieldUnhovered(Rules::YambField::Poker);
 }
 
 void MainWindow::on_label_up_full_clicked()
@@ -689,6 +689,10 @@ void MainWindow::on_label_updown_sixes_unhovered()
 void MainWindow::on_label_hand_ones_clicked()
 {
     handCollumn.fieldClicked(Rules::YambField::Ones);
+    auto hand = engine.getCurrentHand();
+    auto result = hand.getBestResult(Rules::YambField::Ones);
+    updateResults(Rules::Collumn::Hand, Rules::YambField::Ones, result);
+    nextRound();
 }
 
 void MainWindow::on_label_hand_ones_hovered()

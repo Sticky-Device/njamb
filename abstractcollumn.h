@@ -40,6 +40,7 @@ public:
 protected:
     Ui::MainWindow *ui;
     NjambEngine& engine;
+    static const std::vector<Rules::YambField> allFields;
 
 private:
     ClickableLabel *getUIElement(Rules::YambField);

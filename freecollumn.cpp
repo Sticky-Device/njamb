@@ -15,6 +15,11 @@ void FreeCollumn::fieldClicked(Rules::YambField field)
     AbstractCollumn::fieldClicked(field);
 }
 
+void FreeCollumn::removePlayableField(Rules::YambField field)
+{
+    playableFields.erase(std::remove(playableFields.begin(), playableFields.end(), field), playableFields.end());
+}
+
 std::vector<Rules::YambField> FreeCollumn::getPlayableFields()
 {
     return playableFields;
@@ -83,9 +88,4 @@ ClickableLabel *FreeCollumn::getUIElementPoker()
 ClickableLabel *FreeCollumn::getUIElementYamb()
 {
     return ui->label_free_yamb;
-}
-
-void FreeCollumn::removePlayableField(Rules::YambField field)
-{
-    playableFields.erase(std::remove(playableFields.begin(), playableFields.end(), field), playableFields.end());
 }

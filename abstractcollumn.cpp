@@ -1,6 +1,12 @@
 #include "abstractcollumn.h"
 #include "rules.h"
 
+const std::vector<Rules::YambField> AbstractCollumn::allFields {Rules::YambField::Ones, Rules::YambField::Twos, Rules::YambField::Threes, Rules::YambField::Fours,
+                                                                Rules::YambField::Fives, Rules::YambField::Sixes, Rules::YambField::Max, Rules::YambField::Min,
+                                                                Rules::YambField::Triling, Rules::YambField::Straight, Rules::YambField::Full,
+                                                                Rules::YambField::Poker, Rules::YambField::Yamb
+                                                               };
+
 AbstractCollumn::AbstractCollumn(Ui::MainWindow *ui, NjambEngine & eng) : ui(ui), engine(eng)
 {
 
@@ -13,10 +19,19 @@ void AbstractCollumn::diceRolled()
 
 void AbstractCollumn::updateFields()
 {
-    for (auto field : getPlayableFields())
+    auto playableFields = getPlayableFields();
+    for (auto field : allFields)
     {
-        getUIElement(field)->setActive(true);
-        getUIElement(field)->setStyleSheet(Rules::FREE_LABEL_COLOR);
+        if (std::find(begin(playableFields), end(playableFields), field) != end(playableFields))
+        {
+            getUIElement(field)->setActive(true);
+            getUIElement(field)->setStyleSheet(Rules::FREE_LABEL_COLOR);
+        }
+        else
+        {
+            getUIElement(field)->setActive(false);
+            getUIElement(field)->setStyleSheet(Rules::FILLED_LABEL_COLOR);
+        }
     }
 }
 
