@@ -1545,7 +1545,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="7" column="1">
-     <widget class="QLabel" name="label_78">
+     <widget class="QLabel" name="label_down_numbers_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1585,7 +1585,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="7" column="3">
-     <widget class="QLabel" name="label_73">
+     <widget class="QLabel" name="label_up_numbers_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1605,7 +1605,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="7" column="4">
-     <widget class="QLabel" name="label_74">
+     <widget class="QLabel" name="label_updown_numbers_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1625,7 +1625,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="7" column="5">
-     <widget class="QLabel" name="label_76">
+     <widget class="QLabel" name="label_hand_numbers_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1645,7 +1645,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="7" column="6">
-     <widget class="QLabel" name="label_77">
+     <widget class="QLabel" name="label_call_numbers_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1941,7 +1941,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="10" column="1">
-     <widget class="QLabel" name="label_56">
+     <widget class="QLabel" name="label_down_minmax_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -1981,7 +1981,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="10" column="3">
-     <widget class="QLabel" name="label_57">
+     <widget class="QLabel" name="label_up_minmax_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2001,7 +2001,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="10" column="4">
-     <widget class="QLabel" name="label_51">
+     <widget class="QLabel" name="label_updown_minmax_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2021,7 +2021,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="10" column="5">
-     <widget class="QLabel" name="label_52">
+     <widget class="QLabel" name="label_hand_minmax_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2041,7 +2041,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="10" column="6">
-     <widget class="QLabel" name="label_55">
+     <widget class="QLabel" name="label_call_minmax_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2795,7 +2795,7 @@ background-color: rgb(53, 134, 214);</string>
      </widget>
     </item>
     <item row="16" column="1">
-     <widget class="QLabel" name="label_8">
+     <widget class="QLabel" name="label_down_major_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2835,7 +2835,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="16" column="3">
-     <widget class="QLabel" name="label_10">
+     <widget class="QLabel" name="label_up_major_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2855,7 +2855,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="16" column="4">
-     <widget class="QLabel" name="label_11">
+     <widget class="QLabel" name="label_updown_major_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2875,7 +2875,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="16" column="5">
-     <widget class="QLabel" name="label_12">
+     <widget class="QLabel" name="label_hand_major_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -2895,7 +2895,7 @@ background-color: rgb(30, 76, 122);</string>
      </widget>
     </item>
     <item row="16" column="6">
-     <widget class="QLabel" name="label_13">
+     <widget class="QLabel" name="label_call_major_sum">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -3087,7 +3087,7 @@ background-color: rgb(30, 76, 122);</string>
      <x>0</x>
      <y>0</y>
      <width>509</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="palette">

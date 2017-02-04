@@ -1,6 +1,6 @@
 #include "UpDownCollumn.h"
 
-UpDownCollumn::UpDownCollumn(Ui::MainWindow *ui, NjambEngine &engine) : AbstractCollumn(ui, engine)
+UpDownCollumn::UpDownCollumn(Ui::MainWindow *ui, NjambEngine &engine, Results &results) : AbstractCollumn(ui, engine, results)
 {
 
 }
@@ -89,4 +89,9 @@ ClickableLabel *UpDownCollumn::getUIElementPoker()
 ClickableLabel *UpDownCollumn::getUIElementYamb()
 {
     return ui->label_updown_yamb;
+}
+
+Rules::Collumn UpDownCollumn::getCollumn()
+{
+    return Rules::Collumn::UpDown;
 }

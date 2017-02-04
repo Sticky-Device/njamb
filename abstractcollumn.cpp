@@ -7,7 +7,7 @@ const std::vector<Rules::YambField> AbstractCollumn::allFields {Rules::YambField
                                                                 Rules::YambField::Poker, Rules::YambField::Yamb
                                                                };
 
-AbstractCollumn::AbstractCollumn(Ui::MainWindow *ui, NjambEngine & eng) : ui(ui), engine(eng)
+AbstractCollumn::AbstractCollumn(Ui::MainWindow *ui, NjambEngine & eng, Results &results) : ui(ui), engine(eng), results(results)
 {
 
 }
@@ -37,55 +37,26 @@ void AbstractCollumn::updateFields()
 
 void AbstractCollumn::reset()
 {
-    getUIElementOnes()->reset();
-    getUIElementOnes()->setStyleSheet(Rules::FREE_LABEL_COLOR);
-    getUIElementTwos()->reset();
-    getUIElementTwos()->setStyleSheet(Rules::FREE_LABEL_COLOR);
-    getUIElementThrees()->reset();
-    getUIElementThrees()->setStyleSheet(Rules::FREE_LABEL_COLOR);
-    getUIElementFours()->reset();
-    getUIElementFours()->setStyleSheet(Rules::FREE_LABEL_COLOR);
-    getUIElementFives()->reset();
-    getUIElementFives()->setStyleSheet(Rules::FREE_LABEL_COLOR);
-    getUIElementSixes()->reset();
-    getUIElementSixes()->setStyleSheet(Rules::FREE_LABEL_COLOR);
-    getUIElementMax()->reset();
-    getUIElementMax()->setStyleSheet(Rules::FREE_LABEL_COLOR);
-    getUIElementMin()->reset();
-    getUIElementMin()->setStyleSheet(Rules::FREE_LABEL_COLOR);
-    getUIElementTriling()->reset();
-    getUIElementTriling()->setStyleSheet(Rules::FREE_LABEL_COLOR);
-    getUIElementStraight()->reset();
-    getUIElementStraight()->setStyleSheet(Rules::FREE_LABEL_COLOR);
-    getUIElementFull()->reset();
-    getUIElementFull()->setStyleSheet(Rules::FREE_LABEL_COLOR);
-    getUIElementPoker()->reset();
-    getUIElementPoker()->setStyleSheet(Rules::FREE_LABEL_COLOR);
-    getUIElementYamb()->reset();
-    getUIElementYamb()->setStyleSheet(Rules::FREE_LABEL_COLOR);
+    for (auto field : allFields)
+    {
+        getUIElement(field)->reset();
+        getUIElement(field)->setStyleSheet(Rules::FREE_LABEL_COLOR);
+    }
 }
 
 void AbstractCollumn::nextRound()
 {
-    getUIElementOnes()->setActive(false);
-    getUIElementTwos()->setActive(false);
-    getUIElementThrees()->setActive(false);
-    getUIElementFours()->setActive(false);
-    getUIElementFives()->setActive(false);
-    getUIElementSixes()->setActive(false);
-    getUIElementMax()->setActive(false);
-    getUIElementMin()->setActive(false);
-    getUIElementTriling()->setActive(false);
-    getUIElementStraight()->setActive(false);
-    getUIElementFull()->setActive(false);
-    getUIElementPoker()->setActive(false);
-    getUIElementYamb()->setActive(false);
+    for (auto field : allFields)
+    {
+        getUIElement(field)->setActive(false);
+    }
 }
 
 void AbstractCollumn::fieldHovered(Rules::YambField field)
 {
     auto hand = engine.getCurrentHand();
-    getUIElement(field)->setText(QString::number(hand.getBestResult(field)));
+    auto currentRoll = engine.currentRoll();
+    getUIElement(field)->setText(QString::number(hand.getBestResult(field, currentRoll)));
 }
 
 void AbstractCollumn::fieldUnhovered(Rules::YambField field)
@@ -94,12 +65,13 @@ void AbstractCollumn::fieldUnhovered(Rules::YambField field)
 }
 
 void AbstractCollumn::fieldClicked(Rules::YambField field)
-{
+{   
     auto hand = engine.getCurrentHand();
     auto result = hand.getBestResult(field, engine.currentRoll());
     getUIElement(field)->setText(QString::number(result));
     getUIElement(field)->setStyleSheet(Rules::FILLED_LABEL_COLOR);
     getUIElement(field)->setFilled(true);
+    results.updateResult(getCollumn(), field, result);
     updateFields();
 }
 
@@ -137,5 +109,8 @@ ClickableLabel *AbstractCollumn::getUIElement(Rules::YambField field)
     }
 
     // should not get here
+    // TODO: add assertion.
+    // Unfortunately, we can't simply return address of some randomly created ClickableLabel, as it's not bound to any "real" UI object.
+    // Therefore QT complains when such object is created, and app crashes. To be investigated further.
     return getUIElementOnes();
 }

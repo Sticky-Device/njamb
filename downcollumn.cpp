@@ -6,7 +6,7 @@ static std::stack<Rules::YambField> defaultFields ( std::deque<Rules::YambField>
                                                                                     Rules::YambField::Twos, Rules::YambField::Ones
                                                                                  });
 
-DownCollumn::DownCollumn(Ui::MainWindow *ui, NjambEngine &engine) : AbstractCollumn(ui, engine), playableFields(defaultFields)
+DownCollumn::DownCollumn(Ui::MainWindow *ui, NjambEngine &engine, Results &results) : AbstractCollumn(ui, engine, results), playableFields(defaultFields)
 {}
 
 void DownCollumn::reset()
@@ -102,4 +102,9 @@ ClickableLabel *DownCollumn::getUIElementPoker()
 ClickableLabel *DownCollumn::getUIElementYamb()
 {
     return ui->label_down_yamb;
+}
+
+Rules::Collumn DownCollumn::getCollumn()
+{
+    return Rules::Collumn::Down;
 }

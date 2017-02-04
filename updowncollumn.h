@@ -6,7 +6,7 @@
 class UpDownCollumn : public AbstractCollumn
 {
 public:
-    UpDownCollumn(Ui::MainWindow* ui, NjambEngine& engine);
+    UpDownCollumn(Ui::MainWindow* ui, NjambEngine& engine, Results &results);
 
 public:
     void reset() override;
@@ -26,6 +26,9 @@ public:
     ClickableLabel* getUIElementFull() override;
     ClickableLabel* getUIElementPoker() override;
     ClickableLabel* getUIElementYamb() override;
+
+private:
+    Rules::Collumn getCollumn() override;
 };
 
 #endif // UPDOWNCOLLUMN_H

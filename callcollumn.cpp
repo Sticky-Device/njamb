@@ -1,6 +1,6 @@
 #include "callcollumn.h"
 
-CallCollumn::CallCollumn(Ui::MainWindow *ui, NjambEngine &engine) : AbstractCollumn(ui, engine)
+CallCollumn::CallCollumn(Ui::MainWindow *ui, NjambEngine &engine, Results &results) : AbstractCollumn(ui, engine, results)
 {
 
 }
@@ -73,4 +73,9 @@ ClickableLabel *CallCollumn::getUIElementPoker()
 ClickableLabel *CallCollumn::getUIElementYamb()
 {
     return ui->label_call_yamb;
+}
+
+Rules::Collumn CallCollumn::getCollumn()
+{
+    return Rules::Collumn::Call;
 }

@@ -6,7 +6,7 @@
 class HandCollumn : public AbstractCollumn
 {
 public:
-    HandCollumn(Ui::MainWindow* ui, NjambEngine& engine);
+    HandCollumn(Ui::MainWindow* ui, NjambEngine& engine, Results &results);
 
 public:
     std::vector<Rules::YambField> getPlayableFields() override;
@@ -28,6 +28,7 @@ public:
     ClickableLabel* getUIElementYamb() override;
 
 private:
+    Rules::Collumn getCollumn() override;
     void removePlayableField(Rules::YambField field);
 
 private:

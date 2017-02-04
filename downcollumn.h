@@ -7,14 +7,14 @@
 class DownCollumn : public AbstractCollumn
 {
 public:
-    DownCollumn(Ui::MainWindow *ui, NjambEngine&);
+    DownCollumn(Ui::MainWindow *ui, NjambEngine& engine, Results &results);
 
 public:
     void reset() override;
     std::vector<Rules::YambField> getPlayableFields() override;
     void fieldClicked(Rules::YambField field) override;
 
-public:
+private:
     ClickableLabel *getUIElementOnes() override;
     ClickableLabel* getUIElementTwos() override;
     ClickableLabel* getUIElementThrees() override;
@@ -28,6 +28,9 @@ public:
     ClickableLabel* getUIElementFull() override;
     ClickableLabel* getUIElementPoker() override;
     ClickableLabel* getUIElementYamb() override;
+
+private:
+    Rules::Collumn getCollumn() override;
 
 private:
     std::stack<Rules::YambField> playableFields;

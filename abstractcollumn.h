@@ -5,12 +5,13 @@
 #include "njambengine.h"
 #include "clickablelabel.h"
 #include "rules.h"
+#include "results.h"
 #include <vector>
 
 class AbstractCollumn
 {
 public:
-    AbstractCollumn(Ui::MainWindow *ui, NjambEngine&);
+    AbstractCollumn(Ui::MainWindow *ui, NjambEngine&, Results& results);
 
     virtual void diceRolled();
     virtual void updateFields();
@@ -38,8 +39,12 @@ public:
     virtual ClickableLabel* getUIElementYamb() = 0;
 
 protected:
+    virtual Rules::Collumn getCollumn() = 0;
+
+protected:
     Ui::MainWindow *ui;
     NjambEngine& engine;
+    Results& results;
     static const std::vector<Rules::YambField> allFields;
 
 private:

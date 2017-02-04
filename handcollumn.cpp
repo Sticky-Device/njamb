@@ -1,6 +1,6 @@
 #include "handcollumn.h"
 
-HandCollumn::HandCollumn(Ui::MainWindow *ui, NjambEngine &engine) : AbstractCollumn(ui, engine)
+HandCollumn::HandCollumn(Ui::MainWindow *ui, NjambEngine &engine, Results &results) : AbstractCollumn(ui, engine, results)
 {
 }
 
@@ -96,4 +96,9 @@ ClickableLabel *HandCollumn::getUIElementPoker()
 ClickableLabel *HandCollumn::getUIElementYamb()
 {
     return ui->label_hand_yamb;
+}
+
+Rules::Collumn HandCollumn::getCollumn()
+{
+    return Rules::Collumn::Hand;
 }

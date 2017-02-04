@@ -31,38 +31,32 @@ void Results::updateResult(Rules::Collumn collumn, Rules::YambField field, int r
 
 int Results::getResult(Rules::Collumn collumn, Rules::CollumnGroup group)
 {
-    switch (collumn) {
-    case Rules::Collumn::Free:
-        switch (group) {
-        case Rules::CollumnGroup::Numbers:
-            return resultMap[Rules::Collumn::Free][Rules::YambField::Ones] +
-                   resultMap[Rules::Collumn::Free][Rules::YambField::Twos] +
-                   resultMap[Rules::Collumn::Free][Rules::YambField::Threes] +
-                   resultMap[Rules::Collumn::Free][Rules::YambField::Fours] +
-                   resultMap[Rules::Collumn::Free][Rules::YambField::Fives] +
-                   resultMap[Rules::Collumn::Free][Rules::YambField::Sixes];
+    switch (group) {
+    case Rules::CollumnGroup::Numbers:
+        return resultMap[collumn][Rules::YambField::Ones] +
+               resultMap[collumn][Rules::YambField::Twos] +
+               resultMap[collumn][Rules::YambField::Threes] +
+               resultMap[collumn][Rules::YambField::Fours] +
+               resultMap[collumn][Rules::YambField::Fives] +
+               resultMap[collumn][Rules::YambField::Sixes];
 
-        case Rules::CollumnGroup::MinMax:
-        {
-            auto result = (resultMap[Rules::Collumn::Free][Rules::YambField::Max] -
-                    resultMap[Rules::Collumn::Free][Rules::YambField::Min]) *
-                    resultMap[Rules::Collumn::Free][Rules::YambField::Ones];
+    case Rules::CollumnGroup::MinMax:
+    {
+        auto result = (resultMap[collumn][Rules::YambField::Max] -
+                resultMap[collumn][Rules::YambField::Min]) *
+                resultMap[collumn][Rules::YambField::Ones];
 
-            if (result < 0)
-                return 0;
+        if (result < 0)
+            return 0;
 
-            return result;
-        }
-        case Rules::CollumnGroup::Major :
-            return resultMap[Rules::Collumn::Free][Rules::YambField::Triling] +
-                    resultMap[Rules::Collumn::Free][Rules::YambField::Straight] +
-                    resultMap[Rules::Collumn::Free][Rules::YambField::Full] +
-                    resultMap[Rules::Collumn::Free][Rules::YambField::Poker] +
-                    resultMap[Rules::Collumn::Free][Rules::YambField::Yamb];
-        default:
-            break;
-        }
-        break;
+        return result;
+    }
+    case Rules::CollumnGroup::Major :
+        return resultMap[collumn][Rules::YambField::Triling] +
+                resultMap[collumn][Rules::YambField::Straight] +
+                resultMap[collumn][Rules::YambField::Full] +
+                resultMap[collumn][Rules::YambField::Poker] +
+                resultMap[collumn][Rules::YambField::Yamb];
     default:
         break;
     }

@@ -1,6 +1,6 @@
 #include "freecollumn.h"
 
-FreeCollumn::FreeCollumn(Ui::MainWindow* ui, NjambEngine& engine) : AbstractCollumn(ui, engine)
+FreeCollumn::FreeCollumn(Ui::MainWindow* ui, NjambEngine& engine, Results &results) : AbstractCollumn(ui, engine, results)
 {
     playableFields = {Rules::YambField::Ones, Rules::YambField::Twos, Rules::YambField::Threes, Rules::YambField::Fours,
                       Rules::YambField::Fives, Rules::YambField::Sixes, Rules::YambField::Max, Rules::YambField::Min,
@@ -88,4 +88,9 @@ ClickableLabel *FreeCollumn::getUIElementPoker()
 ClickableLabel *FreeCollumn::getUIElementYamb()
 {
     return ui->label_free_yamb;
+}
+
+Rules::Collumn FreeCollumn::getCollumn()
+{
+    return Rules::Collumn::Free;
 }

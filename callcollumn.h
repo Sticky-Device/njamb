@@ -6,12 +6,12 @@
 class CallCollumn : public AbstractCollumn
 {
 public:
-    CallCollumn(Ui::MainWindow* ui, NjambEngine& engine);
+    CallCollumn(Ui::MainWindow* ui, NjambEngine& engine, Results &results);
 
 public:
     std::vector<Rules::YambField> getPlayableFields() override;
 
-public:
+private:
     ClickableLabel* getUIElementOnes() override;
     ClickableLabel* getUIElementTwos() override;
     ClickableLabel* getUIElementThrees() override;
@@ -25,6 +25,9 @@ public:
     ClickableLabel* getUIElementFull() override;
     ClickableLabel* getUIElementPoker() override;
     ClickableLabel* getUIElementYamb() override;
+
+private:
+    Rules::Collumn getCollumn() override;
 };
 
 #endif // CALLCOLLUMN_H

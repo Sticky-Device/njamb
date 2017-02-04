@@ -7,7 +7,7 @@
 class UpCollumn : public AbstractCollumn
 {
 public:
-    UpCollumn(Ui::MainWindow* ui, NjambEngine& engine);
+    UpCollumn(Ui::MainWindow* ui, NjambEngine& engine, Results &results);
 
 public:
     void reset() override;
@@ -28,6 +28,9 @@ public:
     ClickableLabel* getUIElementFull() override;
     ClickableLabel* getUIElementPoker() override;
     ClickableLabel* getUIElementYamb() override;
+
+private:
+    Rules::Collumn getCollumn() override;
 
 private:
     std::stack<Rules::YambField> playableFields;
