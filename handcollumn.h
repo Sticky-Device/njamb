@@ -10,6 +10,7 @@ public:
 
 public:
     std::vector<Rules::YambField> getPlayableFields() override;
+    void fieldClicked(Rules::YambField field) override;
 
 public:
     ClickableLabel* getUIElementOnes() override;
@@ -25,6 +26,13 @@ public:
     ClickableLabel* getUIElementFull() override;
     ClickableLabel* getUIElementPoker() override;
     ClickableLabel* getUIElementYamb() override;
+
+private:
+    void removePlayableField(Rules::YambField field);
+
+private:
+    std::vector<Rules::YambField> playableFields;
+    std::vector<Rules::YambField> filledFields;
 };
 
 #endif // HANDCOLLUMN_H
