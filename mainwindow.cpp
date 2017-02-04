@@ -628,166 +628,188 @@ void MainWindow::on_label_down_twos_unhovered()
 void MainWindow::on_label_down_threes_clicked()
 {
     downCollumn.fieldClicked(Rules::YambField::Threes);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_down_threes_hovered()
 {
-
+    downCollumn.fieldHovered(Rules::YambField::Threes);
 }
 
 void MainWindow::on_label_down_threes_unhovered()
 {
-
+    downCollumn.fieldUnhovered(Rules::YambField::Threes);
 }
 
 void MainWindow::on_label_down_fours_clicked()
 {
-
+    downCollumn.fieldClicked(Rules::YambField::Fours);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_down_fours_hovered()
 {
-
+    downCollumn.fieldHovered(Rules::YambField::Fours);
 }
 
 void MainWindow::on_label_down_fours_unhovered()
 {
-
+    downCollumn.fieldUnhovered(Rules::YambField::Fours);
 }
 
 void MainWindow::on_label_down_fives_clicked()
 {
-
+    downCollumn.fieldClicked(Rules::YambField::Fives);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_down_fives_hovered()
 {
-
+    downCollumn.fieldHovered(Rules::YambField::Fives);
 }
 
 void MainWindow::on_label_down_fives_unhovered()
 {
-
+    downCollumn.fieldUnhovered(Rules::YambField::Fives);
 }
 
 void MainWindow::on_label_down_sixes_clicked()
 {
-
+    downCollumn.fieldClicked(Rules::YambField::Sixes);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_down_sixes_hovered()
 {
-
+    downCollumn.fieldHovered(Rules::YambField::Sixes);
 }
 
 void MainWindow::on_label_down_sixes_unhovered()
 {
-
+    downCollumn.fieldUnhovered(Rules::YambField::Sixes);
 }
 
 void MainWindow::on_label_down_max_clicked()
 {
-
+    downCollumn.fieldClicked(Rules::YambField::Max);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_down_max_hovered()
 {
-
+    downCollumn.fieldHovered(Rules::YambField::Max);
 }
 
 void MainWindow::on_label_down_max_unhovered()
 {
-
+    downCollumn.fieldUnhovered(Rules::YambField::Max);
 }
 
 void MainWindow::on_label_down_min_clicked()
 {
-
+    downCollumn.fieldClicked(Rules::YambField::Min);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_down_min_hovered()
 {
-
+    downCollumn.fieldHovered(Rules::YambField::Min);
 }
 
 void MainWindow::on_label_down_min_unhovered()
 {
-
+    downCollumn.fieldUnhovered(Rules::YambField::Min);
 }
 
 void MainWindow::on_label_down_triling_clicked()
 {
-
+    downCollumn.fieldClicked(Rules::YambField::Triling);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_down_triling_hovered()
 {
-
+    downCollumn.fieldHovered(Rules::YambField::Triling);
 }
 
 void MainWindow::on_label_down_triling_unhovered()
 {
-
+    downCollumn.fieldUnhovered(Rules::YambField::Triling);
 }
 
 void MainWindow::on_label_down_straight_clicked()
 {
-
+    downCollumn.fieldClicked(Rules::YambField::Straight);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_down_straight_hovered()
 {
-
+    downCollumn.fieldHovered(Rules::YambField::Straight);
 }
 
 void MainWindow::on_label_down_straight_unhovered()
 {
-
+    downCollumn.fieldUnhovered(Rules::YambField::Straight);
 }
 
 void MainWindow::on_label_down_full_clicked()
 {
-
+    downCollumn.fieldClicked(Rules::YambField::Full);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_down_full_hovered()
 {
-
+    downCollumn.fieldHovered(Rules::YambField::Full);
 }
 
 void MainWindow::on_label_down_full_unhovered()
 {
-
+    downCollumn.fieldUnhovered(Rules::YambField::Full);
 }
 
 void MainWindow::on_label_down_poker_clicked()
 {
-
+    downCollumn.fieldClicked(Rules::YambField::Poker);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_down_poker_hovered()
 {
-
+    downCollumn.fieldHovered(Rules::YambField::Poker);
 }
 
 void MainWindow::on_label_down_poker_unhovered()
 {
-
+    downCollumn.fieldUnhovered(Rules::YambField::Poker);
 }
 
 void MainWindow::on_label_down_yamb_clicked()
 {
-
+    downCollumn.fieldClicked(Rules::YambField::Yamb);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_down_yamb_hovered()
 {
-
+    downCollumn.fieldHovered(Rules::YambField::Yamb);
 }
 
 void MainWindow::on_label_down_yamb_unhovered()
 {
-
+    downCollumn.fieldUnhovered(Rules::YambField::Yamb);
 }
 
 void MainWindow::on_label_up_ones_clicked()

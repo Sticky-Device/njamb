@@ -30,6 +30,9 @@ void DownCollumn::reset()
 
 std::vector<Rules::YambField> DownCollumn::getPlayableFields()
 {
+    if (playableFields.empty())
+        return {};
+
     return {playableFields.top()};
 }
 
