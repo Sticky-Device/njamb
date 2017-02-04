@@ -10,21 +10,7 @@ public:
 
 public:
     std::vector<Rules::YambField> getPlayableFields() override;
-
-public:
-    void onesClicked();
-    void twosClicked();
-    void threesClicked();
-    void foursClicked();
-    void fivesClicked();
-    void sixesClicked();
-    void maxClicked();
-    void minClicked();
-    void trilingClicked();
-    void straightClicked();
-    void fullClicked();
-    void pokerClicked();
-    void yambClicked();
+    void fieldClicked(Rules::YambField field) override;
 
 public:
     ClickableLabel* getUIElementOnes() override;

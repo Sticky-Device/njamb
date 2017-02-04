@@ -6,10 +6,8 @@ static std::stack<Rules::YambField> defaultFields ( std::deque<Rules::YambField>
                                                                                     Rules::YambField::Twos, Rules::YambField::Ones
                                                                                  });
 
-DownCollumn::DownCollumn(Ui::MainWindow *ui, NjambEngine &engine) : AbstractCollumn(ui, engine),
-playableFields(defaultFields)
-{
-}
+DownCollumn::DownCollumn(Ui::MainWindow *ui, NjambEngine &engine) : AbstractCollumn(ui, engine), playableFields(defaultFields)
+{}
 
 void DownCollumn::reset()
 {
@@ -35,95 +33,10 @@ std::vector<Rules::YambField> DownCollumn::getPlayableFields()
     return {playableFields.top()};
 }
 
-void DownCollumn::onesClicked()
+void DownCollumn::fieldClicked(Rules::YambField field)
 {
-    AbstractCollumn::onesClicked();
     playableFields.pop();
-    updateFields();
-}
-
-void DownCollumn::twosClicked()
-{
-    AbstractCollumn::twosClicked();
-    playableFields.pop();
-    updateFields();
-}
-
-void DownCollumn::threesClicked()
-{
-    AbstractCollumn::threesClicked();
-    playableFields.pop();
-    updateFields();
-}
-
-void DownCollumn::foursClicked()
-{
-    AbstractCollumn::foursClicked();
-    playableFields.pop();
-    updateFields();
-}
-
-void DownCollumn::fivesClicked()
-{
-    AbstractCollumn::fivesClicked();
-    playableFields.pop();
-    updateFields();
-}
-
-void DownCollumn::sixesClicked()
-{
-    AbstractCollumn::sixesClicked();
-    playableFields.pop();
-    updateFields();
-}
-
-void DownCollumn::maxClicked()
-{
-    AbstractCollumn::maxClicked();
-    playableFields.pop();
-    updateFields();
-}
-
-void DownCollumn::minClicked()
-{
-    AbstractCollumn::minClicked();
-    playableFields.pop();
-    updateFields();
-}
-
-void DownCollumn::trilingClicked()
-{
-    AbstractCollumn::trilingClicked();
-    playableFields.pop();
-    updateFields();
-}
-
-void DownCollumn::straightClicked()
-{
-    AbstractCollumn::straightClicked();
-    playableFields.pop();
-    updateFields();
-}
-
-void DownCollumn::fullClicked()
-{
-    AbstractCollumn::fullClicked();
-    playableFields.pop();
-    updateFields();
-}
-
-void DownCollumn::pokerClicked()
-{
-    AbstractCollumn::pokerClicked();
-    playableFields.pop();
-    updateFields();
-}
-
-void DownCollumn::yambClicked()
-{
-    AbstractCollumn::yambClicked();
-    playableFields.pop();
-    updateFields();
+    AbstractCollumn::fieldClicked(field);
 }
 
 ClickableLabel *DownCollumn::getUIElementOnes()

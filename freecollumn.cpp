@@ -9,84 +9,11 @@ FreeCollumn::FreeCollumn(Ui::MainWindow* ui, NjambEngine& engine) : AbstractColl
                      };
 }
 
-void FreeCollumn::onesClicked()
+void FreeCollumn::fieldClicked(Rules::YambField field)
 {
-    AbstractCollumn::onesClicked();
-    removePlayableField(Rules::YambField::Ones);
+    removePlayableField(field);
+    AbstractCollumn::fieldClicked(field);
 }
-
-void FreeCollumn::twosClicked()
-{
-    AbstractCollumn::twosClicked();
-    removePlayableField(Rules::YambField::Twos);
-}
-
-void FreeCollumn::threesClicked()
-{
-    AbstractCollumn::threesClicked();
-    removePlayableField(Rules::YambField::Threes);
-}
-
-void FreeCollumn::foursClicked()
-{
-    AbstractCollumn::foursClicked();
-    removePlayableField(Rules::YambField::Fours);
-}
-
-void FreeCollumn::fivesClicked()
-{
-    AbstractCollumn::fivesClicked();
-    removePlayableField(Rules::YambField::Fives);
-}
-
-void FreeCollumn::sixesClicked()
-{
-    AbstractCollumn::sixesClicked();
-    removePlayableField(Rules::YambField::Sixes);
-}
-
-void FreeCollumn::maxClicked()
-{
-    AbstractCollumn::maxClicked();
-    removePlayableField(Rules::YambField::Max);
-}
-
-void FreeCollumn::minClicked()
-{
-    AbstractCollumn::minClicked();
-    removePlayableField(Rules::YambField::Min);
-}
-
-void FreeCollumn::trilingClicked()
-{
-    AbstractCollumn::trilingClicked();
-    removePlayableField(Rules::YambField::Triling);
-}
-
-void FreeCollumn::straightClicked()
-{
-    AbstractCollumn::straightClicked();
-    removePlayableField(Rules::YambField::Straight);
-}
-
-void FreeCollumn::fullClicked()
-{
-    AbstractCollumn::fullClicked();
-    removePlayableField(Rules::YambField::Full);
-}
-
-void FreeCollumn::pokerClicked()
-{
-    AbstractCollumn::pokerClicked();
-    removePlayableField(Rules::YambField::Poker);
-}
-
-void FreeCollumn::yambClicked()
-{
-    AbstractCollumn::yambClicked();
-    removePlayableField(Rules::YambField::Yamb);
-}
-
 
 std::vector<Rules::YambField> FreeCollumn::getPlayableFields()
 {

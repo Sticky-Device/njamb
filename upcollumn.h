@@ -2,6 +2,7 @@
 #define UPCOLLUMN_H
 
 #include "abstractcollumn.h"
+#include <stack>
 
 class UpCollumn : public AbstractCollumn
 {
@@ -11,6 +12,7 @@ public:
 public:
     void reset() override;
     std::vector<Rules::YambField> getPlayableFields() override;
+    void fieldClicked(Rules::YambField field) override;
 
 public:
     ClickableLabel* getUIElementOnes() override;
@@ -26,6 +28,9 @@ public:
     ClickableLabel* getUIElementFull() override;
     ClickableLabel* getUIElementPoker() override;
     ClickableLabel* getUIElementYamb() override;
+
+private:
+    std::stack<Rules::YambField> playableFields;
 };
 
 #endif // UPCOLLUMN_H

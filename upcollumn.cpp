@@ -1,9 +1,13 @@
 #include "upcollumn.h"
 
-UpCollumn::UpCollumn(Ui::MainWindow *ui, NjambEngine &engine) : AbstractCollumn(ui, engine)
-{
+static std::stack<Rules::YambField> defaultFields ( std::deque<Rules::YambField> {Rules::YambField::Ones, Rules::YambField::Twos, Rules::YambField::Threes, Rules::YambField::Fours,
+                  Rules::YambField::Fives, Rules::YambField::Sixes, Rules::YambField::Max, Rules::YambField::Min,
+                  Rules::YambField::Triling, Rules::YambField::Straight, Rules::YambField::Full,
+                  Rules::YambField::Poker, Rules::YambField::Yamb
+                 });
 
-}
+UpCollumn::UpCollumn(Ui::MainWindow *ui, NjambEngine &engine) : AbstractCollumn(ui, engine), playableFields(defaultFields)
+{}
 
 void UpCollumn::reset()
 {
@@ -20,11 +24,19 @@ void UpCollumn::reset()
     getUIElementStraight()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
     getUIElementFull()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
     getUIElementPoker()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
+
+    playableFields = defaultFields;
 }
 
 std::vector<Rules::YambField> UpCollumn::getPlayableFields()
 {
-    return {};
+    return {playableFields.top()};
+}
+
+void UpCollumn::fieldClicked(Rules::YambField field)
+{
+    playableFields.pop();
+    AbstractCollumn::fieldClicked(field);
 }
 
 ClickableLabel *UpCollumn::getUIElementOnes()
