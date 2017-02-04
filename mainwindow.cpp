@@ -814,152 +814,172 @@ void MainWindow::on_label_down_yamb_unhovered()
 
 void MainWindow::on_label_up_ones_clicked()
 {
-
+    upCollumn.fieldClicked(Rules::YambField::Ones);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_up_ones_hovered()
 {
-
+    upCollumn.fieldHovered(Rules::YambField::Ones);
 }
 
 void MainWindow::on_label_up_ones_unhovered()
 {
-
+    upCollumn.fieldUnhovered(Rules::YambField::Ones);
 }
 
 void MainWindow::on_label_up_twos_clicked()
 {
-
+    upCollumn.fieldClicked(Rules::YambField::Twos);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_up_twos_hovered()
 {
-
+    upCollumn.fieldHovered(Rules::YambField::Twos);
 }
 
 void MainWindow::on_label_up_twos_unhovered()
 {
-
+    upCollumn.fieldUnhovered(Rules::YambField::Twos);
 }
 
 void MainWindow::on_label_up_threes_clicked()
 {
-
+    upCollumn.fieldClicked(Rules::YambField::Threes);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_up_threes_hovered()
 {
-
+    upCollumn.fieldHovered(Rules::YambField::Threes);
 }
 
 void MainWindow::on_label_up_threes_unhovered()
 {
-
+    upCollumn.fieldUnhovered(Rules::YambField::Threes);
 }
 
 void MainWindow::on_label_up_fours_clicked()
 {
-
+    upCollumn.fieldClicked(Rules::YambField::Fours);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_up_fours_hovered()
 {
-
+    upCollumn.fieldHovered(Rules::YambField::Fours);
 }
 
 void MainWindow::on_label_up_fours_unhovered()
 {
-
+    upCollumn.fieldUnhovered(Rules::YambField::Fours);
 }
 
 void MainWindow::on_label_up_fives_clicked()
 {
-
+    upCollumn.fieldClicked(Rules::YambField::Fives);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_up_fives_hovered()
 {
-
+    upCollumn.fieldHovered(Rules::YambField::Fives);
 }
 
 void MainWindow::on_label_up_fives_unhovered()
 {
-
+    upCollumn.fieldUnhovered(Rules::YambField::Fives);
 }
 
 void MainWindow::on_label_up_sixes_clicked()
 {
-
+    upCollumn.fieldClicked(Rules::YambField::Sixes);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_up_sixes_hovered()
 {
-
+    upCollumn.fieldHovered(Rules::YambField::Sixes);
 }
 
 void MainWindow::on_label_up_sixes_unhovered()
 {
-
+    upCollumn.fieldUnhovered(Rules::YambField::Sixes);
 }
 
 void MainWindow::on_label_up_max_clicked()
 {
-
+    upCollumn.fieldClicked(Rules::YambField::Max);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_up_max_hovered()
 {
-
+    upCollumn.fieldHovered(Rules::YambField::Max);
 }
 
 void MainWindow::on_label_up_max_unhovered()
 {
-
+    upCollumn.fieldUnhovered(Rules::YambField::Max);
 }
 
 void MainWindow::on_label_up_min_clicked()
 {
-
+    upCollumn.fieldClicked(Rules::YambField::Min);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_up_min_hovered()
 {
-
+    upCollumn.fieldHovered(Rules::YambField::Min);
 }
 
 void MainWindow::on_label_up_min_unhovered()
 {
-
+    upCollumn.fieldUnhovered(Rules::YambField::Min);
 }
 
 void MainWindow::on_label_up_triling_clicked()
 {
-
+    upCollumn.fieldClicked(Rules::YambField::Triling);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_up_triling_hovered()
 {
-
+    upCollumn.fieldHovered(Rules::YambField::Triling);
 }
 
 void MainWindow::on_label_up_triling_unhovered()
 {
-
+    upCollumn.fieldUnhovered(Rules::YambField::Triling);
 }
 
 void MainWindow::on_label_up_straight_clicked()
 {
-
+    upCollumn.fieldClicked(Rules::YambField::Straight);
+    updateResults();
+    nextRound();
 }
 
 void MainWindow::on_label_up_straight_hovered()
 {
-
+    upCollumn.fieldHovered(Rules::YambField::Straight);
 }
 
 void MainWindow::on_label_up_straight_unhovered()
 {
-
+    upCollumn.fieldUnhovered(Rules::YambField::Straight);
 }
 
 void MainWindow::on_label_up_full_clicked()
