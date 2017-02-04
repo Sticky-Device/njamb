@@ -499,19 +499,12 @@ void MainWindow::nextRound()
     dice5.deactivate();
     dice6.deactivate();
 
-    ui->label_free_ones->setActive(false);
-    ui->label_free_twos->setActive(false);
-    ui->label_free_threes->setActive(false);
-    ui->label_free_fours->setActive(false);
-    ui->label_free_fives->setActive(false);
-    ui->label_free_sixes->setActive(false);
-    ui->label_free_max->setActive(false);
-    ui->label_free_min->setActive(false);
-    ui->label_free_triling->setActive(false);
-    ui->label_free_straight->setActive(false);
-    ui->label_free_full->setActive(false);
-    ui->label_free_poker->setActive(false);
-    ui->label_free_yamb->setActive(false);
+    downCollumn.nextRound();
+    freeCollumn.nextRound();
+    upCollumn.nextRound();
+    upDownCollumn.nextRound();
+    handCollumn.nextRound();
+    callCollumn.nextRound();
 
     ui->diceRollButton->setEnabled(true);
 
@@ -536,6 +529,10 @@ void MainWindow::updateResults(Rules::Collumn collumn, Rules::YambField field, i
 void MainWindow::on_label_down_ones_clicked()
 {
     downCollumn.onesClicked();
+    auto hand = engine.getCurrentHand();
+    auto result = hand.getBestResult(Rules::YambField::Ones);
+    updateResults(Rules::Collumn::Down, Rules::YambField::Ones, result);
+    nextRound();
 }
 
 void MainWindow::on_label_down_ones_hovered()
@@ -551,6 +548,10 @@ void MainWindow::on_label_down_ones_unhovered()
 void MainWindow::on_label_down_twos_clicked()
 {
     downCollumn.twosClicked();
+    auto hand = engine.getCurrentHand();
+    auto result = hand.getBestResult(Rules::YambField::Twos);
+    updateResults(Rules::Collumn::Down, Rules::YambField::Twos, result);
+    nextRound();
 }
 
 void MainWindow::on_label_down_twos_hovered()
@@ -696,4 +697,9 @@ void MainWindow::on_label_call_ones_hovered()
 void MainWindow::on_label_call_ones_unhovered()
 {
     callCollumn.onesUnhovered();
+}
+
+void MainWindow::on_label_down_threes_clicked()
+{
+
 }

@@ -132,6 +132,8 @@ private slots:
 
     void on_label_down_twos_unhovered();
 
+    void on_label_down_threes_clicked();
+
     void on_label_up_yamb_clicked();
 
     void on_label_up_yamb_hovered();

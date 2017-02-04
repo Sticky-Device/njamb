@@ -8,35 +8,65 @@ AbstractCollumn::AbstractCollumn(Ui::MainWindow *ui, NjambEngine & eng) : ui(ui)
 
 void AbstractCollumn::diceRolled()
 {
+    updateFields();
+}
+
+void AbstractCollumn::updateFields()
+{
     for (auto field : getPlayableFields())
     {
         switch (field) {
         case Rules::YambField::Ones:
             getUIElementOnes()->setActive(true);
+            getUIElementOnes()->setStyleSheet(Rules::FREE_LABEL_COLOR);
+            break;
         case Rules::YambField::Twos:
             getUIElementTwos()->setActive(true);
+            getUIElementTwos()->setStyleSheet(Rules::FREE_LABEL_COLOR);
+            break;
         case Rules::YambField::Threes:
             getUIElementThrees()->setActive(true);
+            getUIElementThrees()->setStyleSheet(Rules::FREE_LABEL_COLOR);
+            break;
         case Rules::YambField::Fours:
             getUIElementFours()->setActive(true);
+            getUIElementFours()->setStyleSheet(Rules::FREE_LABEL_COLOR);
+            break;
         case Rules::YambField::Fives:
             getUIElementFives()->setActive(true);
+            getUIElementFives()->setStyleSheet(Rules::FREE_LABEL_COLOR);
+            break;
         case Rules::YambField::Sixes:
             getUIElementSixes()->setActive(true);
+            getUIElementSixes()->setStyleSheet(Rules::FREE_LABEL_COLOR);
+            break;
         case Rules::YambField::Max:
             getUIElementMax()->setActive(true);
+            getUIElementMax()->setStyleSheet(Rules::FREE_LABEL_COLOR);
+            break;
         case Rules::YambField::Min:
             getUIElementMin()->setActive(true);
+            getUIElementMin()->setStyleSheet(Rules::FREE_LABEL_COLOR);
+            break;
         case Rules::YambField::Triling:
             getUIElementTriling()->setActive(true);
+            getUIElementTriling()->setStyleSheet(Rules::FREE_LABEL_COLOR);
+            break;
         case Rules::YambField::Straight:
             getUIElementStraight()->setActive(true);
+            getUIElementStraight()->setStyleSheet(Rules::FREE_LABEL_COLOR);
+            break;
         case Rules::YambField::Full:
             getUIElementFull()->setActive(true);
+            getUIElementFull()->setStyleSheet(Rules::FREE_LABEL_COLOR);
+            break;
         case Rules::YambField::Poker:
             getUIElementPoker()->setActive(true);
+            getUIElementPoker()->setStyleSheet(Rules::FREE_LABEL_COLOR);
+            break;
         case Rules::YambField::Yamb:
             getUIElementYamb()->setActive(true);
+            getUIElementYamb()->setStyleSheet(Rules::FREE_LABEL_COLOR);
             break;
         default:
             break;
@@ -72,6 +102,23 @@ void AbstractCollumn::reset()
     getUIElementPoker()->setStyleSheet(Rules::FREE_LABEL_COLOR);
     getUIElementYamb()->reset();
     getUIElementYamb()->setStyleSheet(Rules::FREE_LABEL_COLOR);
+}
+
+void AbstractCollumn::nextRound()
+{
+    getUIElementOnes()->setActive(false);
+    getUIElementTwos()->setActive(false);
+    getUIElementThrees()->setActive(false);
+    getUIElementFours()->setActive(false);
+    getUIElementFives()->setActive(false);
+    getUIElementSixes()->setActive(false);
+    getUIElementMax()->setActive(false);
+    getUIElementMin()->setActive(false);
+    getUIElementTriling()->setActive(false);
+    getUIElementStraight()->setActive(false);
+    getUIElementFull()->setActive(false);
+    getUIElementPoker()->setActive(false);
+    getUIElementYamb()->setActive(false);
 }
 
 void AbstractCollumn::onesHovered()
