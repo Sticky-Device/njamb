@@ -1,12 +1,12 @@
 #include "freecollumn.h"
 
-FreeCollumn::FreeCollumn(Ui::MainWindow* ui, NjambEngine& engine, Results &results) : AbstractCollumn(ui, engine, results)
+FreeCollumn::FreeCollumn(Ui::MainWindow* ui, NjambEngine& engine, Results &results) : AbstractCollumn(ui, engine, results), playableFields(allFields)
+{}
+
+void FreeCollumn::reset()
 {
-    playableFields = {Rules::YambField::Ones, Rules::YambField::Twos, Rules::YambField::Threes, Rules::YambField::Fours,
-                      Rules::YambField::Fives, Rules::YambField::Sixes, Rules::YambField::Max, Rules::YambField::Min,
-                      Rules::YambField::Triling, Rules::YambField::Straight, Rules::YambField::Full,
-                      Rules::YambField::Poker, Rules::YambField::Yamb
-                     };
+    playableFields = allFields;
+    AbstractCollumn::reset();
 }
 
 void FreeCollumn::fieldClicked(Rules::YambField field)
