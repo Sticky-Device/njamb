@@ -2,6 +2,7 @@
 #define UPDOWNCOLLUMN_H
 
 #include "abstractcollumn.h"
+#include <stack>
 
 class UpDownCollumn : public AbstractCollumn
 {
@@ -11,6 +12,7 @@ public:
 public:
     void reset() override;
     std::vector<Rules::YambField> getPlayableFields() override;
+    void fieldClicked(Rules::YambField field) override;
 
 public:
     ClickableLabel* getUIElementOnes() override;
@@ -29,6 +31,10 @@ public:
 
 private:
     Rules::Collumn getCollumn() override;
+
+private:
+    std::stack<Rules::YambField> playableUpFields;
+    std::stack<Rules::YambField> playableDownFields;
 };
 
 #endif // UPDOWNCOLLUMN_H

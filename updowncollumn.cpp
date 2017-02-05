@@ -1,9 +1,16 @@
 #include "UpDownCollumn.h"
 
-UpDownCollumn::UpDownCollumn(Ui::MainWindow *ui, NjambEngine &engine, Results &results) : AbstractCollumn(ui, engine, results)
-{
+static std::stack<Rules::YambField> defaultUpFields ( std::deque<Rules::YambField> {Rules::YambField::Ones, Rules::YambField::Twos, Rules::YambField::Threes, Rules::YambField::Fours,
+                                                                                    Rules::YambField::Fives, Rules::YambField::Sixes, Rules::YambField::Max,
+                                                                                   });
 
-}
+static std::stack<Rules::YambField> defaultDownFields { std::deque<Rules::YambField> {Rules::YambField::Yamb, Rules::YambField::Poker, Rules::YambField::Full,
+                                                                                      Rules::YambField::Straight, Rules::YambField::Triling, Rules::YambField::Min
+                                                                                     }};
+
+UpDownCollumn::UpDownCollumn(Ui::MainWindow *ui, NjambEngine &engine, Results &results) :
+    AbstractCollumn(ui, engine, results), playableUpFields(defaultUpFields), playableDownFields(defaultDownFields)
+{}
 
 void UpDownCollumn::reset()
 {
@@ -19,11 +26,30 @@ void UpDownCollumn::reset()
     getUIElementFull()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
     getUIElementPoker()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
     getUIElementYamb()->setStyleSheet(Rules::FILLED_LABEL_COLOR);
+
+    playableUpFields = defaultUpFields;
+    playableDownFields = defaultDownFields;
 }
 
 std::vector<Rules::YambField> UpDownCollumn::getPlayableFields()
 {
-    return {};
+    std::vector<Rules::YambField> result;
+    if (!playableUpFields.empty())
+        result.push_back(playableUpFields.top());
+    if (!playableDownFields.empty())
+        result.push_back(playableDownFields.top());
+
+    return result;
+}
+
+void UpDownCollumn::fieldClicked(Rules::YambField field)
+{
+    if (!playableUpFields.empty() && (field == playableUpFields.top()))
+        playableUpFields.pop();
+    if (!playableDownFields.empty() && (field == playableDownFields.top()))
+        playableDownFields.pop();
+
+    AbstractCollumn::fieldClicked(field);
 }
 
 ClickableLabel *UpDownCollumn::getUIElementOnes()
