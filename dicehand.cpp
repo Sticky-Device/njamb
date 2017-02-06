@@ -126,6 +126,13 @@ int DiceHand::getBestResultStraight(int currentRoll)
     if (diceSet.size() < 5)
         return 0;
 
+    std::set<int> minor_straight = {1, 2, 3, 4, 5};
+    std::set<int> major_straight = {2, 3, 4, 5, 6};
+    if ((diceSet.size() == 5) && (diceSet != minor_straight) && (diceSet != major_straight))
+        return 0;
+
+    // if size is 6, than we clearly have (major) straight
+
     switch (currentRoll) {
     case 1:
         return Rules::STRAIGHT_FIRST_HAND;
