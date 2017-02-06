@@ -1,13 +1,45 @@
 #include "callcollumn.h"
 
-CallCollumn::CallCollumn(Ui::MainWindow *ui, NjambEngine &engine, Results &results) : AbstractCollumn(ui, engine, results)
-{
-
-}
+CallCollumn::CallCollumn(Ui::MainWindow *ui, NjambEngine &engine, Results &results) :
+    AbstractCollumn(ui, engine, results)
+{}
 
 std::vector<Rules::YambField> CallCollumn::getPlayableFields()
 {
-    return {};
+    std::vector<Rules::YambField> playableFields;
+    switch (state.mode) {
+    case CallCollumnMode::Normal:
+        // TODO: use set_difference on allFields and filledFields
+        std::copy_if(begin(allFields), end(allFields), std::back_inserter(playableFields), [&](Rules::YambField field) {
+            return std::none_of(begin(filledFields), end(filledFields), [&] (Rules::YambField filledField) {
+                return field == filledField;
+            });
+        });
+        break;
+    case CallCollumnMode::Called:
+        playableFields.push_back(state.calledField);
+        break;
+    default:
+        break;
+    }
+
+    return playableFields;
+}
+
+void CallCollumn::fieldClicked(Rules::YambField field)
+{
+    switch (state.mode) {
+    case CallCollumnMode::Normal :
+        state = {CallCollumnMode::Called, field};
+        updateFields();
+        break;
+    case CallCollumnMode::Called :
+        state = {CallCollumnMode::Normal, Rules::YambField::None};
+        filledFields.push_back(field);
+        AbstractCollumn::fieldClicked(field);
+    default:
+        break;
+    }
 }
 
 ClickableLabel *CallCollumn::getUIElementOnes()

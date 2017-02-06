@@ -29,10 +29,8 @@ public:
 
 private:
     Rules::Collumn getCollumn() override;
-    void removePlayableField(Rules::YambField field);
 
 private:
-    std::vector<Rules::YambField> playableFields;
     std::vector<Rules::YambField> filledFields;
 };
 

@@ -27,6 +27,7 @@ enum class Collumn {
 
 enum class YambField
 {
+    None,
     Ones,
     Twos,
     Threes,

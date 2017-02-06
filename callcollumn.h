@@ -3,6 +3,18 @@
 
 #include "abstractcollumn.h"
 
+enum class CallCollumnMode
+{
+    Normal,
+    Called
+};
+
+struct CallCollumnState
+{
+    CallCollumnMode mode;
+    Rules::YambField calledField;
+};
+
 class CallCollumn : public AbstractCollumn
 {
 public:
@@ -10,6 +22,7 @@ public:
 
 public:
     std::vector<Rules::YambField> getPlayableFields() override;
+    void fieldClicked(Rules::YambField field) override;
 
 private:
     ClickableLabel* getUIElementOnes() override;
@@ -28,6 +41,10 @@ private:
 
 private:
     Rules::Collumn getCollumn() override;
+
+private:
+    std::vector<Rules::YambField> filledFields;
+    CallCollumnState state = { CallCollumnMode::Normal, Rules::YambField::None};
 };
 
 #endif // CALLCOLLUMN_H

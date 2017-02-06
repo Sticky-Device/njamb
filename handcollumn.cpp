@@ -6,12 +6,13 @@ HandCollumn::HandCollumn(Ui::MainWindow *ui, NjambEngine &engine, Results &resul
 
 std::vector<Rules::YambField> HandCollumn::getPlayableFields()
 {
-    playableFields.clear();
+    std::vector<Rules::YambField> playableFields;
     if (engine.currentRoll() == 1)
     {
         // we can change hand collumn only in
         // TODO: test scenario when at the end of game you are left only with fields from hand collumn
         //       in that scenario user should not be allowed to roll dice second/third time
+        // TODO: use set_difference
         std::copy_if(begin(allFields), end(allFields), std::back_inserter(playableFields), [&](Rules::YambField field) {
             return std::none_of(begin(filledFields), end(filledFields), [&] (Rules::YambField filledField) {
                 return field == filledField;
@@ -26,11 +27,6 @@ void HandCollumn::fieldClicked(Rules::YambField field)
 {
     filledFields.push_back(field);
     AbstractCollumn::fieldClicked(field);
-}
-
-void HandCollumn::removePlayableField(Rules::YambField field)
-{
-    playableFields.erase(std::remove(playableFields.begin(), playableFields.end(), field), playableFields.end());
 }
 
 ClickableLabel *HandCollumn::getUIElementOnes()
