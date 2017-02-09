@@ -49,7 +49,7 @@ protected:
     Results& results;
     static const std::vector<Rules::YambField> allFields;
 
-private:
+protected:
     ClickableLabel *getUIElement(Rules::YambField);
 };
 

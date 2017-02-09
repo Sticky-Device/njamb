@@ -4,6 +4,13 @@ CallCollumn::CallCollumn(Ui::MainWindow *ui, NjambEngine &engine, Results &resul
     AbstractCollumn(ui, engine, results)
 {}
 
+void CallCollumn::reset()
+{
+    filledFields.clear();
+    calledField = Rules::YambField::None;
+    AbstractCollumn::reset();
+}
+
 std::vector<Rules::YambField> CallCollumn::getPlayableFields()
 {
     if ((engine.currentRoll() > 1) && (engine.getMode() != Rules::Mode::Called))
@@ -31,20 +38,35 @@ std::vector<Rules::YambField> CallCollumn::getPlayableFields()
 
 void CallCollumn::fieldClicked(Rules::YambField field)
 {
-    auto mode = engine.getMode();
-    engine.CallFieldClicked();
-    switch (mode) {
+    switch (engine.getMode()) {
     case Rules::Mode::Normal :
+        engine.CallFieldClicked();
         calledField = field;
         updateFields();
         break;
     case Rules::Mode::Called :
-        calledField = Rules::YambField::None;
-        filledFields.push_back(field);
-        AbstractCollumn::fieldClicked(field);
+        if (calledField == field)// submit selected
+        {
+            engine.CallFieldClicked();
+            calledField = Rules::YambField::None;
+            filledFields.push_back(field);
+            AbstractCollumn::fieldClicked(field);
+        }
+        else // call choice changed
+        {
+            calledField = field;
+            updateFields();
+        }
     default:
         break;
     }
+}
+
+void CallCollumn::updateFields()
+{
+    AbstractCollumn::updateFields();
+    for (auto field : allFields)
+        getUIElement(field)->setActive(true);
 }
 
 ClickableLabel *CallCollumn::getUIElementOnes()

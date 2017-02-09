@@ -4,6 +4,12 @@ HandCollumn::HandCollumn(Ui::MainWindow *ui, NjambEngine &engine, Results &resul
 {
 }
 
+void HandCollumn::reset()
+{
+    filledFields.clear();
+    AbstractCollumn::reset();
+}
+
 std::vector<Rules::YambField> HandCollumn::getPlayableFields()
 {
     if ((engine.currentRoll() > 1) || (engine.getMode() == Rules::Mode::Called))

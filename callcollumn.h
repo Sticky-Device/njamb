@@ -10,8 +10,10 @@ public:
     CallCollumn(Ui::MainWindow* ui, NjambEngine& engine, Results &results);
 
 public:
+    void reset() override;
     std::vector<Rules::YambField> getPlayableFields() override;
     void fieldClicked(Rules::YambField field) override;
+    void updateFields() override;
 
 private:
     ClickableLabel* getUIElementOnes() override;
