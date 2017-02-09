@@ -46,9 +46,10 @@ void AbstractCollumn::reset()
 
 void AbstractCollumn::nextRound()
 {
-    for (auto field : allFields)
+    for (auto field : getPlayableFields())
     {
         getUIElement(field)->setActive(false);
+        getUIElement(field)->setStyleSheet(Rules::FREE_LABEL_COLOR);
     }
 }
 

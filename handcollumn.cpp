@@ -6,22 +6,19 @@ HandCollumn::HandCollumn(Ui::MainWindow *ui, NjambEngine &engine, Results &resul
 
 std::vector<Rules::YambField> HandCollumn::getPlayableFields()
 {
-    if (engine.getMode() == Rules::Mode::Called)
+    if ((engine.currentRoll() > 1) || (engine.getMode() == Rules::Mode::Called))
         return {};
 
     std::vector<Rules::YambField> playableFields;
-    if (engine.currentRoll() == 1)
-    {
-        // we can change hand collumn only in
-        // TODO: test scenario when at the end of game you are left only with fields from hand collumn
-        //       in that scenario user should not be allowed to roll dice second/third time
-        // TODO: use set_difference
-        std::copy_if(begin(allFields), end(allFields), std::back_inserter(playableFields), [&](Rules::YambField field) {
-            return std::none_of(begin(filledFields), end(filledFields), [&] (Rules::YambField filledField) {
-                return field == filledField;
-            });
+    // we can change hand collumn only in
+    // TODO: test scenario when at the end of game you are left only with fields from hand collumn
+    //       in that scenario user should not be allowed to roll dice second/third time
+    // TODO: use set_difference
+    std::copy_if(begin(allFields), end(allFields), std::back_inserter(playableFields), [&](Rules::YambField field) {
+        return std::none_of(begin(filledFields), end(filledFields), [&] (Rules::YambField filledField) {
+            return field == filledField;
         });
-    }
+    });
 
     return playableFields;
 }

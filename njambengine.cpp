@@ -13,12 +13,14 @@ NjambEngine::NjambEngine()
 void NjambEngine::nextRound()
 {
     numberOfRolls = 0;
+    currentMode = Rules::Mode::Normal;
 }
 
 void NjambEngine::resetGame()
 {
     numberOfRolls = 0;
     currentHand = defaultHand;
+    currentMode = Rules::Mode::Normal;
 }
 
 DiceHand NjambEngine::rollDice(std::vector<int> savedDice)

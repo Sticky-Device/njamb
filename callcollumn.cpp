@@ -6,6 +6,9 @@ CallCollumn::CallCollumn(Ui::MainWindow *ui, NjambEngine &engine, Results &resul
 
 std::vector<Rules::YambField> CallCollumn::getPlayableFields()
 {
+    if ((engine.currentRoll() > 1) && (engine.getMode() != Rules::Mode::Called))
+        return {};
+
     std::vector<Rules::YambField> playableFields;
     switch (engine.getMode()) {
     case Rules::Mode::Normal:
