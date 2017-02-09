@@ -75,6 +75,16 @@ void AbstractCollumn::fieldClicked(Rules::YambField field)
     updateFields();
 }
 
+void AbstractCollumn::callFieldSelected()
+{
+    // disable all fields
+    for (auto field : allFields)
+    {
+        getUIElement(field)->setActive(false);
+        getUIElement(field)->setStyleSheet(Rules::FILLED_LABEL_COLOR);
+    }
+}
+
 ClickableLabel *AbstractCollumn::getUIElement(Rules::YambField field)
 {
     switch (field) {

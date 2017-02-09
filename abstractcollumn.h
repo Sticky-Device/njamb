@@ -21,6 +21,7 @@ public:
     virtual void fieldHovered(Rules::YambField);
     virtual void fieldUnhovered(Rules::YambField);
     virtual void fieldClicked(Rules::YambField);
+    virtual void callFieldSelected();
 
 public:
     // abstract methods

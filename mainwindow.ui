@@ -3015,7 +3015,7 @@ background-color: rgb(30, 76, 122);</string>
     <item row="19" column="3" colspan="2">
      <widget class="QPushButton" name="diceRollButton">
       <property name="text">
-       <string>Roll Dice</string>
+       <string>Roll Dice 1</string>
       </property>
      </widget>
     </item>

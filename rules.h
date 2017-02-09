@@ -53,6 +53,11 @@ enum class CollumnGroup {
 const QString FILLED_LABEL_COLOR = "QLabel {color: rgb(255, 255, 255); background-color: rgb(42, 104, 167) }";
 const QString FREE_LABEL_COLOR = "QLabel { color: rgb(255, 255, 255); background-color: rgb(53, 134, 214) }";
 
+enum class Mode {
+    Normal,
+    Called
+};
+
 }
 
 #endif // RULES_H

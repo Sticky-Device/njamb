@@ -30,6 +30,9 @@ void UpCollumn::reset()
 
 std::vector<Rules::YambField> UpCollumn::getPlayableFields()
 {
+    if (engine.getMode() == Rules::Mode::Called)
+        return {};
+
     if (playableFields.empty())
         return {};
 

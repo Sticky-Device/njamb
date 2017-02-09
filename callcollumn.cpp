@@ -7,8 +7,8 @@ CallCollumn::CallCollumn(Ui::MainWindow *ui, NjambEngine &engine, Results &resul
 std::vector<Rules::YambField> CallCollumn::getPlayableFields()
 {
     std::vector<Rules::YambField> playableFields;
-    switch (state.mode) {
-    case CallCollumnMode::Normal:
+    switch (engine.getMode()) {
+    case Rules::Mode::Normal:
         // TODO: use set_difference on allFields and filledFields
         std::copy_if(begin(allFields), end(allFields), std::back_inserter(playableFields), [&](Rules::YambField field) {
             return std::none_of(begin(filledFields), end(filledFields), [&] (Rules::YambField filledField) {
@@ -16,8 +16,8 @@ std::vector<Rules::YambField> CallCollumn::getPlayableFields()
             });
         });
         break;
-    case CallCollumnMode::Called:
-        playableFields.push_back(state.calledField);
+    case Rules::Mode::Called:
+        playableFields.push_back(calledField);
         break;
     default:
         break;
@@ -28,13 +28,15 @@ std::vector<Rules::YambField> CallCollumn::getPlayableFields()
 
 void CallCollumn::fieldClicked(Rules::YambField field)
 {
-    switch (state.mode) {
-    case CallCollumnMode::Normal :
-        state = {CallCollumnMode::Called, field};
+    auto mode = engine.getMode();
+    engine.CallFieldClicked();
+    switch (mode) {
+    case Rules::Mode::Normal :
+        calledField = field;
         updateFields();
         break;
-    case CallCollumnMode::Called :
-        state = {CallCollumnMode::Normal, Rules::YambField::None};
+    case Rules::Mode::Called :
+        calledField = Rules::YambField::None;
         filledFields.push_back(field);
         AbstractCollumn::fieldClicked(field);
     default:

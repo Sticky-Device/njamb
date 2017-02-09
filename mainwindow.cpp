@@ -119,7 +119,10 @@ void MainWindow::rollDiceButtonClicked()
     if (engine.currentRoll() == 3)
     {
         ui->diceRollButton->setEnabled(false);
+        ui->diceRollButton->setText("Roll Dice");
     }
+    else
+        ui->diceRollButton->setText(QString("Roll Dice ") + QString::number(engine.currentRoll() + 1));
 }
 
 
@@ -163,6 +166,7 @@ void MainWindow::resetUIElements()
     callCollumn.reset();
 
     ui->diceRollButton->setEnabled(true);
+    ui->diceRollButton->setText("Roll Dice 1");
 
     getNumbersSumElementForCollumn(Rules::Collumn::Down)->setText("0");
     getMinMaxSumElementForCollumn(Rules::Collumn::Down)->setText("0");
@@ -297,6 +301,7 @@ void MainWindow::nextRound()
     callCollumn.nextRound();
 
     ui->diceRollButton->setEnabled(true);
+    ui->diceRollButton->setText("Roll Dice 1");
 }
 
 void MainWindow::updateResultsForCollumn(Rules::Collumn collumn)
@@ -1475,9 +1480,24 @@ void MainWindow::on_label_hand_yamb_unhovered()
     handCollumn.fieldUnhovered(Rules::YambField::Yamb);
 }
 
+void MainWindow::handleCallFieldClicked()
+{
+    if (engine.getMode() == Rules::Mode::Normal)
+    {
+        downCollumn.updateFields();
+        freeCollumn.updateFields();
+        upCollumn.updateFields();
+        upDownCollumn.updateFields();
+        handCollumn.updateFields();
+        updateResults();
+        nextRound();
+    }
+}
+
 void MainWindow::on_label_call_ones_clicked()
 {
     callCollumn.fieldClicked(Rules::YambField::Ones);
+    handleCallFieldClicked();
 }
 
 void MainWindow::on_label_call_ones_hovered()
@@ -1493,6 +1513,7 @@ void MainWindow::on_label_call_ones_unhovered()
 void MainWindow::on_label_call_twos_clicked()
 {
     callCollumn.fieldClicked(Rules::YambField::Twos);
+    handleCallFieldClicked();
 }
 
 void MainWindow::on_label_call_twos_hovered()
@@ -1508,6 +1529,7 @@ void MainWindow::on_label_call_twos_unhovered()
 void MainWindow::on_label_call_threes_clicked()
 {
     callCollumn.fieldClicked(Rules::YambField::Threes);
+    handleCallFieldClicked();
 }
 
 void MainWindow::on_label_call_threes_hovered()
@@ -1523,6 +1545,7 @@ void MainWindow::on_label_call_threes_unhovered()
 void MainWindow::on_label_call_fours_clicked()
 {
     callCollumn.fieldClicked(Rules::YambField::Fours);
+    handleCallFieldClicked();
 }
 
 void MainWindow::on_label_call_fours_hovered()
@@ -1538,6 +1561,7 @@ void MainWindow::on_label_call_fours_unhovered()
 void MainWindow::on_label_call_fives_clicked()
 {
     callCollumn.fieldClicked(Rules::YambField::Fives);
+    handleCallFieldClicked();
 }
 
 void MainWindow::on_label_call_fives_hovered()
@@ -1553,6 +1577,7 @@ void MainWindow::on_label_call_fives_unhovered()
 void MainWindow::on_label_call_sixes_clicked()
 {
     callCollumn.fieldClicked(Rules::YambField::Sixes);
+    handleCallFieldClicked();
 }
 
 void MainWindow::on_label_call_sixes_hovered()
@@ -1568,6 +1593,7 @@ void MainWindow::on_label_call_sixes_unhovered()
 void MainWindow::on_label_call_max_clicked()
 {
     callCollumn.fieldClicked(Rules::YambField::Max);
+    handleCallFieldClicked();
 }
 
 void MainWindow::on_label_call_max_hovered()
@@ -1583,6 +1609,7 @@ void MainWindow::on_label_call_max_unhovered()
 void MainWindow::on_label_call_min_clicked()
 {
     callCollumn.fieldClicked(Rules::YambField::Min);
+    handleCallFieldClicked();
 }
 
 void MainWindow::on_label_call_min_hovered()
@@ -1598,6 +1625,7 @@ void MainWindow::on_label_call_min_unhovered()
 void MainWindow::on_label_call_triling_clicked()
 {
     callCollumn.fieldClicked(Rules::YambField::Triling);
+    handleCallFieldClicked();
 }
 
 void MainWindow::on_label_call_triling_hovered()
@@ -1613,6 +1641,7 @@ void MainWindow::on_label_call_triling_unhovered()
 void MainWindow::on_label_call_straight_clicked()
 {
     callCollumn.fieldClicked(Rules::YambField::Straight);
+    handleCallFieldClicked();
 }
 
 void MainWindow::on_label_call_straight_hovered()
@@ -1628,6 +1657,7 @@ void MainWindow::on_label_call_straight_unhovered()
 void MainWindow::on_label_call_full_clicked()
 {
     callCollumn.fieldClicked(Rules::YambField::Full);
+    handleCallFieldClicked();
 }
 
 void MainWindow::on_label_call_full_hovered()
@@ -1643,6 +1673,7 @@ void MainWindow::on_label_call_full_unhovered()
 void MainWindow::on_label_call_poker_clicked()
 {
     callCollumn.fieldClicked(Rules::YambField::Poker);
+    handleCallFieldClicked();
 }
 
 void MainWindow::on_label_call_poker_hovered()
@@ -1658,6 +1689,7 @@ void MainWindow::on_label_call_poker_unhovered()
 void MainWindow::on_label_call_yamb_clicked()
 {
     callCollumn.fieldClicked(Rules::YambField::Yamb);
+    handleCallFieldClicked();
 }
 
 void MainWindow::on_label_call_yamb_hovered()

@@ -121,27 +121,19 @@ private slots:
     void on_label_free_yamb_clicked();
 
     void on_label_down_ones_clicked();
-
     void on_label_down_ones_hovered();
-
     void on_label_down_ones_unhovered();
 
     void on_label_down_twos_clicked();
-
     void on_label_down_twos_hovered();
-
     void on_label_down_twos_unhovered();
 
     void on_label_down_threes_clicked();
-
     void on_label_up_yamb_clicked();
-
     void on_label_up_yamb_hovered();
 
     void on_label_up_yamb_unhovered();
-
     void on_label_up_poker_clicked();
-
     void on_label_up_poker_hovered();
 
     void on_label_up_poker_unhovered();
@@ -515,6 +507,7 @@ private:
     void updateResultsForCollumn(Rules::Collumn collumn);
     void updateResults();
     void resetUIElements();
+    void handleCallFieldClicked();
     std::vector<int> getSelectedDiceIndices();
 
 private:

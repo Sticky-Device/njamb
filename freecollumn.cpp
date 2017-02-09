@@ -22,6 +22,9 @@ void FreeCollumn::removePlayableField(Rules::YambField field)
 
 std::vector<Rules::YambField> FreeCollumn::getPlayableFields()
 {
+    if (engine.getMode() == Rules::Mode::Called)
+        return {};
+
     return playableFields;
 }
 

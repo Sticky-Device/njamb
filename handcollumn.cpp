@@ -6,6 +6,9 @@ HandCollumn::HandCollumn(Ui::MainWindow *ui, NjambEngine &engine, Results &resul
 
 std::vector<Rules::YambField> HandCollumn::getPlayableFields()
 {
+    if (engine.getMode() == Rules::Mode::Called)
+        return {};
+
     std::vector<Rules::YambField> playableFields;
     if (engine.currentRoll() == 1)
     {

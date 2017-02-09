@@ -17,11 +17,14 @@ public:
     DiceHand rollDice(std::vector<int> savedDice = {});
     DiceHand getCurrentHand();
     int currentRoll();
+    void CallFieldClicked();
+    Rules::Mode getMode();
 
 private:
     const DiceHand defaultHand = {{Rules::DEFAULT_DICE, Rules::DEFAULT_DICE, Rules::DEFAULT_DICE, Rules::DEFAULT_DICE, Rules::DEFAULT_DICE, Rules::DEFAULT_DICE}};
     DiceHand currentHand = defaultHand; // we start we all sixes (for now)
     int numberOfRolls = 0;
+    Rules::Mode currentMode = Rules::Mode::Normal;
 };
 
 #endif // NJAMBENGINE_H

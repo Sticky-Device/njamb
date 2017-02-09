@@ -44,3 +44,21 @@ int NjambEngine::currentRoll()
 {
     return numberOfRolls % 4;
 }
+
+void NjambEngine::CallFieldClicked()
+{
+    switch (currentMode) {
+    case Rules::Mode::Normal:
+        currentMode = Rules::Mode::Called;
+        break;
+    case Rules::Mode::Called:
+        currentMode = Rules::Mode::Normal;
+    default:
+        break;
+    }
+}
+
+Rules::Mode NjambEngine::getMode()
+{
+    return currentMode;
+}

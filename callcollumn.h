@@ -2,18 +2,7 @@
 #define CALLCOLLUMN_H
 
 #include "abstractcollumn.h"
-
-enum class CallCollumnMode
-{
-    Normal,
-    Called
-};
-
-struct CallCollumnState
-{
-    CallCollumnMode mode;
-    Rules::YambField calledField;
-};
+#include <functional>
 
 class CallCollumn : public AbstractCollumn
 {
@@ -44,7 +33,7 @@ private:
 
 private:
     std::vector<Rules::YambField> filledFields;
-    CallCollumnState state = { CallCollumnMode::Normal, Rules::YambField::None};
+    Rules::YambField calledField = Rules::YambField::None;
 };
 
 #endif // CALLCOLLUMN_H
