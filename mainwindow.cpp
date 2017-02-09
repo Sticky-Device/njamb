@@ -130,9 +130,7 @@ void MainWindow::on_actionNew_Game_triggered()
 {
     if (QMessageBox::Yes == QMessageBox(QMessageBox::Warning, "New game", "Posvadjali smo se?", QMessageBox::Yes|QMessageBox::No).exec())
     {
-        engine.resetGame();
-        resetUIElements();
-        results.reset();
+        resetGame();
     }
 }
 
@@ -284,6 +282,13 @@ QLabel *MainWindow::getMajorSumElementForCollumn(Rules::Collumn collumn)
 
 void MainWindow::nextRound()
 {
+    if (gameCompleted())
+    {
+        QMessageBox::information(this, "Excellent!", QString("Congratulations! Your final result is ") + QString::number(results.getFinalResult()), QMessageBox::Ok);
+        resetGame();
+        return;
+    }
+
     engine.nextRound();
 
     dice1.deactivate();
@@ -324,6 +329,13 @@ void MainWindow::updateResults()
     ui->label_major_sum->setText(QString::number(results.getResult(Rules::CollumnGroup::Major)));
 
     ui->label_final_result->setText(QString("Final Result: ") + QString::number(results.getFinalResult()));
+}
+
+void MainWindow::resetGame()
+{
+    engine.resetGame();
+    resetUIElements();
+    results.reset();
 }
 
 void MainWindow::on_label_dice1_clicked()
@@ -1492,6 +1504,12 @@ void MainWindow::handleCallFieldClicked()
         updateResults();
         nextRound();
     }
+}
+
+bool MainWindow::gameCompleted()
+{
+    return downCollumn.completed() && freeCollumn.completed() && upCollumn.completed()
+           && upDownCollumn.completed() && handCollumn.completed() && callCollumn.completed();
 }
 
 void MainWindow::on_label_call_ones_clicked()

@@ -506,8 +506,10 @@ private:
     void nextRound();
     void updateResultsForCollumn(Rules::Collumn collumn);
     void updateResults();
+    void resetGame();
     void resetUIElements();
     void handleCallFieldClicked();
+    bool gameCompleted();
     std::vector<int> getSelectedDiceIndices();
 
 private:
