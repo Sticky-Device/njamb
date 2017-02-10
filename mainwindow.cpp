@@ -122,7 +122,17 @@ void MainWindow::rollDiceButtonClicked()
         ui->diceRollButton->setText("Roll Dice");
     }
     else
+    {
         ui->diceRollButton->setText(QString("Roll Dice ") + QString::number(engine.currentRoll() + 1));
+    }
+
+    if ((engine.currentRoll() == 1) && downCollumn.completed() && freeCollumn.completed() &&
+                                       upCollumn.completed() && upDownCollumn.completed())
+    {
+        // all collumns, except hand and call, are filled. we need an action before next roll,
+        // so we have to disable roll button
+        ui->diceRollButton->setEnabled(false);
+    }
 }
 
 
@@ -282,14 +292,13 @@ QLabel *MainWindow::getMajorSumElementForCollumn(Rules::Collumn collumn)
 
 void MainWindow::nextRound()
 {
+    engine.nextRound();
     if (gameCompleted())
     {
         QMessageBox::information(this, "Excellent!", QString("Congratulations! Your final result is ") + QString::number(results.getFinalResult()), QMessageBox::Ok);
         resetGame();
         return;
     }
-
-    engine.nextRound();
 
     dice1.deactivate();
     dice2.deactivate();
@@ -307,6 +316,12 @@ void MainWindow::nextRound()
 
     ui->diceRollButton->setEnabled(true);
     ui->diceRollButton->setText("Roll Dice 1");
+}
+
+bool MainWindow::gameCompleted()
+{
+    return downCollumn.completed() && freeCollumn.completed() && upCollumn.completed()
+           && upDownCollumn.completed() && handCollumn.completed() && callCollumn.completed();
 }
 
 void MainWindow::updateResultsForCollumn(Rules::Collumn collumn)
@@ -337,6 +352,8 @@ void MainWindow::resetGame()
     resetUIElements();
     results.reset();
 }
+
+/*** E V E N T S ***/
 
 void MainWindow::on_label_dice1_clicked()
 {
@@ -1496,20 +1513,13 @@ void MainWindow::handleCallFieldClicked()
 {
     if (engine.getMode() == Rules::Mode::Normal)
     {
-        downCollumn.updateFields();
-        freeCollumn.updateFields();
-        upCollumn.updateFields();
-        upDownCollumn.updateFields();
-        handCollumn.updateFields();
         updateResults();
         nextRound();
     }
-}
 
-bool MainWindow::gameCompleted()
-{
-    return downCollumn.completed() && freeCollumn.completed() && upCollumn.completed()
-           && upDownCollumn.completed() && handCollumn.completed() && callCollumn.completed();
+    // in any case we need to enable roll button,
+    // because it may be disabled if all collumns (except maybe hand and call) are completed
+    ui->diceRollButton->setEnabled(true);
 }
 
 void MainWindow::on_label_call_ones_clicked()
