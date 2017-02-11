@@ -1729,3 +1729,8 @@ void MainWindow::on_label_call_yamb_unhovered()
 {
     callCollumn.fieldUnhovered(Rules::YambField::Yamb);
 }
+
+void MainWindow::on_actionOptions_triggered()
+{
+    QMessageBox::information(this, "Options", "Under construction :)", QMessageBox::Ok);
+}

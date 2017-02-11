@@ -1,4 +1,4 @@
-#include "UpDownCollumn.h"
+#include "updowncollumn.h"
 
 static std::stack<Rules::YambField> defaultUpFields ( std::deque<Rules::YambField> {Rules::YambField::Ones, Rules::YambField::Twos, Rules::YambField::Threes, Rules::YambField::Fours,
                                                                                     Rules::YambField::Fives, Rules::YambField::Sixes, Rules::YambField::Max,

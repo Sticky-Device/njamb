@@ -502,6 +502,8 @@ private slots:
 
     void on_label_up_straight_unhovered();
 
+    void on_actionOptions_triggered();
+
 private:
     void nextRound();
     void updateResultsForCollumn(Rules::Collumn collumn);
