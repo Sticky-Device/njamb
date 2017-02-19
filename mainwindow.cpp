@@ -8,7 +8,7 @@
 #include "dicehand.h"
 #include "rules.h"
 
-const QString aboutText = "Ovo je verzija njamba razvijana od strane Petra, Stefana i Todorica. Mirko radi sam.";
+const QString aboutText = "Njamb: Yahtzee game.\n\nVersion: 1.0.0.\n\nAuthor: Nemanja Todoric";
 
 QPixmap getDicePixMap(int number)
 {
@@ -138,7 +138,7 @@ void MainWindow::rollDiceButtonClicked()
 
 void MainWindow::on_actionNew_Game_triggered()
 {
-    if (QMessageBox::Yes == QMessageBox(QMessageBox::Warning, "New game", "Posvadjali smo se?", QMessageBox::Yes|QMessageBox::No).exec())
+    if (QMessageBox::Yes == QMessageBox(QMessageBox::Warning, "Start a new game?", "Are you sure you want to start a new game?", QMessageBox::Yes|QMessageBox::No, this).exec())
     {
         resetGame();
     }
@@ -295,7 +295,7 @@ void MainWindow::nextRound()
     engine.nextRound();
     if (gameCompleted())
     {
-        QMessageBox::information(this, "Excellent!", QString("Congratulations! Your final result is ") + QString::number(results.getFinalResult()), QMessageBox::Ok);
+        QMessageBox::information(this, "Excellent!", QString("Congratulations! Your final result is: ") + QString::number(results.getFinalResult()), QMessageBox::Ok);
         resetGame();
         return;
     }

@@ -18,6 +18,7 @@ namespace Ui {
 class MainWindow;
 }
 
+// TODO: move to separate file
 class Dice
 {
 public:
@@ -58,6 +59,7 @@ private slots:
     // menu events
     void on_actionNew_Game_triggered();
     void on_actionAbout_Njamb_triggered();
+    void on_actionOptions_triggered();
 
     // dice clicked events
     void on_label_dice1_clicked();
@@ -67,6 +69,7 @@ private slots:
     void on_label_dice5_clicked();
     void on_label_dice6_clicked();
 
+    // field hovered/unhovered/clicked events
     void on_label_free_ones_hovered();
     void on_label_free_ones_unhovered();
 
@@ -129,380 +132,258 @@ private slots:
     void on_label_down_twos_unhovered();
 
     void on_label_down_threes_clicked();
+
     void on_label_up_yamb_clicked();
     void on_label_up_yamb_hovered();
-
     void on_label_up_yamb_unhovered();
+
     void on_label_up_poker_clicked();
     void on_label_up_poker_hovered();
-
     void on_label_up_poker_unhovered();
 
     void on_label_up_full_clicked();
-
     void on_label_up_full_hovered();
-
     void on_label_up_full_unhovered();
 
     void on_label_updown_max_clicked();
-
     void on_label_updown_max_hovered();
-
     void on_label_updown_max_unhovered();
 
     void on_label_updown_min_clicked();
-
     void on_label_updown_min_hovered();
-
     void on_label_updown_min_unhovered();
 
     void on_label_updown_triling_clicked();
-
     void on_label_updown_triling_hovered();
-
     void on_label_updown_triling_unhovered();
 
     void on_label_updown_sixes_clicked();
-
     void on_label_updown_sixes_hovered();
-
     void on_label_updown_sixes_unhovered();
 
     void on_label_hand_ones_clicked();
-
     void on_label_hand_ones_hovered();
-
     void on_label_hand_ones_unhovered();
 
     void on_label_call_ones_clicked();
-
     void on_label_call_ones_hovered();
-
     void on_label_call_ones_unhovered();
 
     void on_label_hand_twos_clicked();
-
     void on_label_hand_twos_hovered();
-
     void on_label_hand_twos_unhovered();
 
     void on_label_hand_threes_clicked();
-
     void on_label_hand_threes_hovered();
-
     void on_label_hand_threes_unhovered();
 
     void on_label_hand_fours_clicked();
-
     void on_label_hand_fours_hovered();
-
     void on_label_hand_fours_unhovered();
 
     void on_label_hand_fives_clicked();
-
     void on_label_hand_fives_hovered();
-
     void on_label_hand_fives_unhovered();
 
     void on_label_hand_sixes_clicked();
-
     void on_label_hand_sixes_hovered();
-
     void on_label_hand_sixes_unhovered();
 
     void on_label_hand_max_clicked();
-
     void on_label_hand_max_hovered();
-
     void on_label_hand_max_unhovered();
 
     void on_label_hand_min_clicked();
-
     void on_label_hand_min_hovered();
-
     void on_label_hand_min_unhovered();
 
     void on_label_hand_triling_clicked();
-
     void on_label_hand_triling_hovered();
-
     void on_label_hand_triling_unhovered();
 
     void on_label_hand_straight_clicked();
-
     void on_label_hand_straight_hovered();
-
     void on_label_hand_straight_unhovered();
 
     void on_label_hand_full_clicked();
-
     void on_label_hand_full_hovered();
-
     void on_label_hand_full_unhovered();
 
     void on_label_hand_poker_clicked();
-
     void on_label_hand_poker_hovered();
-
     void on_label_hand_poker_unhovered();
 
     void on_label_hand_yamb_clicked();
-
     void on_label_hand_yamb_hovered();
-
     void on_label_hand_yamb_unhovered();
 
     void on_label_call_twos_clicked();
-
     void on_label_call_twos_hovered();
-
     void on_label_call_twos_unhovered();
 
     void on_label_call_threes_clicked();
-
     void on_label_call_threes_hovered();
-
     void on_label_call_threes_unhovered();
 
     void on_label_call_fours_clicked();
-
     void on_label_call_fours_hovered();
-
     void on_label_call_fours_unhovered();
 
     void on_label_call_fives_clicked();
-
     void on_label_call_fives_hovered();
-
     void on_label_call_fives_unhovered();
 
     void on_label_call_sixes_clicked();
-
     void on_label_call_sixes_hovered();
-
     void on_label_call_sixes_unhovered();
 
     void on_label_call_max_clicked();
-
     void on_label_call_max_hovered();
-
     void on_label_call_max_unhovered();
 
     void on_label_call_min_clicked();
-
     void on_label_call_min_hovered();
-
     void on_label_call_min_unhovered();
 
     void on_label_call_triling_clicked();
-
     void on_label_call_triling_hovered();
-
     void on_label_call_triling_unhovered();
 
     void on_label_call_straight_clicked();
-
     void on_label_call_straight_hovered();
-
     void on_label_call_straight_unhovered();
 
     void on_label_call_full_clicked();
-
     void on_label_call_full_hovered();
-
     void on_label_call_full_unhovered();
 
     void on_label_call_poker_clicked();
-
     void on_label_call_poker_hovered();
-
     void on_label_call_poker_unhovered();
 
     void on_label_call_yamb_clicked();
-
     void on_label_call_yamb_hovered();
-
     void on_label_call_yamb_unhovered();
 
     void on_label_updown_fives_clicked();
-
     void on_label_updown_fives_hovered();
-
     void on_label_updown_fives_unhovered();
 
     void on_label_updown_fours_clicked();
-
     void on_label_updown_fours_hovered();
-
     void on_label_updown_fours_unhovered();
 
     void on_label_updown_threes_clicked();
-
     void on_label_updown_threes_hovered();
-
     void on_label_updown_threes_unhovered();
 
     void on_label_updown_twos_clicked();
-
     void on_label_updown_twos_hovered();
-
     void on_label_updown_twos_unhovered();
 
     void on_label_updown_ones_clicked();
-
     void on_label_updown_ones_hovered();
-
     void on_label_updown_ones_unhovered();
 
     void on_label_updown_straight_clicked();
-
     void on_label_updown_straight_hovered();
-
     void on_label_updown_straight_unhovered();
 
     void on_label_updown_full_clicked();
-
     void on_label_updown_full_hovered();
-
     void on_label_updown_full_unhovered();
 
     void on_label_updown_poker_clicked();
-
     void on_label_updown_poker_hovered();
-
     void on_label_updown_poker_unhovered();
 
     void on_label_updown_yamb_clicked();
-
     void on_label_updown_yamb_hovered();
-
     void on_label_updown_yamb_unhovered();
 
     void on_label_down_threes_hovered();
-
     void on_label_down_threes_unhovered();
-
     void on_label_down_fours_clicked();
 
     void on_label_down_fours_hovered();
-
     void on_label_down_fours_unhovered();
-
     void on_label_down_fives_clicked();
 
     void on_label_down_fives_hovered();
-
     void on_label_down_fives_unhovered();
 
     void on_label_down_sixes_clicked();
-
     void on_label_down_sixes_hovered();
 
     void on_label_down_sixes_unhovered();
-
     void on_label_down_max_clicked();
 
     void on_label_down_max_hovered();
-
     void on_label_down_max_unhovered();
 
     void on_label_down_min_clicked();
-
     void on_label_down_min_hovered();
-
     void on_label_down_min_unhovered();
 
     void on_label_down_triling_clicked();
-
     void on_label_down_triling_hovered();
-
     void on_label_down_triling_unhovered();
 
     void on_label_down_straight_clicked();
-
     void on_label_down_straight_hovered();
-
     void on_label_down_straight_unhovered();
 
     void on_label_down_full_clicked();
-
     void on_label_down_full_hovered();
-
     void on_label_down_full_unhovered();
 
     void on_label_down_poker_clicked();
-
     void on_label_down_poker_hovered();
-
     void on_label_down_poker_unhovered();
 
     void on_label_down_yamb_clicked();
-
     void on_label_down_yamb_hovered();
-
     void on_label_down_yamb_unhovered();
 
     void on_label_up_ones_clicked();
-
     void on_label_up_ones_hovered();
-
     void on_label_up_ones_unhovered();
 
     void on_label_up_twos_clicked();
-
     void on_label_up_twos_hovered();
-
     void on_label_up_twos_unhovered();
 
     void on_label_up_threes_clicked();
-
     void on_label_up_threes_hovered();
-
     void on_label_up_threes_unhovered();
 
     void on_label_up_fours_clicked();
-
     void on_label_up_fours_hovered();
-
     void on_label_up_fours_unhovered();
 
     void on_label_up_fives_clicked();
-
     void on_label_up_fives_hovered();
-
     void on_label_up_fives_unhovered();
 
     void on_label_up_sixes_clicked();
-
     void on_label_up_sixes_hovered();
-
     void on_label_up_sixes_unhovered();
 
     void on_label_up_max_clicked();
-
     void on_label_up_max_hovered();
-
     void on_label_up_max_unhovered();
 
     void on_label_up_min_clicked();
-
     void on_label_up_min_hovered();
-
     void on_label_up_min_unhovered();
 
     void on_label_up_triling_clicked();
-
     void on_label_up_triling_hovered();
-
     void on_label_up_triling_unhovered();
 
     void on_label_up_straight_clicked();
-
     void on_label_up_straight_hovered();
-
     void on_label_up_straight_unhovered();
-
-    void on_actionOptions_triggered();
 
 private:
     void nextRound();
