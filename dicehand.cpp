@@ -96,16 +96,32 @@ int DiceHand::getBestResultForNumber(int number)
 
 int DiceHand::getBestResultMax()
 {
-    auto hand = dice;
-    std::sort(begin(hand), end(hand));
-    return std::accumulate(++begin(hand), end(hand), 0);
+    // ovo je resenje kompleksnosti O(nlogn), zbog sortiranja..
+    // Bolje resenje je sledeci algoritam:
+    // jednim prolazom sabirati sve elemente i usput odrediti i min element
+    // na kraju samo od zbira oduzeti min element
+    // To je resenje kompleksnosti O(n)
+
+    //auto hand = dice;
+    //std::sort(begin(hand), end(hand));
+    //return std::accumulate(++begin(hand), end(hand), 0);
+
+    return std::accumulate(begin(dice), end(dice), 0) - *std::min_element(begin(dice), end(dice));
 }
 
 int DiceHand::getBestResultMin()
 {
-    auto hand = dice;
-    std::sort(begin(hand), end(hand));
-    return std::accumulate(begin(hand), --end(hand), 0);
+    // ovo je resenje kompleksnosti O(nlogn), zbog sortiranja..
+    // Bolje resenje je sledeci algoritam:
+    // jednim prolazom sabirati sve elemente i usput odrediti i max element
+    // na kraju samo od zbira oduzeti max element
+    // To je resenje kompleksnosti O(n)
+
+    //auto hand = dice;
+    //std::sort(begin(hand), end(hand));
+    //return std::accumulate(begin(hand), --end(hand), 0);
+
+    return std::accumulate(begin(dice), end(dice), 0) - *std::max_element(begin(dice), end(dice));
 }
 
 int DiceHand::getBestResultTriling()

@@ -43,8 +43,8 @@ int Results::getResult(Rules::Collumn collumn, Rules::CollumnGroup group)
     case Rules::CollumnGroup::MinMax:
     {
         auto result = (resultMap[collumn][Rules::YambField::Max] -
-                resultMap[collumn][Rules::YambField::Min]) *
-                resultMap[collumn][Rules::YambField::Ones];
+                        resultMap[collumn][Rules::YambField::Min]) *
+                        resultMap[collumn][Rules::YambField::Ones];
 
         if (result < 0)
             return 0;
@@ -57,8 +57,6 @@ int Results::getResult(Rules::Collumn collumn, Rules::CollumnGroup group)
                 resultMap[collumn][Rules::YambField::Full] +
                 resultMap[collumn][Rules::YambField::Poker] +
                 resultMap[collumn][Rules::YambField::Yamb];
-    default:
-        break;
     }
 
     return 0;

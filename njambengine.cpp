@@ -55,7 +55,6 @@ void NjambEngine::CallFieldClicked()
         break;
     case Rules::Mode::Called:
         currentMode = Rules::Mode::Normal;
-    default:
         break;
     }
 }

@@ -234,9 +234,6 @@ QLabel *MainWindow::getNumbersSumElementForCollumn(Rules::Collumn collumn)
         return ui->label_hand_numbers_sum;
     case Rules::Collumn::Call :
         return ui->label_call_numbers_sum;
-        break;
-    default:
-        break;
     }
 
     return ui->label_down_numbers_sum;
@@ -257,9 +254,6 @@ QLabel *MainWindow::getMinMaxSumElementForCollumn(Rules::Collumn collumn)
         return ui->label_hand_minmax_sum;
     case Rules::Collumn::Call :
         return ui->label_call_minmax_sum;
-        break;
-    default:
-        break;
     }
 
     return ui->label_down_minmax_sum;
@@ -280,9 +274,6 @@ QLabel *MainWindow::getMajorSumElementForCollumn(Rules::Collumn collumn)
         return ui->label_hand_major_sum;
     case Rules::Collumn::Call :
         return ui->label_call_major_sum;
-        break;
-    default:
-        break;
     }
 
     // TODO: assert

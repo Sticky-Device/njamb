@@ -29,8 +29,6 @@ std::vector<Rules::YambField> CallCollumn::getPlayableFields()
     case Rules::Mode::Called:
         playableFields.push_back(calledField);
         break;
-    default:
-        break;
     }
 
     return playableFields;
@@ -57,7 +55,6 @@ void CallCollumn::fieldClicked(Rules::YambField field)
             calledField = field;
             updateFields();
         }
-    default:
         break;
     }
 }
